@@ -1,0 +1,53 @@
+[06/10/2010 - 02:21:19]: //___________________________________________________\
+[06/10/2010 - 02:21:19]: Log started...
+[06/10/2010 - 02:21:19]: Instantiating MVC
+[06/10/2010 - 02:21:19]: Controller instantiated
+[06/10/2010 - 02:21:19]: Model instantiated
+[06/10/2010 - 02:21:19]: STATE [APP] :					APP_INIT
+[06/10/2010 - 02:21:19]: Application Initializing
+[06/10/2010 - 02:21:19]: Loading config file: data/config.xml
+[06/10/2010 - 02:21:19]: Config could not be loaded...
+[06/10/2010 - 02:21:19]: ...config error. Exiting!
+[06/10/2010 - 02:21:19]: View instantiated
+[06/10/2010 - 02:21:19]: Enabling keyboard, mouse, draw, update events for View
+[06/10/2010 - 02:21:19]: STATE [APP] :					APP_READY
+[06/10/2010 - 02:21:28]: Shutting down and destroying objects...
+[06/10/2010 - 02:21:28]: Controller destroyed
+[06/10/2010 - 02:21:28]: Model destroyed
+[06/10/2010 - 02:21:28]: View destroyed
+[06/10/2010 - 02:21:28]: Logging off...
+[06/10/2010 - 02:21:28]: \___________________________________________________//
+[06/10/2010 - 02:21:28]: Closing log file
+[06/10/2010 - 02:22:33]: //___________________________________________________\
+[06/10/2010 - 02:22:33]: Log started...
+[06/10/2010 - 02:22:33]: Instantiating MVC
+[06/10/2010 - 02:22:33]: Controller instantiated
+[06/10/2010 - 02:22:33]: Model instantiated
+[06/10/2010 - 02:22:33]: STATE [APP] :					APP_INIT
+[06/10/2010 - 02:22:33]: Application Initializing
+[06/10/2010 - 02:22:33]: Loading config file: data/config.xml
+[06/10/2010 - 02:22:33]: Config could not be loaded...
+[06/10/2010 - 02:22:33]: ...config error. Exiting!
+[06/10/2010 - 02:22:33]: View instantiated
+[06/10/2010 - 02:22:33]: Enabling keyboard, mouse, draw, update events for View
+[06/10/2010 - 02:22:33]: STATE [APP] :					APP_READY
+[06/10/2010 - 02:22:47]: //___________________________________________________\
+[06/10/2010 - 02:22:47]: Log started...
+[06/10/2010 - 02:22:47]: Instantiating MVC
+[06/10/2010 - 02:22:47]: Controller instantiated
+[06/10/2010 - 02:22:47]: Model instantiated
+[06/10/2010 - 02:22:47]: STATE [APP] :					APP_INIT
+[06/10/2010 - 02:22:47]: Application Initializing
+[06/10/2010 - 02:22:47]: Loading config file: data/config.xml
+[06/10/2010 - 02:22:47]: Config could not be loaded...
+[06/10/2010 - 02:22:47]: ...config error. Exiting!
+[06/10/2010 - 02:22:47]: View instantiated
+[06/10/2010 - 02:22:47]: Enabling keyboard, mouse, draw, update events for View
+[06/10/2010 - 02:22:47]: STATE [APP] :					APP_READY
+[06/10/2010 - 02:23:06]: Shutting down and destroying objects...
+[06/10/2010 - 02:23:06]: Controller destroyed
+[06/10/2010 - 02:23:06]: Model destroyed
+[06/10/2010 - 02:23:06]: View destroyed
+[06/10/2010 - 02:23:06]: Logging off...
+[06/10/2010 - 02:23:06]: \___________________________________________________//
+[06/10/2010 - 02:23:06]: Closing log file

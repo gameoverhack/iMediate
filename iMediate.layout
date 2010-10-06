@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="release" />
+	<File name="..\..\..\addons\MSAOpenCL\src\MSAOpenCL.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="1393" topLine="24" />
+	</File>
+	<File name="..\..\..\addons\MSAOpenCL\src\MSAOpenCL.h" open="1" top="0" tabpos="14">
+		<Cursor position="7859" topLine="59" />
+	</File>
+	<File name="..\..\..\addons\goVideoPlayer\src\goVideoPlayer.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="14745" topLine="506" />
+	</File>
+	<File name="..\..\..\addons\ofxMidi\libs\RtMidi.h" open="0" top="0" tabpos="9">
+		<Cursor position="1901" topLine="0" />
+	</File>
+	<File name="src\MVC\ApplicationLoader.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1087" topLine="5" />
+	</File>
+	<File name="src\MVC\Controller.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="1199" topLine="32" />
+	</File>
+	<File name="src\MVC\Logger.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\MVC\Model.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\MVC\Model.h" open="1" top="0" tabpos="8">
+		<Cursor position="222" topLine="8" />
+	</File>
+	<File name="src\MVC\View.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1163" topLine="28" />
+	</File>
+	<File name="src\MVC\View.h" open="1" top="0" tabpos="4">
+		<Cursor position="777" topLine="18" />
+	</File>
+	<File name="src\goOpenCLContext.cpp" open="1" top="0" tabpos="16">
+		<Cursor position="140" topLine="0" />
+	</File>
+	<File name="src\goOpenCLContext.h" open="1" top="0" tabpos="15">
+		<Cursor position="163" topLine="0" />
+	</File>
+	<File name="src\goVideoEffectCL.cpp" open="1" top="1" tabpos="10">
+		<Cursor position="6674" topLine="182" />
+	</File>
+	<File name="src\goVideoEffectCL.h" open="1" top="0" tabpos="9">
+		<Cursor position="281" topLine="0" />
+	</File>
+	<File name="src\main.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="229" topLine="0" />
+	</File>
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="122" topLine="0" />
+	</File>
+	<File name="src\testApp.h" open="1" top="0" tabpos="5">
+		<Cursor position="63" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
