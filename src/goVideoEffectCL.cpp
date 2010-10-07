@@ -93,8 +93,12 @@ void goVideoEffectCL::update()
     // if there is a new frame....
     if(video->isFrameNew())
     {
-
-        fbo.attach(texture[activeImageIndex], 0);
+#ifdef TARGET_OSX
+		fbo.attach(clImage[activeImageIndex].getTexture(), 0);
+#else
+		fbo.attach(texture[activeImageIndex], 0);
+#endif
+        
         fbo.begin();
         video->draw(0, 0, vidWidth, vidHeight);
         fbo.end();

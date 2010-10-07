@@ -84,9 +84,21 @@ void View::keyPressed(ofKeyEventArgs &e)
 
     switch (e.key)
     {
-    case 'f':
-        showMSG = !showMSG;
-        break;
+		case 'f':
+			showMSG = !showMSG;
+			break;
+		case 'l':
+#ifdef TARGET_OSX
+			//PLAYERS[0].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trainStation/other/slow_legs-JPEG720-JPEG540.mov");
+			PLAYERS[1].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trains02/train2/train17-JPEG720-JPEG540.mov");
+#else
+			//PLAYERS[0].loadMovie("C:/Users/gameoverwell/Desktop/slow_legs-JPEG720-JPEG540.mov");
+			PLAYERS[1].loadMovie("C:/Users/gameoverwell/Desktop/train17-JPEG720-JPEG540.mov");
+#endif
+			
+			PLAYERS[0].setLoopState(OF_LOOP_NORMAL);
+			PLAYERS[1].setLoopState(OF_LOOP_NORMAL);
+			break;
     }
 
 
