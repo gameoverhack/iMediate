@@ -37,6 +37,8 @@ public:
     Model()
     {
         LOG("Model instantiated");
+		
+		
     };
     ~Model()
     {
@@ -52,7 +54,7 @@ public:
 
     goVideoPlayer               players[MAX_VIDEO_CHANNELS];
     goVideoEffectCL             effects[MAX_VIDEO_CHANNELS];
-
+	
 private:
 
     int							applicationState;

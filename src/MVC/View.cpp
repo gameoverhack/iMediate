@@ -6,7 +6,7 @@
  *  Copyright 2009 __MyCompanyName__. All rights reserved.
  *
  */
-
+static bool doEffect = false;
 #include "View.h"
 //--------------------------------------------------------------
 bool View::setup()
@@ -29,8 +29,10 @@ void View::update(ofEventArgs &e)
 {
     ofBackground(0, 0, 0);
 
-    EFFECTS[0].update();
-    EFFECTS[1].update();
+    PLAYERS[0].update();
+    if(doEffect) {
+		EFFECTS[1].update();
+	} else PLAYERS[1].update();
 
 }
 
@@ -38,14 +40,18 @@ void View::update(ofEventArgs &e)
 //--------------------------------------------------------------
 void View::draw(ofEventArgs &e)
 {
-    //glEnable(GL_BLEND);
+
+            
+	//glEnable(GL_BLEND);
 	//	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-        EFFECTS[0].draw();
+		PLAYERS[0].draw(0,0);
         glPushMatrix();
         glTranslatef(20,20,0);
-        EFFECTS[1].draw();
+        if(doEffect) {
+			EFFECTS[1].draw();
+		} else PLAYERS[1].draw(0,0);
         glPopMatrix();
-   // glDisable(GL_BLEND);
+    //glDisable(GL_BLEND);
 
     if(showMSG)
     {
@@ -85,7 +91,7 @@ void View::keyPressed(ofKeyEventArgs &e)
 //--------------------------------------------------------------
 void View::keyReleased(ofKeyEventArgs &e)
 {
-
+	doEffect ^= true;
 }
 
 //--------------------------------------------------------------

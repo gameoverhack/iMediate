@@ -2,9 +2,7 @@
 #define __GOVIDEOEFFECTCL_H
 
 #include "MSAOpenCL.h"
-#include "goOpenCLContext.h"
 #include "goVideoPlayer.h"
-
 
 
 class goVideoEffectCL
@@ -38,8 +36,7 @@ class goVideoEffectCL
 
 
     protected:
-
-        //MSA::OpenCL			openCL;
+	
         MSA::OpenCLImage	clImage[2];             // two OpenCL images
 
 #ifndef TARGET_OSX

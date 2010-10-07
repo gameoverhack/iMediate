@@ -1,5 +1,7 @@
 #include "goVideoEffectCL.h"
 
+static MSA::OpenCL openCL;
+static bool isSetup = false;
 
 goVideoEffectCL::goVideoEffectCL()
 {
@@ -36,7 +38,13 @@ void goVideoEffectCL::allocate(goVideoPlayer * _video)
 	// allocate temp buffer
 	pixels		= new unsigned char[vidWidth * vidHeight * 4];
 
-
+	if(!isSetup) {
+		// init openCL from OpenGL context to enable GL-CL data sharing
+		openCL.setupFromOpenGL();
+		// load and compile openCL program
+		openCL.loadProgramFromFile("MSAopenCL/ImageProcessing.cl");
+		
+	}
 
 #ifdef TARGET_OSX
 	// create openCL textures and related OpenGL textures
@@ -47,20 +55,29 @@ void goVideoEffectCL::allocate(goVideoPlayer * _video)
 	texture[0].allocate(vidWidth, vidHeight, GL_RGBA);
 	texture[1].allocate(vidWidth, vidHeight, GL_RGBA);
 	// create openCL textures mapped to OpenGL textures
-	clImage[0] = *(OPENCL.createImageFromTexture(texture[0]));
-	clImage[1] = *(OPENCL.createImageFromTexture(texture[1]));
+	clImage[0] = *(openCL.createImageFromTexture(texture[0]));
+	clImage[1] = *(openCL.createImageFromTexture(texture[1]));
 #endif
 
-    //if (!OPENCL.isSetup)
-    //{
+	if(!isSetup) {
+		// load kernels
+		openCL.loadKernel("msa_boxblur");
+		openCL.loadKernel("msa_flipx");
+		openCL.loadKernel("msa_flipy");
+		openCL.loadKernel("msa_greyscale");
+		openCL.loadKernel("msa_invert");
+		openCL.loadKernel("msa_threshold");
+		openCL.loadKernel("go_hue");
+		openCL.loadKernel("go_saturation");
+		openCL.loadKernel("go_contrast");
+		openCL.loadKernel("go_brightness");
+		
+		isSetup = true;
+	}
 
-
-
-        // create image sampler
-        // gameover: has been hard coded into the kernels - maybe should be kept as an argument??
-        //clSampler = clCreateSampler(OPENCL.getContext(), CL_FALSE, CL_ADDRESS_CLAMP_TO_EDGE, CL_FILTER_NEAREST, NULL);
-    //}
-
+	// create image sampler
+	// gameover: has been hard coded into the kernels - maybe should be kept as an argument??
+	//clSampler = clCreateSampler(openCL.getContext(), CL_FALSE, CL_ADDRESS_CLAMP_TO_EDGE, CL_FILTER_NEAREST, NULL);
 
     allocated = true;
 }
@@ -96,11 +113,11 @@ void goVideoEffectCL::update()
         glFinish();
 #endif
 
-        clEnqueueAcquireGLObjects(OPENCL.getQueue(), 1, &clImage[activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
-        clEnqueueAcquireGLObjects(OPENCL.getQueue(), 1, &clImage[1-activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
+        clEnqueueAcquireGLObjects(openCL.getQueue(), 1, &clImage[activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
+        clEnqueueAcquireGLObjects(openCL.getQueue(), 1, &clImage[1-activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
 
 		if(doBlur) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("msa_boxblur");
+			MSA::OpenCLKernel *kernel = openCL.kernel("msa_boxblur");
 			for(int i=0; i<blurAmount; i++) {
 				cl_int offset = i * i / 2 + 1;
 				kernel->setArg(0, clImage[activeImageIndex].getCLMem());
@@ -112,7 +129,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doFlipX) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("msa_flipx");
+			MSA::OpenCLKernel *kernel = openCL.kernel("msa_flipx");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
             kernel->run2D(vidWidth, vidHeight);
@@ -121,7 +138,7 @@ void goVideoEffectCL::update()
 
 
 		if(doFlipY) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("msa_flipy");
+			MSA::OpenCLKernel *kernel = openCL.kernel("msa_flipy");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
             kernel->run2D(vidWidth, vidHeight);
@@ -129,7 +146,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doGreyscale) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("msa_greyscale");
+			MSA::OpenCLKernel *kernel = openCL.kernel("msa_greyscale");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
             kernel->run2D(vidWidth, vidHeight);
@@ -137,7 +154,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doInvert) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("msa_invert");
+			MSA::OpenCLKernel *kernel = openCL.kernel("msa_invert");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
             kernel->run2D(vidWidth, vidHeight);
@@ -145,7 +162,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doThreshold) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("msa_threshold");
+			MSA::OpenCLKernel *kernel = openCL.kernel("msa_threshold");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
 			kernel->setArg(2, threshLevel);
@@ -154,7 +171,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doHue) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("go_hue");
+			MSA::OpenCLKernel *kernel = openCL.kernel("go_hue");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
 			kernel->setArg(2, rLevel);
@@ -166,7 +183,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doSaturation) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("go_saturation");
+			MSA::OpenCLKernel *kernel = openCL.kernel("go_saturation");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
 			kernel->setArg(2, saturationLevel);
@@ -175,7 +192,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doContrast) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("go_contrast");
+			MSA::OpenCLKernel *kernel = openCL.kernel("go_contrast");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
 			kernel->setArg(2, contrastLevel);
@@ -184,7 +201,7 @@ void goVideoEffectCL::update()
 		}
 
 		if(doBrightness) {
-			MSA::OpenCLKernel *kernel = OPENCL.kernel("go_brightness");
+			MSA::OpenCLKernel *kernel = openCL.kernel("go_brightness");
 			kernel->setArg(0, clImage[activeImageIndex].getCLMem());
 			kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
 			kernel->setArg(2, brightnessLevel);
@@ -192,23 +209,24 @@ void goVideoEffectCL::update()
 			activeImageIndex = 1 - activeImageIndex;
 		}
 
-        clEnqueueReleaseGLObjects(OPENCL.getQueue(), 1, &clImage[activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
-        clEnqueueReleaseGLObjects(OPENCL.getQueue(), 1, &clImage[1-activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
-    }
-
-    // calculate capture fps
-    static float lastTime = 0;
-    float nowTime = ofGetElapsedTimef();
-    float timeDiff = nowTime - lastTime;
-    if(timeDiff > 0 ) currentFPS = 0.9f * currentFPS + 0.1f / timeDiff;
-    lastTime = nowTime;
+        clEnqueueReleaseGLObjects(openCL.getQueue(), 1, &clImage[activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
+        clEnqueueReleaseGLObjects(openCL.getQueue(), 1, &clImage[1-activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
+    
+		// calculate capture fps
+		static float lastTime = 0;
+		float nowTime = ofGetElapsedTimef();
+		float timeDiff = nowTime - lastTime;
+		if(timeDiff > 0 ) currentFPS = 0.9f * currentFPS + 0.1f / timeDiff;
+		lastTime = nowTime;
+	
+	}
 
 }
 
 void goVideoEffectCL::draw()
 {
     // make sure all openCL kernels have finished executing before drawing
-	OPENCL.finish();
+	openCL.finish();
 
 #ifdef TARGET_OSX
 	// draw the OpenGL texture (which was mapped to the openCL image)
