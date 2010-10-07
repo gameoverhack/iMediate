@@ -22,7 +22,7 @@
 #define EFFECTS         MODEL->effects
 
 #include "ofxXmlSettings.h"
-#include "goVideoPlayer.h"
+#include "goThreadedVideo.h"
 #include "goVideoEffectCL.h"
 
 #include "Singleton.h"
@@ -37,8 +37,8 @@ public:
     Model()
     {
         LOG("Model instantiated");
-		
-		
+
+
     };
     ~Model()
     {
@@ -52,9 +52,9 @@ public:
     void						setAppState(int _state);
     int							getAppState();
 
-    goVideoPlayer               players[MAX_VIDEO_CHANNELS];
+    goThreadedVideo             players[MAX_VIDEO_CHANNELS];
     goVideoEffectCL             effects[MAX_VIDEO_CHANNELS];
-	
+
 private:
 
     int							applicationState;

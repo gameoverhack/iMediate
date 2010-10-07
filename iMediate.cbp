@@ -89,6 +89,7 @@
 			<Add directory="..\..\..\addons\ofxMidi\src" />
 			<Add directory="src\MVC" />
 			<Add directory="src" />
+			<Add directory="..\..\..\addons\goThreadedVideo\src" />
 		</Compiler>
 		<Linker>
 			<Add option="../../../libs/FreeImage/lib/win_cb/FreeImage.lib" />
@@ -159,6 +160,8 @@
 		<Unit filename="..\..\..\addons\goDirList\src\goDirList.h" />
 		<Unit filename="..\..\..\addons\goSoundPlayer\src\goSoundPlayer.cpp" />
 		<Unit filename="..\..\..\addons\goSoundPlayer\src\goSoundPlayer.h" />
+		<Unit filename="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.cpp" />
+		<Unit filename="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.h" />
 		<Unit filename="..\..\..\addons\goUtils\src\goUtils.cpp" />
 		<Unit filename="..\..\..\addons\goUtils\src\goUtils.h" />
 		<Unit filename="..\..\..\addons\goVideoPlayer\src\goVideoPlayer.cpp" />
@@ -390,12 +393,6 @@
 			<Option virtualFolder="src\" />
 		</Unit>
 		<Unit filename="src\MVC\View.h">
-			<Option virtualFolder="src\" />
-		</Unit>
-		<Unit filename="src\goOpenCLContext.cpp">
-			<Option virtualFolder="src\" />
-		</Unit>
-		<Unit filename="src\goOpenCLContext.h">
 			<Option virtualFolder="src\" />
 		</Unit>
 		<Unit filename="src\goVideoEffectCL.cpp">

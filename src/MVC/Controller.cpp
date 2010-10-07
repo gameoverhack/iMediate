@@ -48,16 +48,18 @@ void Controller::setup()
     {
 
         ofSetLogLevel(OF_LOG_VERBOSE);
-		
-        PLAYERS[0].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trainStation/other/slow_legs-JPEG720-JPEG540.mov");
+
+		///Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trainStation/other/slow_legs-JPEG720-JPEG540.mov
+        PLAYERS[0].loadMovie("C:/Users/gameoverwell/Desktop/slow_legs-JPEG720-JPEG540.mov");
         PLAYERS[0].play();
 
-        PLAYERS[1].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trains02/train2/train17-JPEG720-JPEG540.mov");
+        ///Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trains02/train2/train17-JPEG720-JPEG540.mov
+        PLAYERS[1].loadMovie("C:/Users/gameoverwell/Desktop/train17-JPEG720-JPEG540.mov");
         PLAYERS[1].play();
 
-        EFFECTS[0].allocate(&PLAYERS[0]);
+        EFFECTS[0].allocate(&PLAYERS[0], 720, 405);
 
-        EFFECTS[1].allocate(&PLAYERS[1]);
+        EFFECTS[1].allocate(&PLAYERS[1], 720, 405);
 
         EFFECTS[1].doBlur = true;
         EFFECTS[1].blurAmount = 5;

@@ -29,10 +29,12 @@ void View::update(ofEventArgs &e)
 {
     ofBackground(0, 0, 0);
 
-    PLAYERS[0].update();
-    if(doEffect) {
+    EFFECTS[0].update();
+    EFFECTS[1].update();
+
+    /*if(doEffect) {
 		EFFECTS[1].update();
-	} else PLAYERS[1].update();
+	} else PLAYERS[1].update();*/
 
 }
 
@@ -41,15 +43,17 @@ void View::update(ofEventArgs &e)
 void View::draw(ofEventArgs &e)
 {
 
-            
+
 	//glEnable(GL_BLEND);
 	//	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 		PLAYERS[0].draw(0,0);
         glPushMatrix();
         glTranslatef(20,20,0);
-        if(doEffect) {
-			EFFECTS[1].draw();
-		} else PLAYERS[1].draw(0,0);
+        EFFECTS[0].draw();
+        EFFECTS[1].draw();
+        //if(doEffect) {
+		//	EFFECTS[1].draw();
+		//} else PLAYERS[1].draw(0,0);
         glPopMatrix();
     //glDisable(GL_BLEND);
 

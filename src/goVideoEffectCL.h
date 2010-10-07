@@ -2,8 +2,8 @@
 #define __GOVIDEOEFFECTCL_H
 
 #include "MSAOpenCL.h"
-#include "goVideoPlayer.h"
-
+#include "goThreadedVideo.h"
+#include "ofxFbo.h"
 
 class goVideoEffectCL
 {
@@ -13,7 +13,7 @@ class goVideoEffectCL
 
         float				currentFPS;
 
-        void                allocate(goVideoPlayer * _video);
+        void                allocate(goThreadedVideo * _video, int _vidWidth, int _vidHeight);
 
         void                update();
         void                draw();
@@ -36,7 +36,9 @@ class goVideoEffectCL
 
 
     protected:
-	
+
+        ofxFbo              fbo;
+
         MSA::OpenCLImage	clImage[2];             // two OpenCL images
 
 #ifndef TARGET_OSX
@@ -55,7 +57,7 @@ class goVideoEffectCL
 
     private:
 
-        goVideoPlayer *     video;
+        goThreadedVideo *     video;
 };
 
 #endif // __GOVIDEOEFFECTCL_H
