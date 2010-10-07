@@ -38,6 +38,7 @@ class goVideoEffectCL
     protected:
 
         ofxFbo              fbo;
+        int                 fboTexID;
 
         MSA::OpenCLImage	clImage[2];             // two OpenCL images
 

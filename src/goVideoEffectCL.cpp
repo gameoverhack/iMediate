@@ -2,7 +2,7 @@
 
 static MSA::OpenCL openCL;
 static bool isSetup = false;
-
+static int instanceCount = 0;
 goVideoEffectCL::goVideoEffectCL()
 {
     doBlur          = false;
@@ -31,6 +31,8 @@ void goVideoEffectCL::allocate(goThreadedVideo * _video, int _vidWidth, int _vid
     video = _video;
     vidWidth = _vidWidth;
     vidHeight = _vidHeight;
+
+    fboTexID = instanceCount++;
 
     fbo.setup(_vidWidth, _vidHeight);
 
@@ -88,8 +90,6 @@ void goVideoEffectCL::update()
 
     video->update();
 
-
-
     // if there is a new frame....
     if(video->isFrameNew())
     {
@@ -98,6 +98,7 @@ void goVideoEffectCL::update()
         fbo.begin();
         video->draw(0, 0, vidWidth, vidHeight);
         fbo.end();
+        glFinish();
 
         clEnqueueAcquireGLObjects(openCL.getQueue(), 1, &clImage[activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)
         clEnqueueAcquireGLObjects(openCL.getQueue(), 1, &clImage[1-activeImageIndex].getCLMem(), 0,0,0); // added by gameover (matt gingold)

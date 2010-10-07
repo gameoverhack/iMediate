@@ -46,10 +46,10 @@ void View::draw(ofEventArgs &e)
 
 	//glEnable(GL_BLEND);
 	//	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-		PLAYERS[0].draw(0,0);
+        EFFECTS[0].draw();
         glPushMatrix();
         glTranslatef(20,20,0);
-        EFFECTS[0].draw();
+
         EFFECTS[1].draw();
         //if(doEffect) {
 		//	EFFECTS[1].draw();
