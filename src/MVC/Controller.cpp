@@ -87,6 +87,17 @@ void Controller::setup()
 
         EFFECTS[0].doInvert = true;
 
+        DICTIONARY.loadText(ofToDataPath("Spanish.txt"));
+        DICTIONARY.loadText(ofToDataPath("French.txt"));
+        DICTIONARY.loadText(ofToDataPath("Latin.txt"));
+        DICTIONARY.loadText(ofToDataPath("German.txt"));
+        DICTIONARY.loadText(ofToDataPath("Italian.txt"));
+        DICTIONARY.loadText(ofToDataPath("Portuguese.txt"));
+
+        for (int i = 0; i < DICTIONARY.words.size(); i++)
+        {
+            cout << i << " = " << DICTIONARY.words[i] << endl;
+        }
 
 /*
 
@@ -140,7 +151,7 @@ void Controller::checkFolders()
 
 void Controller::groupLoadDone(int & id)
 {
-    cout << "IDDDDD: " << id << endl;
+
     EFFECTS[id].reallocate(&GROUPS[id].videoGroup[0], 720, 405);
     //GROUPS[id].videoGroup[0].forceTexture();
 }

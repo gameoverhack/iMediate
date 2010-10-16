@@ -1,0 +1,10 @@
+<controls>
+    <ComboBox_folderBrowser_1>
+        <name>folderBrowser 1</name>
+        <value>15</value>
+    </ComboBox_folderBrowser_1>
+    <ComboBox_folderBrowser_2>
+        <name>folderBrowser 2</name>
+        <value>16</value>
+    </ComboBox_folderBrowser_2>
+</controls>

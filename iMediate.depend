@@ -2073,12 +2073,13 @@
 1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\applicationloader.h
 	"Model.h"
 
-1287213007 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
+1287246655 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
 	"ofxXmlSettings.h"
 	"goVideoGroup.h"
 	"goThreadedVideo.h"
 	"goVideoEffectCL.h"
 	"goDirList.h"
+	"goTextLoader.h"
 	"ofxSimpleGuiToo.h"
 	"Singleton.h"
 	"Constants.h"
@@ -2096,7 +2097,7 @@
 	"Singleton.h"
 	"ofUtils.h"
 
-1287220132 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
+1287246875 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
 	"Controller.h"
 
 1287216397 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
@@ -2298,4 +2299,376 @@
 	"ofxSimpleGuiToo.h"
 
 1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguivaluecontrol.cpp
+
+1287223057 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftbuffer.cpp
+	"FTGL/ftgl.h"
+
+1252156498 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftgl.h
+	<ft2build.h>
+	<FTGL/FTPoint.h>
+	<FTGL/FTBBox.h>
+	<FTGL/FTBuffer.h>
+	<FTGL/FTGlyph.h>
+	<FTGL/FTBitmapGlyph.h>
+	<FTGL/FTBufferGlyph.h>
+	<FTGL/FTExtrdGlyph.h>
+	<FTGL/FTOutlineGlyph.h>
+	<FTGL/FTPixmapGlyph.h>
+	<FTGL/FTPolyGlyph.h>
+	<FTGL/FTTextureGlyph.h>
+	<FTGL/FTFont.h>
+	<FTGL/FTGLBitmapFont.h>
+	<FTGL/FTBufferFont.h>
+	<FTGL/FTGLExtrdFont.h>
+	<FTGL/FTGLOutlineFont.h>
+	<FTGL/FTGLPixmapFont.h>
+	<FTGL/FTGLPolygonFont.h>
+	<FTGL/FTGLTextureFont.h>
+	<FTGL/FTLayout.h>
+	<FTGL/FTSimpleLayout.h>
+
+1262216156 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\freetype\include\ft2build.h
+	<freetype/config/ftheader.h>
+
+1262216156 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\freetype\include\freetype2\freetype\config\ftheader.h
+
+1250170794 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftpoint.h
+	<FTGL/ftgl.h>
+
+1287223068 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftbbox.h
+	<FTGL/ftgl.h>
+
+1213010374 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftbuffer.h
+	<FTGL/ftgl.h>
+
+1250172947 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftglyph.h
+	<FTGL/ftgl.h>
+	<FTGL/FTPoint.h>
+	<FTGL/FTBBox.h>
+	<FTGL/FTBuffer.h>
+
+1210347255 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftbitmapglyph.h
+	<FTGL/ftgl.h>
+
+1213276992 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftbufferglyph.h
+	<FTGL/ftgl.h>
+
+1210347248 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftextrdglyph.h
+	<FTGL/ftgl.h>
+
+1210347420 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftoutlineglyph.h
+	<FTGL/ftgl.h>
+
+1209999112 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftpixmapglyph.h
+	<FTGL/ftgl.h>
+
+1210503101 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftpolyglyph.h
+	<FTGL/ftgl.h>
+
+1209999112 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\fttextureglyph.h
+	<FTGL/ftgl.h>
+
+1252155884 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftfont.h
+	<FTGL/ftgl.h>
+
+1209927967 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftglbitmapfont.h
+	<FTGL/ftgl.h>
+
+1211211073 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftbufferfont.h
+	<FTGL/ftgl.h>
+
+1209927975 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftglextrdfont.h
+	<FTGL/ftgl.h>
+
+1209927982 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftgloutlinefont.h
+	<FTGL/ftgl.h>
+
+1209927986 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftglpixmapfont.h
+	<FTGL/ftgl.h>
+
+1209927990 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftglpolygonfont.h
+	<FTGL/ftgl.h>
+
+1209927994 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftgltexturefont.h
+	<FTGL/ftgl.h>
+
+1210530211 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftlayout.h
+	<FTGL/ftgl.h>
+
+1210530211 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftgl\ftsimplelayout.h
+	<FTGL/ftgl.h>
+
+1287223068 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftcharmap.cpp
+	"FTFace.h"
+	"FTCharmap.h"
+
+1210507625 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftface.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+	"FTSize.h"
+
+1209583162 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftsize.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+
+1210056183 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftcharmap.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+	"FTCharToGlyphIndexMap.h"
+
+1209890886 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftchartoglyphindexmap.h
+	<stdlib.h>
+	"FTGL/ftgl.h"
+
+1287223068 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftcontour.cpp
+	"FTContour.h"
+	<math.h>
+
+1213016057 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftcontour.h
+	"FTGL/ftgl.h"
+	"FTVector.h"
+
+1209583162 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftvector.h
+	"FTGL/ftgl.h"
+
+1287223068 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftface.cpp
+	"FTFace.h"
+	"FTLibrary.h"
+
+1209583162 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlibrary.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+
+1287223074 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftbitmapfont.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBitmapFontImpl.h"
+
+1213015828 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftinternals.h
+	"FTGL/ftgl.h"
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"SDL_opengl.h"
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<mesa/glu.h>
+	<GL/glu.h>
+
+1213016059 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftbitmapfontimpl.h
+	"FTFontImpl.h"
+
+1213016061 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftfontimpl.h
+	"FTGL/ftgl.h"
+	"FTFace.h"
+
+1287223078 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftbufferfont.cpp
+	<wchar.h>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBufferFontImpl.h"
+
+1213015712 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftbufferfontimpl.h
+	"FTFontImpl.h"
+
+1287223081 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftextrudefont.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTExtrudeFontImpl.h"
+
+1213016060 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftextrudefontimpl.h
+	"FTFontImpl.h"
+
+1287223085 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftfont.cpp
+	"FTInternals.h"
+	"FTUnicode.h"
+	"FTFontImpl.h"
+	"FTBitmapFontImpl.h"
+	"FTExtrudeFontImpl.h"
+	"FTOutlineFontImpl.h"
+	"FTPixmapFontImpl.h"
+	"FTPolygonFontImpl.h"
+	"FTTextureFontImpl.h"
+	"FTGlyphContainer.h"
+	"FTFace.h"
+
+1212484569 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftunicode.h
+
+1213016062 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftoutlinefontimpl.h
+	"FTFontImpl.h"
+
+1213016063 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftpixmapfontimpl.h
+	"FTFontImpl.h"
+
+1213016064 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftpolygonfontimpl.h
+	"FTFontImpl.h"
+
+1213016065 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\fttexturefontimpl.h
+	"FTFontImpl.h"
+	"FTVector.h"
+
+1213015784 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyphcontainer.h
+	<ft2build.h>
+	"FTGL/ftgl.h"
+	"FTVector.h"
+
+1287223089 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftfontglue.cpp
+	"FTInternals.h"
+
+1287223093 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftoutlinefont.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTOutlineFontImpl.h"
+
+1287223096 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftpixmapfont.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPixmapFontImpl.h"
+
+1287223100 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\ftpolygonfont.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPolygonFontImpl.h"
+
+1287223103 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftfont\fttexturefont.cpp
+	<cassert>
+	<string>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"../FTGlyph/FTTextureGlyphImpl.h"
+	"./FTTextureFontImpl.h"
+
+1213015814 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\fttextureglyphimpl.h
+	"FTGlyphImpl.h"
+
+1213015799 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftglyphimpl.h
+	"FTGL/ftgl.h"
+
+1287223107 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyphcontainer.cpp
+	"FTGL/ftgl.h"
+	"FTGlyphContainer.h"
+	"FTFace.h"
+	"FTCharmap.h"
+
+1287223113 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftbitmapglyph.cpp
+	<string>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBitmapGlyphImpl.h"
+
+1213015792 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftbitmapglyphimpl.h
+	"FTGlyphImpl.h"
+
+1287223117 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftbufferglyph.cpp
+	<string>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTBufferGlyphImpl.h"
+
+1211310482 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftbufferglyphimpl.h
+	"FTGlyphImpl.h"
+
+1287223121 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftextrudeglyph.cpp
+	<iostream>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTExtrudeGlyphImpl.h"
+	"FTVectoriser.h"
+
+1213015796 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftextrudeglyphimpl.h
+	"FTGlyphImpl.h"
+
+1213015888 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftvectoriser.h
+	"FTGL/ftgl.h"
+	"FTContour.h"
+	"FTList.h"
+	"FTVector.h"
+
+1209583162 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlist.h
+	"FTGL/ftgl.h"
+
+1287223124 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftglyph.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTGlyphImpl.h"
+
+1287223128 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftglyphglue.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+
+1287223132 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftoutlineglyph.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTOutlineGlyphImpl.h"
+	"FTVectoriser.h"
+
+1213015801 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftoutlineglyphimpl.h
+	"FTGlyphImpl.h"
+
+1287223135 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftpixmapglyph.cpp
+	<math.h>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPixmapGlyphImpl.h"
+
+1213015804 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftpixmapglyphimpl.h
+	"FTGlyphImpl.h"
+
+1287223139 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftpolygonglyph.cpp
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTPolygonGlyphImpl.h"
+	"FTVectoriser.h"
+
+1213015809 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\ftpolygonglyphimpl.h
+	"FTGlyphImpl.h"
+
+1287223142 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftglyph\fttextureglyph.cpp
+	<math.h>
+	"FTGL/ftgl.h"
+	"FTInternals.h"
+	"FTTextureGlyphImpl.h"
+
+1287223145 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlayout\ftlayout.cpp
+	"FTGL/ftgl.h"
+	"../FTFont/FTFontImpl.h"
+	"./FTLayoutImpl.h"
+
+1213015831 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlayout\ftlayoutimpl.h
+	"FTSize.h"
+	"FTGlyphContainer.h"
+
+1287223148 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlayout\ftlayoutglue.cpp
+	"FTInternals.h"
+
+1287223152 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlayout\ftsimplelayout.cpp
+	<ctype.h>
+	<wctype.h>
+	"FTInternals.h"
+	"FTUnicode.h"
+	"FTGlyphContainer.h"
+	"FTSimpleLayoutImpl.h"
+
+1213015834 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlayout\ftsimplelayoutimpl.h
+	"FTLayoutImpl.h"
+
+1287223155 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftlibrary.cpp
+	"FTLibrary.h"
+
+1287223159 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftpoint.cpp
+	<math.h>
+	"FTGL/ftgl.h"
+
+1287223163 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftsize.cpp
+	"FTSize.h"
+
+1287223167 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\libs\ftgl\include\ftvectoriser.cpp
+	"FTInternals.h"
+	"FTVectoriser.h"
+
+1287246904 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.h
+	"ofMain.h"
 

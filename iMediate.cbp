@@ -434,6 +434,12 @@
 		<Unit filename="src\MVC\View.h">
 			<Option virtualFolder="src\" />
 		</Unit>
+		<Unit filename="src\goTextLoader.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goTextLoader.h">
+			<Option virtualFolder="src\" />
+		</Unit>
 		<Unit filename="src\goThreadedImage.cpp">
 			<Option virtualFolder="src\" />
 		</Unit>

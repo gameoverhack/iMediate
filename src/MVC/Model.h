@@ -22,6 +22,7 @@
 #define PLAYERS         MODEL->players
 #define EFFECTS         MODEL->effects
 
+#define DICTIONARY      MODEL->text
 
 #define GUI             gui
 
@@ -35,6 +36,7 @@
 #include "goThreadedVideo.h"
 #include "goVideoEffectCL.h"
 #include "goDirList.h"
+#include "goTextLoader.h"
 #include "ofxSimpleGuiToo.h"
 
 #include "Singleton.h"
@@ -69,6 +71,8 @@ public:
     goVideoEffectCL             effects[MAX_VIDEO_CHANNELS];
 
     goDirList                   files;
+
+    goTextLoader                text;
 
     // gui elements
     int                         folderBox[MAX_VIDEO_CHANNELS];
