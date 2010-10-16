@@ -18,12 +18,24 @@
 #define SETAPPSTATE		MODEL->setAppState
 #define GETAPPSTATE		MODEL->getAppState()
 
+#define GROUPS          MODEL->groups
 #define PLAYERS         MODEL->players
 #define EFFECTS         MODEL->effects
 
+
+#define GUI             gui
+
+#define FILES           MODEL->files
+
+#define FOLDERS         MODEL->folderBox
+#define LASTFOLDERS     MODEL->lastFolderBox
+
 #include "ofxXmlSettings.h"
+#include "goVideoGroup.h"
 #include "goThreadedVideo.h"
 #include "goVideoEffectCL.h"
+#include "goDirList.h"
+#include "ofxSimpleGuiToo.h"
 
 #include "Singleton.h"
 #include "Constants.h"
@@ -52,8 +64,15 @@ public:
     void						setAppState(int _state);
     int							getAppState();
 
-    goThreadedVideo             players[MAX_VIDEO_CHANNELS];
+    goVideoGroup                groups[MAX_VIDEO_CHANNELS];
+    goThreadedVideo            players[MAX_VIDEO_CHANNELS];
     goVideoEffectCL             effects[MAX_VIDEO_CHANNELS];
+
+    goDirList                   files;
+
+    // gui elements
+    int                         folderBox[MAX_VIDEO_CHANNELS];
+    int                         lastFolderBox[MAX_VIDEO_CHANNELS];
 
 private:
 

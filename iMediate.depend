@@ -1505,12 +1505,13 @@
 	"MSAOpenCLProgram.h"
 	"MSAOpenCLKernel.h"
 
-1286349210 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\godirlist\src\godirlist.cpp
+1287199803 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\godirlist\src\godirlist.cpp
 	"goDirList.h"
 
-1286349210 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\godirlist\src\godirlist.h
+1287198765 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\godirlist\src\godirlist.h
 	"ofMain.h"
 	"goUtils.h"
+	<map>
 	<queue>
 	"Poco/DirectoryIterator.h"
 	"Poco/File.h"
@@ -1647,7 +1648,7 @@
 	<math.h>
 	<iostream>
 
-1286419234 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxfbo\src\ofxfbo.cpp
+1286419584 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxfbo\src\ofxfbo.cpp
 	"ofxFbo.h"
 
 1286417614 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxfbo\src\ofxfbo.h
@@ -2072,10 +2073,13 @@
 1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\applicationloader.h
 	"Model.h"
 
-1286412843 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
+1287213007 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
 	"ofxXmlSettings.h"
+	"goVideoGroup.h"
 	"goThreadedVideo.h"
 	"goVideoEffectCL.h"
+	"goDirList.h"
+	"ofxSimpleGuiToo.h"
 	"Singleton.h"
 	"Constants.h"
 	"Logger.h"
@@ -2092,10 +2096,10 @@
 	"Singleton.h"
 	"ofUtils.h"
 
-1286414991 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
+1287220132 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
 	"Controller.h"
 
-1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
+1287216397 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
 	"Singleton.h"
 	"Model.h"
 	"View.h"
@@ -2114,7 +2118,7 @@
 1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.cpp
 	"Model.h"
 
-1286416881 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
+1287219322 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
 	"View.h"
 
 1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\main.cpp
@@ -2129,12 +2133,12 @@
 1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\testapp.cpp
 	"testApp.h"
 
-1286418256 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
+1287219305 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
 	"MSAOpenCL.h"
 	"goThreadedVideo.h"
 	"ofxFbo.h"
 
-1286418912 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
+1287219259 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
 	"goVideoEffectCL.h"
 
 1286394720 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goopenclcontext.h
@@ -2144,12 +2148,154 @@
 1286394716 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goopenclcontext.cpp
 	"goOpenCLContext.h"
 
-1286414226 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.h
+1287218355 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.h
 	"ofxThread.h"
 	"ofEvents.h"
 	"string.h"
 	"goVideoPlayer.h"
 
-1286414284 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.cpp
+1287218629 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.cpp
 	"goThreadedVideo.h"
+
+1287220329 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.h
+	"goThreadedVideo.h"
+	"goThreadedImage.h"
+
+1287195409 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gothreadedimage.h
+	"ofMain.h"
+	"ofxThread.h"
+
+1287218409 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.cpp
+	"goVideoGroup.h"
+
+1287195497 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gothreadedimage.cpp
+	"goThreadedImage.h"
+
+1286358659 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxmsainteractiveobject\src\ofxmsainteractiveobject.cpp
+	"ofxMSAInteractiveObject.h"
+	"ofMain.h"
+
+1286351358 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxmsainteractiveobject\src\ofxmsainteractiveobject.h
+	"ofMain.h"
+
+1287207215 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguitoo.h
+	"ofMain.h"
+	"ofxXmlSettings.h"
+	"ofxSimpleGuiIncludes.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguiincludes.h
+	"ofxSimpleGuiPage.h"
+	"ofxSimpleGuiConfig.h"
+	"ofxSimpleGuiButton.h"
+	"ofxSimpleGuiContent.h"
+	"ofxSimpleGuiFPSCounter.h"
+	"ofxSimpleGuiQuadWarp.h"
+	"ofxSimpleGuiSliderFloat.h"
+	"ofxSimpleGuiSliderInt.h"
+	"ofxSimpleGuiSlider2d.h"
+	"ofxSimpleGuiMovieSlider.h"
+	"ofxSimpleGuiToggle.h"
+	"ofxSimpleGuiTitle.h"
+	"ofxSimpleGuiColorPicker.h"
+	"ofxSimpleGuiComboBox.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguipage.h
+	"ofxSimpleGuiIncludes.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguiconfig.h
+	"ofTypes.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguibutton.cpp
+	"ofxSimpleGuiButton.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguibutton.h
+	"ofxSimpleGuiValueControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguivaluecontrol.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguicontrol.h
+	"ofxMSAInteractiveObject.h"
+	"ofxSimpleGuiConfig.h"
+	"ofxXmlSettings.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguicolorpicker.cpp
+	"ofxSimpleGuiColorPicker.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguicolorpicker.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguicontent.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguifpscounter.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguiquadwarp.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguisliderfloat.h
+	"ofxSimpleGuiControl.h"
+	"ofxSimpleGuiSliderBase.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguisliderbase.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguisliderint.h
+	"ofxSimpleGuiControl.h"
+	"ofxSimpleGuiSliderBase.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguislider2d.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguimovieslider.h
+	"ofxSimpleGuiControl.h"
+	"ofxSimpleGuiButton.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguitoggle.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguititle.h
+	"ofxSimpleGuiControl.h"
+
+1287210378 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguicombobox.h
+	"ofxSimpleGuiControl.h"
+
+1287210374 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguicombobox.cpp
+	"ofxSimpleGuiComboBox.h"
+	"ofxSimpleGuiPage.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguicontent.cpp
+	"ofxSimpleGuiContent.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguifpscounter.cpp
+	"ofxSimpleGuiFPSCounter.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguimovieslider.cpp
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguiquadwarp.cpp
+	"ofxSimpleGuiQuadWarp.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguislider2d.cpp
+	"ofxSimpleGuiSlider2d.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguititle.cpp
+	"ofxSimpleGuiTitle.h"
+
+1286358533 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\controls\ofxsimpleguitoggle.cpp
+	"ofxSimpleGuiToggle.h"
+
+1286355762 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguiconfig.cpp
+	"ofxSimpleGuiConfig.h"
+
+1286358208 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguicontrol.cpp
+	"ofxSimpleGuiControl.h"
+
+1286358686 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguipage.cpp
+	"ofxSimpleGuiPage.h"
+
+1287207332 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguitoo.cpp
+	"ofxSimpleGuiToo.h"
+
+1286351099 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxsimpleguitoo\src\ofxsimpleguivaluecontrol.cpp
 

@@ -14,6 +14,7 @@ class goVideoEffectCL
         float				currentFPS;
 
         void                allocate(goThreadedVideo * _video, int _vidWidth, int _vidHeight);
+        void                reallocate(goThreadedVideo * _video, int _vidWidth, int _vidHeight);
 
         void                update();
         void                draw();
@@ -34,6 +35,7 @@ class goVideoEffectCL
         cl_float			threshLevel;
         cl_float            rLevel, gLevel, bLevel, aLevel, contrastLevel, saturationLevel, brightnessLevel;
 
+        bool                allocated;
 
     protected:
 
@@ -51,7 +53,7 @@ class goVideoEffectCL
 
         unsigned char		*pixels;				// temp buffer
 
-        bool                allocated;
+
 
         int					vidWidth;
         int					vidHeight;

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="debug" />
+	<ActiveTarget name="release" />
 	<File name="..\..\..\addons\MSAOpenCL\src\MSAOpenCL.cpp" open="1" top="0" tabpos="13">
 		<Cursor position="7862" topLine="238" />
 	</File>
 	<File name="..\..\..\addons\MSAOpenCL\src\MSAOpenCL.h" open="1" top="0" tabpos="14">
 		<Cursor position="7859" topLine="59" />
 	</File>
+	<File name="..\..\..\addons\goDirList\src\goDirList.cpp" open="1" top="0" tabpos="25">
+		<Cursor position="1415" topLine="52" />
+	</File>
+	<File name="..\..\..\addons\goDirList\src\goDirList.h" open="1" top="0" tabpos="26">
+		<Cursor position="1876" topLine="39" />
+	</File>
 	<File name="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.cpp" open="1" top="0" tabpos="15">
-		<Cursor position="11207" topLine="331" />
+		<Cursor position="5346" topLine="141" />
 	</File>
 	<File name="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.h" open="1" top="0" tabpos="16">
-		<Cursor position="1203" topLine="20" />
+		<Cursor position="1816" topLine="57" />
 	</File>
 	<File name="..\..\..\addons\goVideoPlayer\src\goVideoPlayer.cpp" open="1" top="0" tabpos="12">
 		<Cursor position="4914" topLine="163" />
@@ -28,11 +34,53 @@
 	<File name="..\..\..\addons\ofxMidi\libs\RtMidi.h" open="0" top="0" tabpos="9">
 		<Cursor position="1901" topLine="0" />
 	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiButton.h" open="1" top="0" tabpos="28">
+		<Cursor position="14" topLine="0" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiComboBox.cpp" open="1" top="0" tabpos="36">
+		<Cursor position="4971" topLine="146" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiComboBox.h" open="1" top="0" tabpos="37">
+		<Cursor position="162" topLine="0" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiContent.cpp" open="1" top="0" tabpos="38">
+		<Cursor position="534" topLine="0" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiControl.cpp" open="1" top="0" tabpos="35">
+		<Cursor position="1631" topLine="81" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiControl.h" open="1" top="0" tabpos="39">
+		<Cursor position="1892" topLine="35" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiIncludes.h" open="1" top="0" tabpos="29">
+		<Cursor position="1952" topLine="6" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiPage.cpp" open="1" top="0" tabpos="32">
+		<Cursor position="3396" topLine="83" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiToo.cpp" open="1" top="0" tabpos="30">
+		<Cursor position="10687" topLine="340" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiToo.h" open="1" top="0" tabpos="27">
+		<Cursor position="4254" topLine="74" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiValueControl.cpp" open="1" top="0" tabpos="33">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiValueControl.h" open="1" top="0" tabpos="34">
+		<Cursor position="0" topLine="0" />
+	</File>
 	<File name="src\MVC\ApplicationLoader.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="1087" topLine="5" />
 	</File>
+	<File name="src\MVC\Constants.h" open="1" top="0" tabpos="24">
+		<Cursor position="0" topLine="0" />
+	</File>
 	<File name="src\MVC\Controller.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="1389" topLine="29" />
+		<Cursor position="1764" topLine="63" />
+	</File>
+	<File name="src\MVC\Controller.h" open="1" top="0" tabpos="31">
+		<Cursor position="691" topLine="7" />
 	</File>
 	<File name="src\MVC\Logger.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="0" topLine="0" />
@@ -41,25 +89,37 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="src\MVC\Model.h" open="1" top="0" tabpos="8">
-		<Cursor position="983" topLine="20" />
+		<Cursor position="1324" topLine="39" />
 	</File>
 	<File name="src\MVC\View.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="918" topLine="25" />
+		<Cursor position="1016" topLine="33" />
 	</File>
 	<File name="src\MVC\View.h" open="1" top="0" tabpos="4">
 		<Cursor position="777" topLine="18" />
 	</File>
-	<File name="src\goVideoEffectCL.cpp" open="1" top="1" tabpos="10">
-		<Cursor position="2708" topLine="74" />
+	<File name="src\goThreadedImage.cpp" open="1" top="0" tabpos="23">
+		<Cursor position="980" topLine="5" />
+	</File>
+	<File name="src\goThreadedImage.h" open="1" top="0" tabpos="22">
+		<Cursor position="105" topLine="0" />
+	</File>
+	<File name="src\goVideoEffectCL.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="8775" topLine="0" />
 	</File>
 	<File name="src\goVideoEffectCL.h" open="1" top="0" tabpos="9">
-		<Cursor position="985" topLine="15" />
+		<Cursor position="1008" topLine="26" />
+	</File>
+	<File name="src\goVideoGroup.cpp" open="1" top="1" tabpos="20">
+		<Cursor position="1178" topLine="29" />
+	</File>
+	<File name="src\goVideoGroup.h" open="1" top="0" tabpos="21">
+		<Cursor position="506" topLine="0" />
 	</File>
 	<File name="src\main.cpp" open="1" top="0" tabpos="6">
 		<Cursor position="229" topLine="0" />
 	</File>
 	<File name="src\testApp.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="122" topLine="0" />
+		<Cursor position="328" topLine="0" />
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="5">
 		<Cursor position="63" topLine="0" />

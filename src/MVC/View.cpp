@@ -29,11 +29,17 @@ void View::update(ofEventArgs &e)
 {
     ofBackground(0, 0, 0);
 
-    EFFECTS[0].update();
-    EFFECTS[1].update();
+    CONTROLLER->checkFolders();
+
+    for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
+    {
+        EFFECTS[i].update();
+        GROUPS[i].update();
+    }
+
 
     /*if(doEffect) {
-		EFFECTS[1].update();
+		PLAYERS[1].update();
 	} else PLAYERS[1].update();*/
 
 }
@@ -47,15 +53,19 @@ void View::draw(ofEventArgs &e)
 	//glEnable(GL_BLEND);
 	//	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
         EFFECTS[0].draw();
-        glPushMatrix();
-        glTranslatef(20,20,0);
-
         EFFECTS[1].draw();
         //if(doEffect) {
-		//	EFFECTS[1].draw();
+		//	PLAYERS[1].draw();
 		//} else PLAYERS[1].draw(0,0);
-        glPopMatrix();
+
     //glDisable(GL_BLEND);
+
+
+    glPushMatrix();
+    //glTranslatef(20,200,0);
+    GUI.draw(10.0f, 300.0f);
+    glPopMatrix();
+
 
     if(showMSG)
     {
@@ -87,18 +97,18 @@ void View::keyPressed(ofKeyEventArgs &e)
 		case 'f':
 			showMSG = !showMSG;
 			break;
-		case 'l':
-#ifdef TARGET_OSX
-			//PLAYERS[0].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trainStation/other/slow_legs-JPEG720-JPEG540.mov");
-			PLAYERS[1].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trains02/train2/train17-JPEG720-JPEG540.mov");
-#else
-			//PLAYERS[0].loadMovie("C:/Users/gameoverwell/Desktop/slow_legs-JPEG720-JPEG540.mov");
-			PLAYERS[1].loadMovie("C:/Users/gameoverwell/Desktop/train17-JPEG720-JPEG540.mov");
-#endif
-			
-			PLAYERS[0].setLoopState(OF_LOOP_NORMAL);
-			PLAYERS[1].setLoopState(OF_LOOP_NORMAL);
+        case '1':
+		case '2':
+		case '3':
+		case '4':
+		case '5':
+		case '6':
+		case '7':
+		case '8':
+		case '9':
+			EFFECTS[1].reallocate(&GROUPS[1].videoGroup[e.key - '0'], 720, 405);
 			break;
+
     }
 
 

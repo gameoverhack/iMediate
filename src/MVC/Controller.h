@@ -34,6 +34,9 @@ public:
 
     void						setup();
 
+    void                        checkFolders();
+    void                        groupLoadDone(int & id);
+
 private:
 
 };

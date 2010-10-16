@@ -90,6 +90,9 @@
 			<Add directory="src\MVC" />
 			<Add directory="src" />
 			<Add directory="..\..\..\addons\goThreadedVideo\src" />
+			<Add directory="..\..\..\addons\ofxMSAInteractiveObject\src" />
+			<Add directory="..\..\..\addons\ofxSimpleGuiToo\src" />
+			<Add directory="..\..\..\addons\ofxSimpleGuiToo\src\Controls" />
 		</Compiler>
 		<Linker>
 			<Add option="../../../libs/FreeImage/lib/win_cb/FreeImage.lib" />
@@ -176,6 +179,8 @@
 		<Unit filename="..\..\..\addons\ofx3DModelLoader\src\ofx3dModelLoader.cpp" />
 		<Unit filename="..\..\..\addons\ofxFbo\src\ofxFbo.cpp" />
 		<Unit filename="..\..\..\addons\ofxFbo\src\ofxFbo.h" />
+		<Unit filename="..\..\..\addons\ofxMSAInteractiveObject\src\ofxMSAInteractiveObject.cpp" />
+		<Unit filename="..\..\..\addons\ofxMSAInteractiveObject\src\ofxMSAInteractiveObject.h" />
 		<Unit filename="..\..\..\addons\ofxMidi\libs\RtError.h" />
 		<Unit filename="..\..\..\addons\ofxMidi\libs\RtMidi.cpp" />
 		<Unit filename="..\..\..\addons\ofxMidi\libs\RtMidi.h" />
@@ -293,6 +298,40 @@
 		</Unit>
 		<Unit filename="..\..\..\addons\ofxShader\src\ofxShader.cpp" />
 		<Unit filename="..\..\..\addons\ofxShader\src\ofxShader.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiButton.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiButton.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiColorPicker.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiColorPicker.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiComboBox.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiComboBox.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiContent.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiContent.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiFPSCounter.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiFPSCounter.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiMovieSlider.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiMovieSlider.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiQuadWarp.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiQuadWarp.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiSlider2d.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiSlider2d.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiSliderBase.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiSliderFloat.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiSliderInt.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiTitle.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiTitle.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiToggle.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\Controls\ofxSimpleGuiToggle.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiConfig.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiConfig.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiControl.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiControl.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiIncludes.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiPage.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiPage.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiToo.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiToo.h" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiValueControl.cpp" />
+		<Unit filename="..\..\..\addons\ofxSimpleGuiToo\src\ofxSimpleGuiValueControl.h" />
 		<Unit filename="..\..\..\addons\ofxThread\src\ofxThread.cpp">
 			<Option virtualFolder="addons\ofxThread\src" />
 		</Unit>
@@ -395,10 +434,22 @@
 		<Unit filename="src\MVC\View.h">
 			<Option virtualFolder="src\" />
 		</Unit>
+		<Unit filename="src\goThreadedImage.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goThreadedImage.h">
+			<Option virtualFolder="src\" />
+		</Unit>
 		<Unit filename="src\goVideoEffectCL.cpp">
 			<Option virtualFolder="src\" />
 		</Unit>
 		<Unit filename="src\goVideoEffectCL.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goVideoGroup.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goVideoGroup.h">
 			<Option virtualFolder="src\" />
 		</Unit>
 		<Unit filename="src\main.cpp">
