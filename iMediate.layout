@@ -13,11 +13,11 @@
 	<File name="..\..\..\addons\goDirList\src\goDirList.h" open="0" top="0" tabpos="26">
 		<Cursor position="1876" topLine="39" />
 	</File>
-	<File name="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.cpp" open="0" top="0" tabpos="15">
-		<Cursor position="5346" topLine="141" />
+	<File name="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="13430" topLine="409" />
 	</File>
-	<File name="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.h" open="0" top="0" tabpos="16">
-		<Cursor position="1816" topLine="57" />
+	<File name="..\..\..\addons\goThreadedVideo\src\goThreadedVideo.h" open="1" top="0" tabpos="18">
+		<Cursor position="1331" topLine="19" />
 	</File>
 	<File name="..\..\..\addons\goVideoPlayer\src\goVideoPlayer.cpp" open="0" top="0" tabpos="12">
 		<Cursor position="4914" topLine="163" />
@@ -76,11 +76,11 @@
 	<File name="src\MVC\Constants.h" open="0" top="0" tabpos="24">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\MVC\Controller.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="2439" topLine="62" />
+	<File name="src\MVC\Controller.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="3675" topLine="127" />
 	</File>
-	<File name="src\MVC\Controller.h" open="0" top="0" tabpos="31">
-		<Cursor position="691" topLine="7" />
+	<File name="src\MVC\Controller.h" open="1" top="0" tabpos="14">
+		<Cursor position="705" topLine="7" />
 	</File>
 	<File name="src\MVC\Logger.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="0" topLine="0" />
@@ -89,42 +89,42 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="src\MVC\Model.h" open="1" top="0" tabpos="5">
-		<Cursor position="552" topLine="9" />
+		<Cursor position="1667" topLine="55" />
 	</File>
-	<File name="src\MVC\View.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="1016" topLine="33" />
+	<File name="src\MVC\View.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="697" topLine="42" />
 	</File>
-	<File name="src\MVC\View.h" open="0" top="0" tabpos="4">
-		<Cursor position="777" topLine="18" />
+	<File name="src\MVC\View.h" open="1" top="0" tabpos="8">
+		<Cursor position="580" topLine="0" />
 	</File>
-	<File name="src\goTextLoader.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="1072" topLine="21" />
+	<File name="src\goTextLoader.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1027" topLine="21" />
 	</File>
 	<File name="src\goTextLoader.h" open="1" top="0" tabpos="2">
 		<Cursor position="73" topLine="0" />
 	</File>
-	<File name="src\goThreadedImage.cpp" open="0" top="0" tabpos="23">
-		<Cursor position="980" topLine="5" />
+	<File name="src\goThreadedImage.cpp" open="1" top="0" tabpos="17">
+		<Cursor position="908" topLine="0" />
 	</File>
-	<File name="src\goThreadedImage.h" open="0" top="0" tabpos="22">
-		<Cursor position="105" topLine="0" />
+	<File name="src\goThreadedImage.h" open="1" top="0" tabpos="19">
+		<Cursor position="374" topLine="4" />
 	</File>
-	<File name="src\goVideoEffectCL.cpp" open="0" top="0" tabpos="10">
-		<Cursor position="8775" topLine="0" />
+	<File name="src\goVideoEffectCL.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="708" topLine="204" />
 	</File>
-	<File name="src\goVideoEffectCL.h" open="0" top="0" tabpos="9">
-		<Cursor position="1008" topLine="26" />
+	<File name="src\goVideoEffectCL.h" open="1" top="0" tabpos="16">
+		<Cursor position="1581" topLine="28" />
 	</File>
-	<File name="src\goVideoGroup.cpp" open="0" top="0" tabpos="20">
-		<Cursor position="1178" topLine="29" />
+	<File name="src\goVideoGroup.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="640" topLine="37" />
 	</File>
-	<File name="src\goVideoGroup.h" open="0" top="0" tabpos="21">
-		<Cursor position="506" topLine="0" />
+	<File name="src\goVideoGroup.h" open="1" top="0" tabpos="21">
+		<Cursor position="283" topLine="0" />
 	</File>
-	<File name="src\main.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="229" topLine="0" />
+	<File name="src\main.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="296" topLine="0" />
 	</File>
-	<File name="src\testApp.cpp" open="0" top="0" tabpos="1">
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="10">
 		<Cursor position="328" topLine="0" />
 	</File>
 	<File name="src\testApp.h" open="0" top="0" tabpos="5">

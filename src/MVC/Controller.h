@@ -18,6 +18,10 @@
 #include "Logger.h"
 #include "ApplicationLoader.h"
 
+#define GROUPS          CONTROLLER->groups
+
+#include "goVideoGroup.h"
+
 class Controller
 {
 
@@ -31,6 +35,8 @@ public:
     {
         LOG("Controller destroyed");
     };
+
+    goVideoGroup                groups[MAX_VIDEO_CHANNELS];
 
     void						setup();
 

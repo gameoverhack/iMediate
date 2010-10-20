@@ -187,6 +187,10 @@ void goVideoEffectCL::update()
                 MSA::OpenCLKernel *kernel = openCL.kernel("go_hue");
                 kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                 kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
+                rLevel = hueColour.r;
+                gLevel = hueColour.g;
+                bLevel = hueColour.b;
+                aLevel = hueColour.a;
                 kernel->setArg(2, rLevel);
                 kernel->setArg(3, gLevel);
                 kernel->setArg(4, bLevel);

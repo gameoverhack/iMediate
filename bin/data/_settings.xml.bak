@@ -1,10 +1,128 @@
 <controls>
     <ComboBox_folderBrowser_1>
         <name>folderBrowser 1</name>
-        <value>15</value>
+        <value>12</value>
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>16</value>
+        <value>10</value>
     </ComboBox_folderBrowser_2>
+    <Toggle_Blur>
+        <name>Blur</name>
+        <value>1</value>
+        <name>Blur</name>
+        <value>1</value>
+    </Toggle_Blur>
+    <SliderInt_Blur_Level>
+        <name>Blur Level</name>
+        <value>4</value>
+        <name>Blur Level</name>
+        <value>4</value>
+    </SliderInt_Blur_Level>
+    <Toggle_FlipX>
+        <name>FlipX</name>
+        <value>0</value>
+        <name>FlipX</name>
+        <value>0</value>
+    </Toggle_FlipX>
+    <Toggle_FlipY>
+        <name>FlipY</name>
+        <value>0</value>
+        <name>FlipY</name>
+        <value>0</value>
+    </Toggle_FlipY>
+    <Toggle_Greyscale>
+        <name>Greyscale</name>
+        <value>0</value>
+        <name>Greyscale</name>
+        <value>0</value>
+    </Toggle_Greyscale>
+    <Toggle_Invert>
+        <name>Invert</name>
+        <value>0</value>
+        <name>Invert</name>
+        <value>0</value>
+    </Toggle_Invert>
+    <Toggle_Threshold>
+        <name>Threshold</name>
+        <value>0</value>
+        <name>Threshold</name>
+        <value>0</value>
+    </Toggle_Threshold>
+    <SliderFloat_Threshold_Level>
+        <name>Threshold Level</name>
+        <value>0.630000</value>
+        <name>Threshold Level</name>
+        <value>0.630000</value>
+    </SliderFloat_Threshold_Level>
+    <Toggle_Hue>
+        <name>Hue</name>
+        <value>0</value>
+        <name>Hue</name>
+        <value>0</value>
+    </Toggle_Hue>
+    <ColorPicker_Hue_Colour>
+        <name>Hue Colour</name>
+        <values_0>0.610000</values_0>
+        <values_1>0.075000</values_1>
+        <values_2>0.345000</values_2>
+        <values_3>1.000000</values_3>
+        <name>Hue Colour</name>
+        <values_0>0.610000</values_0>
+        <values_1>0.075000</values_1>
+        <values_2>0.345000</values_2>
+        <values_3>1.000000</values_3>
+    </ColorPicker_Hue_Colour>
+    <Toggle_Saturation>
+        <name>Saturation</name>
+        <value>0</value>
+        <name>Saturation</name>
+        <value>0</value>
+    </Toggle_Saturation>
+    <SliderFloat_Saturation_Level>
+        <name>Saturation Level</name>
+        <value>2.000000</value>
+        <name>Saturation Level</name>
+        <value>2.000000</value>
+    </SliderFloat_Saturation_Level>
+    <Toggle_Contrast>
+        <name>Contrast</name>
+        <value>1</value>
+        <name>Contrast</name>
+        <value>1</value>
+    </Toggle_Contrast>
+    <SliderFloat_Contrast_Level>
+        <name>Contrast Level</name>
+        <value>1.180000</value>
+        <name>Contrast Level</name>
+        <value>1.180000</value>
+    </SliderFloat_Contrast_Level>
+    <Toggle_Brightness>
+        <name>Brightness</name>
+        <value>0</value>
+        <name>Brightness</name>
+        <value>0</value>
+    </Toggle_Brightness>
+    <SliderFloat_Brightness_Level>
+        <name>Brightness Level</name>
+        <value>2.000000</value>
+        <name>Brightness Level</name>
+        <value>2.000000</value>
+    </SliderFloat_Brightness_Level>
+    <Toggle_Blur></Toggle_Blur>
+    <SliderInt_Blur_Level></SliderInt_Blur_Level>
+    <Toggle_FlipX></Toggle_FlipX>
+    <Toggle_FlipY></Toggle_FlipY>
+    <Toggle_Greyscale></Toggle_Greyscale>
+    <Toggle_Invert></Toggle_Invert>
+    <Toggle_Threshold></Toggle_Threshold>
+    <SliderFloat_Threshold_Level></SliderFloat_Threshold_Level>
+    <Toggle_Hue></Toggle_Hue>
+    <ColorPicker_Hue_Colour></ColorPicker_Hue_Colour>
+    <Toggle_Saturation></Toggle_Saturation>
+    <SliderFloat_Saturation_Level></SliderFloat_Saturation_Level>
+    <Toggle_Contrast></Toggle_Contrast>
+    <SliderFloat_Contrast_Level></SliderFloat_Contrast_Level>
+    <Toggle_Brightness></Toggle_Brightness>
+    <SliderFloat_Brightness_Level></SliderFloat_Brightness_Level>
 </controls>

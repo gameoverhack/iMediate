@@ -6,7 +6,7 @@
  *  Copyright 2009 __MyCompanyName__. All rights reserved.
  *
  */
-static bool doEffect = false;
+
 #include "View.h"
 //--------------------------------------------------------------
 bool View::setup()
@@ -18,7 +18,10 @@ bool View::setup()
         enableViewEvents();
         showMSG = false;
         //ofHideCursor();
+        bCustomFullscreen = false;
     }
+
+    FBO.setup(1024, 768);
 
     return true;
 }
@@ -38,9 +41,18 @@ void View::update(ofEventArgs &e)
     }
 
 
-    /*if(doEffect) {
-		PLAYERS[1].update();
-	} else PLAYERS[1].update();*/
+    // actually do the drawing of effects
+    // and layers in the update to an FBO
+
+    FBO.begin();
+
+    EFFECTS[0].draw();
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_ZERO, GL_SRC_COLOR);
+    EFFECTS[1].draw();
+    glDisable(GL_BLEND);
+
+    FBO.end();
 
 }
 
@@ -49,23 +61,40 @@ void View::update(ofEventArgs &e)
 void View::draw(ofEventArgs &e)
 {
 
-
-	//glEnable(GL_BLEND);
-	//	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
-        EFFECTS[0].draw();
-        EFFECTS[1].draw();
-        //if(doEffect) {
-		//	PLAYERS[1].draw();
-		//} else PLAYERS[1].draw(0,0);
-
-    //glDisable(GL_BLEND);
-
-
+    // draw video layer 1 & 2 separately
     glPushMatrix();
-    //glTranslatef(20,200,0);
-    GUI.draw(10.0f, 300.0f);
+    glTranslated(0,0,0);
+    glScalef(0.5f, 0.5f, 0.0f);
+    EFFECTS[0].draw();
     glPopMatrix();
 
+    glPushMatrix();
+    glTranslated(720/2.0f,0,0);
+    glScalef(0.5f, 0.5f, 0.0f);
+    EFFECTS[1].draw();
+    glPopMatrix();
+
+    // draw combo effects FBO for preview
+    glPushMatrix();
+    glTranslated(720,0,0);
+    glScalef(0.5f, 0.5f, 0.0f);
+    FBO.draw(0,0);
+    glPopMatrix();
+
+    // draw main out
+    glPushMatrix();
+    glTranslated(1680,0,0);
+    glScalef(1024/720.0f, 768/405.0f, 0.0f);
+    FBO.draw(0,0);
+    glPopMatrix();
+
+    // draw controls
+    glPushMatrix();
+    GUI.draw(10.0f, 405/2.0f + 10.0f);
+    glPopMatrix();
+
+    GROUPS[0].drawPreviews(720/2.0f * 3.0f, 0);
+    GROUPS[1].drawPreviews(720/2.0f * 3.0f + 720/10.0f + 10.0f, 0);
 
     if(showMSG)
     {
@@ -78,6 +107,12 @@ void View::draw(ofEventArgs &e)
         fpsStr += "effect_02_FPS: " + ofToString(EFFECTS[1].currentFPS) + "\n";
 
         string stateMsg = "appstate: " + states[GETAPPSTATE] + "\n\n";
+
+        for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
+        {
+            stateMsg += "Group " + ofToString(i) + " loading: " + GROUPS[i].currentlyLoadingVideo + "\n";
+        }
+
 
         string msg = fpsStr + " " + stateMsg;
         ofDrawBitmapString(msg, 20, ofGetHeight()-180);
@@ -94,30 +129,61 @@ void View::keyPressed(ofKeyEventArgs &e)
 
     switch (e.key)
     {
-		case 'f':
-			showMSG = !showMSG;
-			break;
-        case '1':
-		case '2':
-		case '3':
-		case '4':
-		case '5':
-		case '6':
-		case '7':
-		case '8':
-		case '9':
-			EFFECTS[1].reallocate(&GROUPS[1].videoGroup[e.key - '0'], 720, 405);
-			break;
+    case OF_KEY_F2:
+        showMSG = !showMSG;
+        break;
+    case OF_KEY_F12:
+        exit(0);
+        break;
+    case OF_KEY_F1:
+#ifdef TARGET_WIN32
+        if (!bCustomFullscreen)
+        {
+            LOG("Trying to force fullscreen on Windows 7" + ofToString(ofGetWidth()));
+            windowTitle = "imMediate";
+            ofSetWindowTitle(windowTitle);
+            int x = 0;
+            int y = 0;
+            int width = 1680 + 1024;
+            int height = 1050;
+            int storedWindowX, storedWindowY, storedWindowH, storedWindowW;
+            HWND vWnd  = FindWindow(NULL,  "imMediate");
+            long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
+            windowStyle &= ~WS_OVERLAPPEDWINDOW;
+            windowStyle |= WS_POPUP;
+            SetWindowLong(vWnd, GWL_STYLE, windowStyle);
+            SetWindowPos(vWnd, HWND_TOP, x, y, width, height, SWP_FRAMECHANGED);
+            bCustomFullscreen = true;
+        }
+        else
+        {
+            int x = 0;
+            int y = 0;
+            int width = 1680;
+            int height = 1050;
+            HWND vWnd  = FindWindow(NULL,  "imMediate");
+            long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
+            windowStyle |= WS_TILEDWINDOW;
+            SetWindowLong(vWnd, GWL_STYLE, windowStyle);
+            SetWindowPos(vWnd, HWND_TOP, x, y, width, height, SWP_FRAMECHANGED);
+            bCustomFullscreen = false;
+        }
 
+#else
+        ofToggleFullscreen();
+#endif
+        break;
     }
 
+    if (e.key - 'a' >= 0 && e.key - 'a' < 27) GROUPS[0].playVideoInGroup(e.key - 'a');
+    if (e.key - 'A' >= 0 && e.key - 'A' < 27) GROUPS[1].playVideoInGroup(e.key - 'A');
 
 }
 
 //--------------------------------------------------------------
 void View::keyReleased(ofKeyEventArgs &e)
 {
-	doEffect ^= true;
+
 }
 
 //--------------------------------------------------------------

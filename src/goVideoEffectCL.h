@@ -34,6 +34,7 @@ class goVideoEffectCL
         int					blurAmount;
         cl_float			threshLevel;
         cl_float            rLevel, gLevel, bLevel, aLevel, contrastLevel, saturationLevel, brightnessLevel;
+        ofColor             hueColour;
 
         bool                allocated;
 

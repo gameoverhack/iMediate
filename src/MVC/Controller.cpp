@@ -49,7 +49,6 @@ void Controller::setup()
 
         ofSetLogLevel(OF_LOG_VERBOSE);
 
-
         string rootVideoFolder;
 
 #ifdef TARGET_OSX
@@ -73,19 +72,46 @@ void Controller::setup()
         GUI.addTitle("Video Folders");
         for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
         {
-            ofxSimpleGuiComboBox box = GUI.addComboBox("folderBrowser " + ofToString(i+1), FOLDERS[i], FILES.getNumberOfDirectories(),  folderArray);
+            GUI.addComboBox("folderBrowser " + ofToString(i+1), FOLDERS[i], FILES.getNumberOfDirectories(),  folderArray);
             ofAddListener(GROUPS[i].groupLoaded, this, &Controller::groupLoadDone);
 
         }
 
+        for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
+        {
+            GUI.addTitle("Effects Group" + i).setNewColumn(true);
+            GUI.addToggle("Blur", EFFECTS[i].doBlur);
+            GUI.addSlider("Blur Level", EFFECTS[i].blurAmount, 0.0, 20);
+            GUI.addToggle("FlipX", EFFECTS[i].doFlipX);
+            GUI.addToggle("FlipY", EFFECTS[i].doFlipY);
+            GUI.addToggle("Greyscale", EFFECTS[i].doGreyscale);
+            GUI.addToggle("Invert", EFFECTS[i].doInvert);
+            GUI.addToggle("Threshold", EFFECTS[i].doThreshold);
+            GUI.addSlider("Threshold Level", EFFECTS[i].threshLevel, 0.0, 1);
+            EFFECTS[i].threshLevel = 0.2;
+            GUI.addToggle("Hue", EFFECTS[i].doHue);
+            GUI.addColorPicker("Hue Colour", &(EFFECTS[i].hueColour.r));
+            GUI.addToggle("Saturation", EFFECTS[i].doSaturation);
+            GUI.addSlider("Saturation Level", EFFECTS[i].saturationLevel, 0.0, 10);
+            EFFECTS[i].saturationLevel = 1.0;
+            GUI.addToggle("Contrast", EFFECTS[i].doContrast);
+            GUI.addSlider("Contrast Level", EFFECTS[i].contrastLevel, 0.0, 10);
+            EFFECTS[i].contrastLevel = 1.0;
+            GUI.addToggle("Brightness", EFFECTS[i].doBrightness);
+            GUI.addSlider("Brightness Level", EFFECTS[i].brightnessLevel, 0.0, 10);
+            EFFECTS[i].brightnessLevel = 1.0;
+        }
+for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
+    {
+        gui.addTitle("Previews" + i).setNewColumn(true);
+        for (int j = 0; j < MAX_VIDEOS_IN_GROUP; j++)
+        {
+            GUI.addContent("file", GROUPS[i].videoPreviews[j], 40);
+        }
+    }
         GUI.loadFromXML();
 
         GUI.show();
-
-        EFFECTS[1].doBlur = true;
-        EFFECTS[1].blurAmount = 5;
-
-        EFFECTS[0].doInvert = true;
 
         DICTIONARY.loadText(ofToDataPath("Spanish.txt"));
         DICTIONARY.loadText(ofToDataPath("French.txt"));
@@ -96,30 +122,10 @@ void Controller::setup()
 
         for (int i = 0; i < DICTIONARY.words.size(); i++)
         {
-            cout << i << " = " << DICTIONARY.words[i] << endl;
+            //cout << i << " = " << DICTIONARY.words[i] << endl;
         }
 
-/*
 
-		PLAYERS[0].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trainStation/other/slow_legs-JPEG720-JPEG540.mov");
-		PLAYERS[1].loadMovie("/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/trains02/train2/train17-JPEG720-JPEG540.mov");
-#else
-		PLAYERS[0].loadMovie("C:/Users/gameoverwell/Desktop/slow_legs-JPEG720-JPEG540.mov");
-		PLAYERS[1].loadMovie("C:/Users/gameoverwell/Desktop/train17-JPEG720-JPEG540.mov");
-#endif
-
-        PLAYERS[0].play();
-        PLAYERS[1].play();
-
-        EFFECTS[0].allocate(&PLAYERS[0], 720, 405);
-
-        EFFECTS[1].allocate(&PLAYERS[1], 720, 405);
-
-        EFFECTS[1].doBlur = true;
-        EFFECTS[1].blurAmount = 5;
-
-        EFFECTS[0].doInvert = true;
-*/
         // start application
         SETAPPSTATE(APP_READY);
     }
@@ -137,21 +143,22 @@ void Controller::checkFolders()
 
             vector<string> files;
             FILES.getFilesByDirectory(FOLDERS[i], &files);
+
             GROUPS[i].loadVectorOfVideos(&files);
 
-            for (int j = 0; j < files.size(); j++)
+            /*for (int j = 0; j < files.size(); j++)
             {
                 cout << i << " :: " << j << " :: " << files[i] << endl;
             }
+            */
         }
     }
-
 
 }
 
 void Controller::groupLoadDone(int & id)
 {
 
-    EFFECTS[id].reallocate(&GROUPS[id].videoGroup[0], 720, 405);
-    //GROUPS[id].videoGroup[0].forceTexture();
+
+
 }

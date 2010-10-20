@@ -18,9 +18,9 @@
 #define SETAPPSTATE		MODEL->setAppState
 #define GETAPPSTATE		MODEL->getAppState()
 
-#define GROUPS          MODEL->groups
 #define PLAYERS         MODEL->players
 #define EFFECTS         MODEL->effects
+#define FBO             MODEL->fbo
 
 #define DICTIONARY      MODEL->text
 
@@ -32,12 +32,12 @@
 #define LASTFOLDERS     MODEL->lastFolderBox
 
 #include "ofxXmlSettings.h"
-#include "goVideoGroup.h"
 #include "goThreadedVideo.h"
 #include "goVideoEffectCL.h"
 #include "goDirList.h"
 #include "goTextLoader.h"
 #include "ofxSimpleGuiToo.h"
+#include "ofxFbo.h"
 
 #include "Singleton.h"
 #include "Constants.h"
@@ -66,13 +66,14 @@ public:
     void						setAppState(int _state);
     int							getAppState();
 
-    goVideoGroup                groups[MAX_VIDEO_CHANNELS];
-    goThreadedVideo            players[MAX_VIDEO_CHANNELS];
+    goThreadedVideo          *  players[MAX_VIDEO_CHANNELS];
     goVideoEffectCL             effects[MAX_VIDEO_CHANNELS];
 
     goDirList                   files;
 
     goTextLoader                text;
+
+    ofxFbo                      fbo;
 
     // gui elements
     int                         folderBox[MAX_VIDEO_CHANNELS];

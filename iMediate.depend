@@ -1572,7 +1572,7 @@
 1286349211 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\goutils\src\goutils.cpp
 	"goUtils.h"
 
-1286349204 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\govideoplayer\src\govideoplayer.cpp
+1287555192 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\govideoplayer\src\govideoplayer.cpp
 	"goVideoPlayer.h"
 	"ofUtils.h"
 	<gst/video/video.h>
@@ -2073,14 +2073,14 @@
 1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\applicationloader.h
 	"Model.h"
 
-1287246655 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
+1287557231 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
 	"ofxXmlSettings.h"
-	"goVideoGroup.h"
 	"goThreadedVideo.h"
 	"goVideoEffectCL.h"
 	"goDirList.h"
 	"goTextLoader.h"
 	"ofxSimpleGuiToo.h"
+	"ofxFbo.h"
 	"Singleton.h"
 	"Constants.h"
 	"Logger.h"
@@ -2097,17 +2097,18 @@
 	"Singleton.h"
 	"ofUtils.h"
 
-1287246875 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
+1287568523 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
 	"Controller.h"
 
-1287216397 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
+1287557215 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
 	"Singleton.h"
 	"Model.h"
 	"View.h"
 	"Logger.h"
 	"ApplicationLoader.h"
+	"goVideoGroup.h"
 
-1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.h
+1287542831 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.h
 	"Singleton.h"
 	"Controller.h"
 	"Logger.h"
@@ -2119,10 +2120,10 @@
 1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.cpp
 	"Model.h"
 
-1287219322 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
+1287566976 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
 	"View.h"
 
-1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\main.cpp
+1287540454 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\main.cpp
 	"ofMain.h"
 	"testApp.h"
 	"ofAppGlutWindow.h"
@@ -2134,12 +2135,12 @@
 1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\testapp.cpp
 	"testApp.h"
 
-1287219305 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
+1287567184 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
 	"MSAOpenCL.h"
 	"goThreadedVideo.h"
 	"ofxFbo.h"
 
-1287219259 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
+1287561027 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
 	"goVideoEffectCL.h"
 
 1286394720 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goopenclcontext.h
@@ -2149,16 +2150,17 @@
 1286394716 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goopenclcontext.cpp
 	"goOpenCLContext.h"
 
-1287218355 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.h
+1287554487 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.h
 	"ofxThread.h"
 	"ofEvents.h"
 	"string.h"
 	"goVideoPlayer.h"
 
-1287218629 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.cpp
+1287561663 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.cpp
 	"goThreadedVideo.h"
 
-1287220329 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.h
+1287568706 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.h
+	"Model.h"
 	"goThreadedVideo.h"
 	"goThreadedImage.h"
 
@@ -2166,7 +2168,7 @@
 	"ofMain.h"
 	"ofxThread.h"
 
-1287218409 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.cpp
+1287568725 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.cpp
 	"goVideoGroup.h"
 
 1287195497 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gothreadedimage.cpp
@@ -2671,4 +2673,7 @@
 
 1287246904 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.h
 	"ofMain.h"
+
+1287246927 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.cpp
+	"goTextLoader.h"
 
