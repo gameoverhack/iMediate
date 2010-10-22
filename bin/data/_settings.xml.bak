@@ -1,12 +1,20 @@
 <controls>
     <ComboBox_folderBrowser_1>
         <name>folderBrowser 1</name>
-        <value>12</value>
+        <value>16</value>
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>10</value>
+        <value>6</value>
     </ComboBox_folderBrowser_2>
+    <SliderFloat_Channel_A_Speed>
+        <name>Channel A Speed</name>
+        <value>1.000000</value>
+    </SliderFloat_Channel_A_Speed>
+    <SliderFloat_Channel_B_Speed>
+        <name>Channel B Speed</name>
+        <value>1.000000</value>
+    </SliderFloat_Channel_B_Speed>
     <Toggle_Blur>
         <name>Blur</name>
         <value>1</value>
@@ -15,7 +23,7 @@
     </Toggle_Blur>
     <SliderInt_Blur_Level>
         <name>Blur Level</name>
-        <value>4</value>
+        <value>17</value>
         <name>Blur Level</name>
         <value>4</value>
     </SliderInt_Blur_Level>
@@ -81,9 +89,9 @@
     </Toggle_Saturation>
     <SliderFloat_Saturation_Level>
         <name>Saturation Level</name>
-        <value>2.000000</value>
+        <value>0.650000</value>
         <name>Saturation Level</name>
-        <value>2.000000</value>
+        <value>0.650000</value>
     </SliderFloat_Saturation_Level>
     <Toggle_Contrast>
         <name>Contrast</name>
@@ -93,9 +101,9 @@
     </Toggle_Contrast>
     <SliderFloat_Contrast_Level>
         <name>Contrast Level</name>
-        <value>1.180000</value>
+        <value>7.500000</value>
         <name>Contrast Level</name>
-        <value>1.180000</value>
+        <value>7.500000</value>
     </SliderFloat_Contrast_Level>
     <Toggle_Brightness>
         <name>Brightness</name>
@@ -125,4 +133,44 @@
     <SliderFloat_Contrast_Level></SliderFloat_Contrast_Level>
     <Toggle_Brightness></Toggle_Brightness>
     <SliderFloat_Brightness_Level></SliderFloat_Brightness_Level>
+    <Toggle_Reverse_Channels>
+        <name>Reverse Channels</name>
+        <value>0</value>
+    </Toggle_Reverse_Channels>
+    <Toggle_Channel_A_Direct>
+        <name>Channel A Direct</name>
+        <value>0</value>
+    </Toggle_Channel_A_Direct>
+    <Toggle_Channel_A_FXMute>
+        <name>Channel A FXMute</name>
+        <value>0</value>
+    </Toggle_Channel_A_FXMute>
+    <Toggle_Channel_B_Direct>
+        <name>Channel B Direct</name>
+        <value>0</value>
+    </Toggle_Channel_B_Direct>
+    <Toggle_Channel_B_FXMute>
+        <name>Channel B FXMute</name>
+        <value>0</value>
+    </Toggle_Channel_B_FXMute>
+    <SliderFloat_Channel_A_Fade>
+        <name>Channel A Fade</name>
+        <value>1.000000</value>
+    </SliderFloat_Channel_A_Fade>
+    <SliderFloat_Channel_B_Fade>
+        <name>Channel B Fade</name>
+        <value>1.000000</value>
+    </SliderFloat_Channel_B_Fade>
+    <SliderFloat_X-Fade>
+        <name>X-Fade</name>
+        <value>0.000000</value>
+    </SliderFloat_X-Fade>
+    <ComboBox_X-Fade_Mode_1>
+        <name>X-Fade Mode 1</name>
+        <value>1</value>
+    </ComboBox_X-Fade_Mode_1>
+    <ComboBox_X-Fade_Mode_2>
+        <name>X-Fade Mode 2</name>
+        <value>1</value>
+    </ComboBox_X-Fade_Mode_2>
 </controls>

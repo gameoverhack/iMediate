@@ -16,6 +16,7 @@ class goVideoEffectCL
         void                allocate(goThreadedVideo * _video, int _vidWidth, int _vidHeight);
         void                reallocate(goThreadedVideo * _video, int _vidWidth, int _vidHeight);
 
+        void                setup();
         void                update();
         void                draw();
 
@@ -37,10 +38,17 @@ class goVideoEffectCL
         ofColor             hueColour;
 
         bool                allocated;
+        bool                muteAll;
+
+        goThreadedVideo *     video;
+
+        float                 videoSpeed;
+        float                 fadeLevel;
 
     protected:
 
         ofxFbo              fbo;
+
         int                 fboTexID;
 
         MSA::OpenCLImage	clImage[2];             // two OpenCL images
@@ -54,14 +62,13 @@ class goVideoEffectCL
 
         unsigned char		*pixels;				// temp buffer
 
-
-
         int					vidWidth;
         int					vidHeight;
+        float               lastSpeed;
 
     private:
 
-        goThreadedVideo *     video;
+
 };
 
 #endif // __GOVIDEOEFFECTCL_H

@@ -434,6 +434,18 @@
 		<Unit filename="src\MVC\View.h">
 			<Option virtualFolder="src\" />
 		</Unit>
+		<Unit filename="src\goGuiManager.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goGuiManager.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goMidiManager.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goMidiManager.h">
+			<Option virtualFolder="src\" />
+		</Unit>
 		<Unit filename="src\goTextLoader.cpp">
 			<Option virtualFolder="src\" />
 		</Unit>
@@ -456,6 +468,12 @@
 			<Option virtualFolder="src\" />
 		</Unit>
 		<Unit filename="src\goVideoGroup.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goVideoPreview.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goVideoPreview.h">
 			<Option virtualFolder="src\" />
 		</Unit>
 		<Unit filename="src\main.cpp">

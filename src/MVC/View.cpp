@@ -16,12 +16,13 @@ bool View::setup()
     {
         ofSetVerticalSync(true);
         enableViewEvents();
-        showMSG = false;
+        showMSG = true;
         //ofHideCursor();
         bCustomFullscreen = false;
     }
 
-    FBO.setup(1024, 768);
+    FBO_OUTPUT.setup(1024, 768);
+    FBO_PREVIEW.setup(1024, 768);
 
     return true;
 }
@@ -32,7 +33,8 @@ void View::update(ofEventArgs &e)
 {
     ofBackground(0, 0, 0);
 
-    CONTROLLER->checkFolders();
+    GUIMANAGER->update();
+    MIDIMANAGER->update();
 
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
     {
@@ -40,22 +42,59 @@ void View::update(ofEventArgs &e)
         GROUPS[i].update();
     }
 
-
     // actually do the drawing of effects
-    // and layers in the update to an FBO
+    // and layers in the update to an FBO_OUTPUT
 
-    FBO.begin();
+    FBO_OUTPUT.begin();
 
-    EFFECTS[0].draw();
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_ZERO, GL_SRC_COLOR);
-    EFFECTS[1].draw();
-    glDisable(GL_BLEND);
+    if (!CHANNELADIRECT && !CHANNELBDIRECT)
+    {
+        drawBlend();
+    }
+    else
+    {
+        glPushMatrix();
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+        if (CHANNELADIRECT) EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+        if (CHANNELBDIRECT) EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
+        glPopMatrix();
+    }
 
-    FBO.end();
+    FBO_OUTPUT.end();
+
+
+    FBO_PREVIEW.begin();
+    drawBlend();
+    FBO_PREVIEW.end();
 
 }
 
+void View::drawBlend()
+{
+    float fadeLevel;
+
+    glPushMatrix();
+    fadeLevel = (XFADE >= 0 ? XFADE : 0);
+    glColor4f(1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel);         // cross fade
+
+    EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
+
+    glPopMatrix();
+
+    glEnable(GL_BLEND);
+    glBlendFunc(xblendModes[XMODES[0]], xblendModes[XMODES[1]]);
+
+    glPushMatrix();
+    fadeLevel = (XFADE <= 0 ? -XFADE : 0);
+    glColor4f(1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel);         // cross fade
+
+    EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
+
+    glDisable(GL_BLEND);
+    glPopMatrix();
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+}
 
 //--------------------------------------------------------------
 void View::draw(ofEventArgs &e)
@@ -74,18 +113,25 @@ void View::draw(ofEventArgs &e)
     EFFECTS[1].draw();
     glPopMatrix();
 
-    // draw combo effects FBO for preview
+    // draw combo effects FBO_OUTPUT for preview
     glPushMatrix();
     glTranslated(720,0,0);
     glScalef(0.5f, 0.5f, 0.0f);
-    FBO.draw(0,0);
+    FBO_PREVIEW.draw(0,0);
+    glPopMatrix();
+
+    // draw combo effects FBO_OUTPUT for preview
+    glPushMatrix();
+    glTranslated(720*1.5,0,0);
+    glScalef(0.5f, 0.5f, 0.0f);
+    FBO_OUTPUT.draw(0,0);
     glPopMatrix();
 
     // draw main out
     glPushMatrix();
     glTranslated(1680,0,0);
     glScalef(1024/720.0f, 768/405.0f, 0.0f);
-    FBO.draw(0,0);
+    FBO_OUTPUT.draw(0,0);
     glPopMatrix();
 
     // draw controls
@@ -93,8 +139,24 @@ void View::draw(ofEventArgs &e)
     GUI.draw(10.0f, 405/2.0f + 10.0f);
     glPopMatrix();
 
-    GROUPS[0].drawPreviews(720/2.0f * 3.0f, 0);
-    GROUPS[1].drawPreviews(720/2.0f * 3.0f + 720/10.0f + 10.0f, 0);
+    // draw rect around preview icon currently playing
+    glPushMatrix();
+    glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
+    ofNoFill();
+    ofRect(GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].x,
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].y-1,
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].width+1,
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].height+1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
+    ofNoFill();
+    ofRect(GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].x,
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].y-1,
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].width+1,
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].height+1);
+    glPopMatrix();
 
     if(showMSG)
     {
@@ -112,6 +174,12 @@ void View::draw(ofEventArgs &e)
         {
             stateMsg += "Group " + ofToString(i) + " loading: " + GROUPS[i].currentlyLoadingVideo + "\n";
         }
+
+        stateMsg += "midi in status: channel: " + ofToString(LASTMIDIMSG.channel) +
+                    ", status: " + ofToString(LASTMIDIMSG.status) +
+                    ", byteOne: " + ofToString(LASTMIDIMSG.byteOne) +
+                    ", byteTwo: " + ofToString(LASTMIDIMSG.byteTwo) +
+                    ", timestamp: " + ofToString(LASTMIDIMSG.timestamp);
 
 
         string msg = fpsStr + " " + stateMsg;

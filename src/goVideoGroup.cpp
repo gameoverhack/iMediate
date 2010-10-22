@@ -18,11 +18,35 @@ goVideoGroup::goVideoGroup()
         ofAddListener(videoGroup[i]->loadDone, this, &goVideoGroup::success);
         ofAddListener(videoGroup[i]->error, this, &goVideoGroup::error);
     }
+    cout << "SETTTTIIINGGG:  " << myID << endl;
 }
 
 goVideoGroup::~goVideoGroup()
 {
     //dtor
+}
+
+void goVideoGroup::setup(float x, float y)
+{
+
+
+    int tRow = 0;
+
+    for (int i = 0; i < MAX_VIDEOS_IN_GROUP; i++)
+    {
+        int tCol = i%4;
+        int width = 720/10.0f;
+        int height = 405/10.0f;
+
+        if(tCol==0) tRow++;
+        videoPreviews[i].setSize(width, height);
+        videoPreviews[i].setPos(x + (width + 2.0f) * tCol,
+                                y + (height + 2.0f) * tRow);
+
+        videoPreviews[i].index = i;
+        ofAddListener(videoPreviews[i].previewClicked, this, &goVideoGroup::previewClicked);
+
+    }
 }
 
 void goVideoGroup::update()
@@ -60,6 +84,7 @@ void goVideoGroup::loadVectorOfVideos(vector<string> * paths)
         // delete all the listeners and old videoplayers
         for (int i = 0; i < MAX_VIDEOS_IN_GROUP; i++)
         {
+            videoPreviews[i].disableAllEvents();
             ofRemoveListener(videoGroup[i]->loadDone, this, &goVideoGroup::success);
             ofRemoveListener(videoGroup[i]->error, this, &goVideoGroup::error);
             delete videoGroup[i];
@@ -92,6 +117,12 @@ void goVideoGroup::loadVectorOfVideos(vector<string> * paths)
 
 }
 
+void goVideoGroup::previewClicked(int & index)
+{
+    cout << "here" << endl;
+    playVideoInGroup(index);
+}
+
 void goVideoGroup::playVideoInGroup(int index)
 {
     if (index != currentlyPlayingVideo && index <= numberLoaded)
@@ -101,7 +132,8 @@ void goVideoGroup::playVideoInGroup(int index)
         EFFECTS[myID].reallocate(videoGroup[index], 720, 405);
 
         // update variables
-        if (currentlyPlayingVideo != -1) {
+        if (currentlyPlayingVideo != -1)
+        {
             videoGroup[currentlyPlayingVideo]->setPaused(true);
             lastPlayingVideo = currentlyPlayingVideo;
         }
@@ -112,37 +144,30 @@ void goVideoGroup::playVideoInGroup(int index)
 
 }
 
-void goVideoGroup::drawPreviews(int x, int y)
-{
-    for (int i = 0; i < numberLoaded; i++)
-    {
-        videoPreviews[i].draw(x, y + i * (videoPreviews[i].getHeight()/10.0f + 2.0f),
-                                        videoPreviews[i].getWidth()/10.0f,
-                                        videoPreviews[i].getHeight()/10.0f);
-    }
-}
-
 void goVideoGroup::success(string & name)
 {
+
     if(numberLoaded + 1 < numberToLoad)
     {
         videoGroup[numberLoaded]->setPaused(true);
-        videoPreviews[numberLoaded].setFromPixels(videoGroup[numberLoaded]->getPixels(),
-                                                  videoGroup[numberLoaded]->width,
-                                                  videoGroup[numberLoaded]->height,
-                                                  OF_IMAGE_COLOR);
-        //videoPreviews[numberLoaded].setup(videoGroup[numberLoaded]->width, videoGroup[numberLoaded]->height);
-        //videoPreviews[numberLoaded].begin();
-        //videoGroup[numberLoaded]->draw(0,0);
-        //videoPreviews[numberLoaded].end();
-
-        numberLoaded++;
         loadNext = true;
-    } else {
+    }
+    else
+    {
         currentlyLoadingVideo = "ALL LOADED";
         locked = false;
+
         ofNotifyEvent(groupLoaded, myID);
     }
+
+
+    videoPreviews[numberLoaded].enableAllEvents();
+    videoPreviews[numberLoaded].videoIcon.setFromPixels(videoGroup[numberLoaded]->getPixels(),
+            videoGroup[numberLoaded]->width,
+            videoGroup[numberLoaded]->height,
+            OF_IMAGE_COLOR);
+
+    numberLoaded++;
 }
 
 void goVideoGroup::error(int & code)

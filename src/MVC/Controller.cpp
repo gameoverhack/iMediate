@@ -49,71 +49,36 @@ void Controller::setup()
 
         ofSetLogLevel(OF_LOG_VERBOSE);
 
+        // list root video folders - TODO: delegate to Application Loader
+
         string rootVideoFolder;
 
 #ifdef TARGET_OSX
         rootVideoFolder = "/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/";
 #else
-        rootVideoFolder = "C:/Users/gameoverwell/Desktop/vjMedia";
+        rootVideoFolder = "E:/vjMedia"; //C:/Users/gameoverwell/Desktop/vjMedia";
 #endif
 
-        FILES.setVerbose(true);
+        //FILES.setVerbose(true);
         FILES.allowExt("mov");
         FILES.listDir(rootVideoFolder, true);
 
-        string folderArray[1000]; // silly big number for max number of directories
-
         for (int i = 0; i < FILES.getNumberOfDirectories(); i++)
         {
-            folderArray[i] = FILES.directoriesWithFiles.at(i).substr(rootVideoFolder.size());
+            FOLDERARRAY[i] = FILES.directoriesWithFiles.at(i).substr(rootVideoFolder.size());
         }
 
-        // start a new group
-        GUI.addTitle("Video Folders");
-        for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
-        {
-            GUI.addComboBox("folderBrowser " + ofToString(i+1), FOLDERS[i], FILES.getNumberOfDirectories(),  folderArray);
-            ofAddListener(GROUPS[i].groupLoaded, this, &Controller::groupLoadDone);
+        // dummy allocate to force openCL to initialize
+        EFFECTS[0].setup();
 
-        }
+        GUIMANAGER->setup();
 
-        for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
-        {
-            GUI.addTitle("Effects Group" + i).setNewColumn(true);
-            GUI.addToggle("Blur", EFFECTS[i].doBlur);
-            GUI.addSlider("Blur Level", EFFECTS[i].blurAmount, 0.0, 20);
-            GUI.addToggle("FlipX", EFFECTS[i].doFlipX);
-            GUI.addToggle("FlipY", EFFECTS[i].doFlipY);
-            GUI.addToggle("Greyscale", EFFECTS[i].doGreyscale);
-            GUI.addToggle("Invert", EFFECTS[i].doInvert);
-            GUI.addToggle("Threshold", EFFECTS[i].doThreshold);
-            GUI.addSlider("Threshold Level", EFFECTS[i].threshLevel, 0.0, 1);
-            EFFECTS[i].threshLevel = 0.2;
-            GUI.addToggle("Hue", EFFECTS[i].doHue);
-            GUI.addColorPicker("Hue Colour", &(EFFECTS[i].hueColour.r));
-            GUI.addToggle("Saturation", EFFECTS[i].doSaturation);
-            GUI.addSlider("Saturation Level", EFFECTS[i].saturationLevel, 0.0, 10);
-            EFFECTS[i].saturationLevel = 1.0;
-            GUI.addToggle("Contrast", EFFECTS[i].doContrast);
-            GUI.addSlider("Contrast Level", EFFECTS[i].contrastLevel, 0.0, 10);
-            EFFECTS[i].contrastLevel = 1.0;
-            GUI.addToggle("Brightness", EFFECTS[i].doBrightness);
-            GUI.addSlider("Brightness Level", EFFECTS[i].brightnessLevel, 0.0, 10);
-            EFFECTS[i].brightnessLevel = 1.0;
-        }
-for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
-    {
-        gui.addTitle("Previews" + i).setNewColumn(true);
-        for (int j = 0; j < MAX_VIDEOS_IN_GROUP; j++)
-        {
-            GUI.addContent("file", GROUPS[i].videoPreviews[j], 40);
-        }
-    }
-        GUI.loadFromXML();
+        GROUPS[0].setup(900.0f, 405 + 10.0f);
+        GROUPS[1].setup(900.0f + 720/10.0f * 4.0 + 10.0f, 405 + 10.0f);
 
-        GUI.show();
+        MIDIMANAGER->setup();
 
-        DICTIONARY.loadText(ofToDataPath("Spanish.txt"));
+        /*DICTIONARY.loadText(ofToDataPath("Spanish.txt"));
         DICTIONARY.loadText(ofToDataPath("French.txt"));
         DICTIONARY.loadText(ofToDataPath("Latin.txt"));
         DICTIONARY.loadText(ofToDataPath("German.txt"));
@@ -124,7 +89,7 @@ for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
         {
             //cout << i << " = " << DICTIONARY.words[i] << endl;
         }
-
+        */
 
         // start application
         SETAPPSTATE(APP_READY);
@@ -133,32 +98,3 @@ for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
 
 }
 
-void Controller::checkFolders()
-{
-    for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
-    {
-        if (FOLDERS[i] != LASTFOLDERS[i])
-        {
-            LASTFOLDERS[i] = FOLDERS[i];
-
-            vector<string> files;
-            FILES.getFilesByDirectory(FOLDERS[i], &files);
-
-            GROUPS[i].loadVectorOfVideos(&files);
-
-            /*for (int j = 0; j < files.size(); j++)
-            {
-                cout << i << " :: " << j << " :: " << files[i] << endl;
-            }
-            */
-        }
-    }
-
-}
-
-void Controller::groupLoadDone(int & id)
-{
-
-
-
-}

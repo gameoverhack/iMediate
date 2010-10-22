@@ -51,6 +51,8 @@ private:
 
     void				update(ofEventArgs &e);
     void				draw(ofEventArgs &e);
+    void                drawBlend();
+
     //void				windowResized(ofEventArgs &e);
 
     void				keyPressed(ofKeyEventArgs &e);

@@ -12,28 +12,10 @@
 
 #define MAX_VIDEO_CHANNELS 2
 
-#define MODEL			ModelSingleton::Instance()
-#define CONFIG			MODEL->config
-#define CG				MODEL->cg_XML
-#define SETAPPSTATE		MODEL->setAppState
-#define GETAPPSTATE		MODEL->getAppState()
-
-#define PLAYERS         MODEL->players
-#define EFFECTS         MODEL->effects
-#define FBO             MODEL->fbo
-
-#define DICTIONARY      MODEL->text
-
-#define GUI             gui
-
-#define FILES           MODEL->files
-
-#define FOLDERS         MODEL->folderBox
-#define LASTFOLDERS     MODEL->lastFolderBox
-
 #include "ofxXmlSettings.h"
 #include "goThreadedVideo.h"
 #include "goVideoEffectCL.h"
+
 #include "goDirList.h"
 #include "goTextLoader.h"
 #include "ofxSimpleGuiToo.h"
@@ -42,6 +24,27 @@
 #include "Singleton.h"
 #include "Constants.h"
 #include "Logger.h"
+
+#define MODEL			ModelSingleton::Instance()
+#define CONFIG			MODEL->config
+#define CG				MODEL->cg_XML
+#define SETAPPSTATE		MODEL->setAppState
+#define GETAPPSTATE		MODEL->getAppState()
+
+#define PLAYERS         MODEL->players
+#define EFFECTS         MODEL->effects
+
+#define FBO_OUTPUT      MODEL->outputFbo
+#define FBO_PREVIEW     MODEL->previewFbo
+
+#define DICTIONARY      MODEL->text
+
+#define GUI             gui
+
+#define FILES           MODEL->files
+
+#define FOLDERARRAY     MODEL->folderArray
+
 
 class Model
 {
@@ -70,14 +73,12 @@ public:
     goVideoEffectCL             effects[MAX_VIDEO_CHANNELS];
 
     goDirList                   files;
+    string                      folderArray[1000]; // silly big number for max number of directories
 
     goTextLoader                text;
 
-    ofxFbo                      fbo;
-
-    // gui elements
-    int                         folderBox[MAX_VIDEO_CHANNELS];
-    int                         lastFolderBox[MAX_VIDEO_CHANNELS];
+    ofxFbo                      outputFbo;
+    ofxFbo                      previewFbo;
 
 private:
 

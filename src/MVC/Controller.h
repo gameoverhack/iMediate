@@ -18,9 +18,11 @@
 #include "Logger.h"
 #include "ApplicationLoader.h"
 
-#define GROUPS          CONTROLLER->groups
-
 #include "goVideoGroup.h"
+#include "goGuiManager.h"
+#include "goMidiManager.h"
+
+#define GROUPS          CONTROLLER->groups
 
 class Controller
 {
@@ -40,8 +42,7 @@ public:
 
     void						setup();
 
-    void                        checkFolders();
-    void                        groupLoadDone(int & id);
+    string                      folderArray[1000]; // silly big number for max number of directories
 
 private:
 

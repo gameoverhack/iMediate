@@ -2067,13 +2067,13 @@
 	<string.h>
 	"tinyxml.h"
 
-1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\applicationloader.cpp
+1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\applicationloader.cpp
 	"ApplicationLoader.h"
 
-1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\applicationloader.h
+1287710926 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\applicationloader.h
 	"Model.h"
 
-1287557231 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
+1287711270 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.h
 	"ofxXmlSettings.h"
 	"goThreadedVideo.h"
 	"goVideoEffectCL.h"
@@ -2085,62 +2085,64 @@
 	"Constants.h"
 	"Logger.h"
 
-1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\singleton.h
+1287710926 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\singleton.h
 	"assert.h"
 	<cstdlib>
 
-1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\constants.h
+1287711713 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\constants.h
 
-1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\logger.h
+1287710926 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\logger.h
 	<iostream>
 	<fstream>
 	"Singleton.h"
 	"ofUtils.h"
 
-1287568523 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
+1287729574 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
 	"Controller.h"
 
-1287557215 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
+1287711270 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
 	"Singleton.h"
 	"Model.h"
 	"View.h"
 	"Logger.h"
 	"ApplicationLoader.h"
 	"goVideoGroup.h"
+	"goGuiManager.h"
+	"goMidiManager.h"
 
-1287542831 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.h
+1287721612 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.h
 	"Singleton.h"
 	"Controller.h"
 	"Logger.h"
 	"ofEvents.h"
 
-1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\logger.cpp
+1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\logger.cpp
 	"Logger.h"
 
-1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.cpp
+1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.cpp
 	"Model.h"
 
-1287566976 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
+1287729779 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
 	"View.h"
 
-1287540454 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\main.cpp
+1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\main.cpp
 	"ofMain.h"
 	"testApp.h"
 	"ofAppGlutWindow.h"
 
-1286411931 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\testapp.h
+1287710926 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\testapp.h
 	"ofMain.h"
 	"Controller.h"
 
-1286411931 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\testapp.cpp
+1287710925 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\testapp.cpp
 	"testApp.h"
 
-1287567184 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
+1287721801 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
 	"MSAOpenCL.h"
 	"goThreadedVideo.h"
 	"ofxFbo.h"
 
-1287561027 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
+1287721826 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
 	"goVideoEffectCL.h"
 
 1286394720 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goopenclcontext.h
@@ -2156,22 +2158,23 @@
 	"string.h"
 	"goVideoPlayer.h"
 
-1287561663 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.cpp
+1287718866 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\gothreadedvideo\src\gothreadedvideo.cpp
 	"goThreadedVideo.h"
 
-1287568706 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.h
+1287737737 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.h
 	"Model.h"
 	"goThreadedVideo.h"
-	"goThreadedImage.h"
+	"goVideoEffectCL.h"
+	"goVideoPreview.h"
 
-1287195409 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gothreadedimage.h
+1287710925 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gothreadedimage.h
 	"ofMain.h"
 	"ofxThread.h"
 
-1287568725 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.cpp
+1287729482 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideogroup.cpp
 	"goVideoGroup.h"
 
-1287195497 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gothreadedimage.cpp
+1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gothreadedimage.cpp
 	"goThreadedImage.h"
 
 1286358659 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxmsainteractiveobject\src\ofxmsainteractiveobject.cpp
@@ -2671,9 +2674,51 @@
 	"FTInternals.h"
 	"FTVectoriser.h"
 
-1287246904 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.h
+1287710926 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.h
 	"ofMain.h"
 
-1287246927 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.cpp
+1287710925 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.cpp
 	"goTextLoader.h"
+
+1287721904 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.h
+	"ofMain.h"
+	"Singleton.h"
+	"Controller.h"
+	"Model.h"
+	"Logger.h"
+
+1287734696 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.h
+	"ofMain.h"
+	"Singleton.h"
+	"Controller.h"
+	"Model.h"
+	"Logger.h"
+	"goGuiManager.h"
+	"ofxMidi.h"
+
+1286349215 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxmidi\src\ofxmidi.h
+	<iostream>
+	"RtMidi.h"
+	"ofxMidiConstants.h"
+	"ofxMidiEvents.h"
+	"ofxMidiIn.h"
+	"ofxMidiOut.h"
+
+1287734687 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
+	"goMidiManager.h"
+
+1287734813 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
+	"goGuiManager.h"
+
+1287737259 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideopreview.h
+	"ofxMSAInteractiveObject.h"
+	"goThreadedImage.h"
+
+1287723462 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideopreview.cpp
+	"goVideoPreview.h"
+
+1287729718 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goparticlemask.cpp
+	"goParticleMask.h"
+
+1287729718 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goparticlemask.h
 
