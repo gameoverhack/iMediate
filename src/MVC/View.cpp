@@ -21,8 +21,8 @@ bool View::setup()
         bCustomFullscreen = false;
     }
 
-    FBO_OUTPUT.setup(1024, 768);
-    FBO_PREVIEW.setup(1024, 768);
+    FBO_OUTPUT.setup(720, 405);
+    FBO_PREVIEW.setup(720, 405);
 
     return true;
 }
@@ -41,6 +41,8 @@ void View::update(ofEventArgs &e)
         EFFECTS[i].update();
         GROUPS[i].update();
     }
+
+    PARTICLES->update();
 
     // actually do the drawing of effects
     // and layers in the update to an FBO_OUTPUT
@@ -75,22 +77,42 @@ void View::drawBlend()
     float fadeLevel;
 
     glPushMatrix();
-    fadeLevel = (XFADE >= 0 ? XFADE : 0);
-    glColor4f(1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel);         // cross fade
 
+    if (XFADETRUE) fadeLevel = ((XFADE) + 1) / 2;
+    else fadeLevel = 1.0f - (XFADE >= 0 ? XFADE : 0);
+
+    glColor4f(fadeLevel, fadeLevel, fadeLevel, fadeLevel);         // cross fade
     EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
+
+    PARTICLES->draw(0x000000, 0);
+    PARTICLES->draw(0xFFFFFF, 1);
 
     glPopMatrix();
 
     glEnable(GL_BLEND);
-    glBlendFunc(xblendModes[XMODES[0]], xblendModes[XMODES[1]]);
+
+    PARTICLES->draw(0x000000, 2);
+    PARTICLES->draw(0xFFFFFF, 3);
+
+    if(!XFUNCMUTE) glBlendEquation(xblendEquations[XFUNCS[0]]);
+    if(!XFADEMUTE) glBlendFunc(xblendModes[XMODES[0]], xblendModes[XMODES[1]]);
+    if(!XFUNCMUTE) glBlendEquation(xblendEquations[XFUNCS[1]]);
 
     glPushMatrix();
-    fadeLevel = (XFADE <= 0 ? -XFADE : 0);
-    glColor4f(1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel, 1.0f - fadeLevel);         // cross fade
 
+    PARTICLES->draw(0x000000, 4);
+    PARTICLES->draw(0xFFFFFF, 5);
+
+    if (XFADETRUE) fadeLevel = ((-XFADE) + 1) / 2;
+    else fadeLevel = 1.0f - (XFADE <= 0 ? -XFADE : 0);
+
+    glColor4f(fadeLevel, fadeLevel, fadeLevel, fadeLevel);         // cross fade
     EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
 
+    PARTICLES->draw(0x000000, 6);
+    PARTICLES->draw(0xFFFFFF, 7);
+
+    glBlendEquation(GL_FUNC_ADD);
     glDisable(GL_BLEND);
     glPopMatrix();
     glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
@@ -152,10 +174,10 @@ void View::draw(ofEventArgs &e)
     glPushMatrix();
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
     ofNoFill();
-    ofRect(GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].x,
-           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].y-1,
-           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].width+1,
-           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].height+1);
+    ofRect(GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].x,
+           GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].y-1,
+           GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].width+1,
+           GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].height+1);
     glPopMatrix();
 
     if(showMSG)

@@ -12,6 +12,26 @@ goGuiManager::~goGuiManager()
 
 void goGuiManager::setup()
 {
+    string xblendEquationNamesAsString[] =
+    {
+        "FUNC_ADD",
+        "MIN",
+        "MAX",
+        "FUNC_SUBTRACT",
+        "FUNC_REVERSE_SUBTRACT",
+    };
+    string xblendModeNamesAsString[] =
+    {
+        "ZERO",
+        "ONE",
+        "SRC_COLOR",
+        "ONE_MINUS_SRC_COLOR",
+        "SRC_ALPHA",
+        "ONE_MINUS_SRC_ALPHA",
+        "DST_ALPHA",
+        "ONE_MINUS_DST_ALPHA"
+    };
+
     // create drop down video folder groups
     GUI.addTitle("Video");
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
@@ -22,6 +42,13 @@ void goGuiManager::setup()
 
     GUI.addSlider("Channel A Speed", EFFECTS[0].videoSpeed, -5.0f, 5.0f);
     GUI.addSlider("Channel B Speed", EFFECTS[1].videoSpeed, -5.0f, 5.0f);
+    GUI.addToggle("Particle Color", PARTICLES->particleColors);
+    GUI.addToggle("Particle Size", PARTICLES->sizeParticle);
+    GUI.addToggle("Particle Speed", PARTICLES->speedParticle);
+    GUI.addToggle("Particle Link", PARTICLES->linkParticle);
+    GUI.addToggle("Particle Erase", PARTICLES->eraseParticle);
+    GUI.addSlider("Particle Size", PARTICLES->pWidth, 0, 720.0f);
+    GUI.addSlider("Particle Type", PARTICLES->particlePattern, 0, 16);
 
     // create effects interface for video groups
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
@@ -35,18 +62,14 @@ void goGuiManager::setup()
         GUI.addToggle("Invert", EFFECTS[i].doInvert);
         GUI.addToggle("Threshold", EFFECTS[i].doThreshold);
         GUI.addSlider("Threshold Level", EFFECTS[i].threshLevel, 0.0, 1);
-        EFFECTS[i].threshLevel = 0.2;
         GUI.addToggle("Hue", EFFECTS[i].doHue);
         GUI.addColorPicker("Hue Colour", &(EFFECTS[i].hueColour.r));
         GUI.addToggle("Saturation", EFFECTS[i].doSaturation);
         GUI.addSlider("Saturation Level", EFFECTS[i].saturationLevel, 0.0, 10);
-        EFFECTS[i].saturationLevel = 1.0;
         GUI.addToggle("Contrast", EFFECTS[i].doContrast);
         GUI.addSlider("Contrast Level", EFFECTS[i].contrastLevel, 0.0, 10);
-        EFFECTS[i].contrastLevel = 1.0;
         GUI.addToggle("Brightness", EFFECTS[i].doBrightness);
         GUI.addSlider("Brightness Level", EFFECTS[i].brightnessLevel, 0.0, 10);
-        EFFECTS[i].brightnessLevel = 1.0;
     }
 
     GUI.addTitle("X-Faders & Blends").setNewColumn(true);
@@ -57,24 +80,19 @@ void goGuiManager::setup()
     GUI.addToggle("Channel B FXMute", EFFECTS[1].muteAll);
     GUI.addSlider("Channel A Fade", EFFECTS[0].fadeLevel, 0, 1.0);
     GUI.addSlider("Channel B Fade", EFFECTS[1].fadeLevel, 0, 1.0);
+
     GUI.addSlider("X-Fade", XFADE, -1.0f, 1.0f);
 
-    string xblendModeNamesAsString[] =
-    {
-        "ZERO",
-        "ONE",
-        "SRC_COLOR",
-        "ONE_MINUS_SRC_COLOR",
-        "SRC_ALPHA",
-        "ONE_MINUS_SRC_ALPHA",
-        "DST_ALPHA",
-        "ONE_MINUS_DST_ALPHA"
-    };
-
+    GUI.addComboBox("X-Fade Func Top", xfuncs[0], 5,  xblendEquationNamesAsString);
     for (int i = 0; i < 2; i++)
     {
         GUI.addComboBox("X-Fade Mode " + ofToString(i+1), xmodes[i], 8,  xblendModeNamesAsString);
     }
+    GUI.addComboBox("X-Fade Func Bot", xfuncs[1], 5,  xblendEquationNamesAsString);
+
+    GUI.addToggle("Use True Fader", XFADETRUE);
+    GUI.addToggle("Use Fade Funcs", XFUNCMUTE);
+    GUI.addToggle("Use Fade Modes", XFADEMUTE);
 
     GUI.addPage("MIDI");
     GUI.addToggle("MIDI Recieve", MIDIMANAGER->newMSG);

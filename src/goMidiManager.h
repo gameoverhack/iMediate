@@ -8,6 +8,7 @@
 #include "Model.h"
 #include "Logger.h"
 #include "goGuiManager.h"
+#include "goParticleMask.h"
 
 #include "ofxMidi.h"
 

@@ -2110,10 +2110,11 @@
 	"goGuiManager.h"
 	"goMidiManager.h"
 
-1287721612 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.h
+1287771240 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.h
 	"Singleton.h"
 	"Controller.h"
 	"Logger.h"
+	"goParticleMask.h"
 	"ofEvents.h"
 
 1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\logger.cpp
@@ -2122,7 +2123,7 @@
 1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\model.cpp
 	"Model.h"
 
-1287729779 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
+1287779230 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.cpp
 	"View.h"
 
 1287710926 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\main.cpp
@@ -2680,20 +2681,21 @@
 1287710925 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.cpp
 	"goTextLoader.h"
 
-1287721904 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.h
+1287778744 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.h
 	"ofMain.h"
 	"Singleton.h"
 	"Controller.h"
 	"Model.h"
 	"Logger.h"
 
-1287734696 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.h
+1287771683 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.h
 	"ofMain.h"
 	"Singleton.h"
 	"Controller.h"
 	"Model.h"
 	"Logger.h"
 	"goGuiManager.h"
+	"goParticleMask.h"
 	"ofxMidi.h"
 
 1286349215 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxmidi\src\ofxmidi.h
@@ -2704,10 +2706,10 @@
 	"ofxMidiIn.h"
 	"ofxMidiOut.h"
 
-1287734687 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
+1287776812 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
 	"goMidiManager.h"
 
-1287734813 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
+1287779025 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
 	"goGuiManager.h"
 
 1287737259 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideopreview.h
@@ -2717,8 +2719,29 @@
 1287723462 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideopreview.cpp
 	"goVideoPreview.h"
 
-1287729718 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goparticlemask.cpp
+1287776786 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goparticlemask.cpp
 	"goParticleMask.h"
 
-1287729718 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goparticlemask.h
+1287775102 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goparticlemask.h
+	"Singleton.h"
+	"particle.h"
+
+1238194032 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\particle.h
+	"ofMain.h"
+	"ofxVectorMath.h"
+
+1286349233 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxvectormath\src\ofxvectormath.h
+	"ofxVec2f.h"
+	"ofxVec3f.h"
+	"ofxVec4f.h"
+	"ofxMatrix3x3.h"
+	"ofxMatrix4x4.h"
+	"ofxQuaternion.h"
+
+1286349232 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxvectormath\src\ofxvec2f.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1227750742 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\particle.cpp
+	"particle.h"
 

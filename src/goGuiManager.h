@@ -14,11 +14,15 @@
 #define LASTFOLDERS     GUIMANAGER->lastFolderBox
 
 #define XFADE           GUIMANAGER->xfade
+#define XFADETRUE       GUIMANAGER->trueXFader
+#define XFADEMUTE       GUIMANAGER->xfademute
+#define XFUNCMUTE       GUIMANAGER->xfuncmute
 #define REVERSECHANNELS GUIMANAGER->reversechannels
 #define CHANNELADIRECT  GUIMANAGER->channeladirect
 #define CHANNELBDIRECT  GUIMANAGER->channelbdirect
 
 #define XMODES          GUIMANAGER->xmodes
+#define XFUNCS          GUIMANAGER->xfuncs
 
 #define SOLENOIDCHANNEL GUIMANAGER->solenoidChannel
 #define PLAYSOLENOIDS   GUIMANAGER->playSolenoids
@@ -46,10 +50,10 @@ public:
     int                         lastFolderBox[MAX_VIDEO_CHANNELS];
 
     float                       xfade;
-    bool                        reversechannels;
+    bool                        xfademute, xfuncmute, trueXFader, reversechannels;
     bool                        channeladirect, channelbdirect;
 
-    int                         xmodes[2];
+    int                         xmodes[2], xfuncs[2];
 
     int                         solenoidChannel;
     bool                        playSolenoids;

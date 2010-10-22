@@ -16,6 +16,8 @@
 #include "Controller.h"
 #include "Logger.h"
 
+#include "goParticleMask.h"
+
 #include "ofEvents.h"
 
 #define VIEW ViewSingleton::Instance()

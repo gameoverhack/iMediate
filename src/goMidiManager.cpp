@@ -129,6 +129,8 @@ void goMidiManager::update()
 
         if (lastMidiMsg.channel == CONTROLCHANNEL)
         {
+            // Novation control data
+
             // note values change video
             if (lastMidiMsg.byteOne >= 48 && lastMidiMsg.byteOne <=59)
             {
@@ -139,7 +141,38 @@ void goMidiManager::update()
                 GROUPS[1].playVideoInGroup((int)lastMidiMsg.byteOne - 60);
             }
 
-            // control data
+            // particles
+            if(lastMidiMsg.byteOne == 9)
+            {
+                PARTICLES->pWidth = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 127.0, true);
+            }
+            if(lastMidiMsg.byteOne == 10)
+            {
+                PARTICLES->particlePattern = ofMap(lastMidiMsg.byteTwo, 0, 16, 0, 16, false);
+            }
+            if(lastMidiMsg.byteOne == 43)
+            {
+                PARTICLES->particleColors ^= true;
+            }
+            if(lastMidiMsg.byteOne == 44)
+            {
+                PARTICLES->sizeParticle ^= true;
+            }
+            if(lastMidiMsg.byteOne == 45)
+            {
+                PARTICLES->speedParticle ^= true;
+            }
+            if(lastMidiMsg.byteOne == 46)
+            {
+                PARTICLES->linkParticle ^= true;
+            }
+            if(lastMidiMsg.byteOne == 48)
+            {
+                PARTICLES->eraseParticle ^= true;
+            }
+            if(lastMidiMsg.byteOne > 35 && lastMidiMsg.byteOne < 44) {
+                PARTICLES->generate(lastMidiMsg.byteOne-36, lastMidiMsg.byteTwo);
+            }
 
             if (lastMidiMsg.status == 176)
             {
@@ -166,7 +199,6 @@ void goMidiManager::update()
                 {
                     EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
                 }
-
 
             }
 

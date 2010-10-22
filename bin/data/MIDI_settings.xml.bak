@@ -17,34 +17,34 @@
     </SliderInt_Controller_Channel>
     <SliderInt_Listen_Channel_Begin>
         <name>Listen Channel Begin</name>
-        <value>6</value>
+        <value>12</value>
     </SliderInt_Listen_Channel_Begin>
     <SliderInt_Listen_Channel_End>
         <name>Listen Channel End</name>
-        <value>16</value>
+        <value>12</value>
     </SliderInt_Listen_Channel_End>
     <Toggle_RX_in_Channel_Range>
         <name>RX in Channel Range</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_RX_in_Channel_Range>
     <SliderInt_Map_Listen_To_Channel>
         <name>Map Listen To Channel</name>
-        <value>12</value>
+        <value>16</value>
     </SliderInt_Map_Listen_To_Channel>
     <SliderInt_Listen_Note_Begin>
         <name>Listen Note Begin</name>
-        <value>47</value>
+        <value>55</value>
     </SliderInt_Listen_Note_Begin>
     <SliderInt_Listen_Note_End>
         <name>Listen Note End</name>
-        <value>75</value>
+        <value>64</value>
     </SliderInt_Listen_Note_End>
     <Toggle_RX_in_Note_Range>
         <name>RX in Note Range</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_RX_in_Note_Range>
     <ComboBox_Remap_Mode>
         <name>Remap Mode</name>
-        <value>1</value>
+        <value>0</value>
     </ComboBox_Remap_Mode>
 </controls>
