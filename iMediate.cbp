@@ -446,6 +446,12 @@
 		<Unit filename="src\goMidiManager.h">
 			<Option virtualFolder="src\" />
 		</Unit>
+		<Unit filename="src\goOSCManager.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\goOSCManager.h">
+			<Option virtualFolder="src\" />
+		</Unit>
 		<Unit filename="src\goParticleMask.cpp">
 			<Option virtualFolder="src\" />
 		</Unit>

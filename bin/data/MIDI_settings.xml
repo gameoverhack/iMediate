@@ -33,11 +33,11 @@
     </SliderInt_Map_Listen_To_Channel>
     <SliderInt_Listen_Note_Begin>
         <name>Listen Note Begin</name>
-        <value>55</value>
+        <value>31</value>
     </SliderInt_Listen_Note_Begin>
     <SliderInt_Listen_Note_End>
         <name>Listen Note End</name>
-        <value>67</value>
+        <value>86</value>
     </SliderInt_Listen_Note_End>
     <Toggle_RX_in_Note_Range>
         <name>RX in Note Range</name>
@@ -45,6 +45,6 @@
     </Toggle_RX_in_Note_Range>
     <ComboBox_Remap_Mode>
         <name>Remap Mode</name>
-        <value>0</value>
+        <value>1</value>
     </ComboBox_Remap_Mode>
 </controls>

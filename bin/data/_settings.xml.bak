@@ -1,11 +1,11 @@
 <controls>
     <ComboBox_folderBrowser_1>
         <name>folderBrowser 1</name>
-        <value>16</value>
+        <value>14</value>
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>12</value>
+        <value>6</value>
     </ComboBox_folderBrowser_2>
     <SliderFloat_Channel_A_Speed>
         <name>Channel A Speed</name>
@@ -17,7 +17,7 @@
     </SliderFloat_Channel_B_Speed>
     <Toggle_Particle_Color>
         <name>Particle Color</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Particle_Color>
     <Toggle_Particle_Size>
         <name>Particle Size</name>
@@ -41,7 +41,7 @@
     </SliderInt_Particle_Size>
     <SliderInt_Particle_Type>
         <name>Particle Type</name>
-        <value>3</value>
+        <value>16</value>
     </SliderInt_Particle_Type>
     <Toggle_Blur>
         <name>Blur</name>
@@ -51,9 +51,9 @@
     </Toggle_Blur>
     <SliderInt_Blur_Level>
         <name>Blur Level</name>
-        <value>3</value>
+        <value>4</value>
         <name>Blur Level</name>
-        <value>3</value>
+        <value>6</value>
     </SliderInt_Blur_Level>
     <Toggle_FlipX>
         <name>FlipX</name>
@@ -135,7 +135,7 @@
     </SliderFloat_Contrast_Level>
     <Toggle_Brightness>
         <name>Brightness</name>
-        <value>0</value>
+        <value>1</value>
         <name>Brightness</name>
         <value>0</value>
     </Toggle_Brightness>
@@ -191,7 +191,7 @@
     </SliderFloat_Channel_B_Fade>
     <SliderFloat_X-Fade>
         <name>X-Fade</name>
-        <value>-0.170000</value>
+        <value>-0.055118</value>
     </SliderFloat_X-Fade>
     <ComboBox_X-Fade_Func_Top>
         <name>X-Fade Func Top</name>
@@ -215,7 +215,7 @@
     </Toggle_Use_True_Fader>
     <Toggle_Use_Fade_Funcs>
         <name>Use Fade Funcs</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Use_Fade_Funcs>
     <Toggle_Use_Fade_Modes>
         <name>Use Fade Modes</name>
