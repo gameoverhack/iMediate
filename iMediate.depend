@@ -2682,14 +2682,14 @@
 1287710925 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gotextloader.cpp
 	"goTextLoader.h"
 
-1287778744 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.h
+1287791077 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.h
 	"ofMain.h"
 	"Singleton.h"
 	"Controller.h"
 	"Model.h"
 	"Logger.h"
 
-1287771683 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.h
+1287790951 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.h
 	"ofMain.h"
 	"Singleton.h"
 	"Controller.h"
@@ -2707,7 +2707,7 @@
 	"ofxMidiIn.h"
 	"ofxMidiOut.h"
 
-1287776812 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
+1287791065 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
 	"goMidiManager.h"
 
 1287783593 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp

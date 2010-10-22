@@ -103,23 +103,23 @@
 	<File name="src\MVC\Model.h" open="0" top="0" tabpos="5">
 		<Cursor position="530" topLine="9" />
 	</File>
-	<File name="src\MVC\View.cpp" open="1" top="1" tabpos="10">
-		<Cursor position="872" topLine="30" />
+	<File name="src\MVC\View.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="872" topLine="42" />
 	</File>
 	<File name="src\MVC\View.h" open="0" top="0" tabpos="8">
 		<Cursor position="328" topLine="18" />
 	</File>
-	<File name="src\goGuiManager.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="5108" topLine="100" />
+	<File name="src\goGuiManager.cpp" open="1" top="1" tabpos="5">
+		<Cursor position="6295" topLine="123" />
 	</File>
 	<File name="src\goGuiManager.h" open="1" top="0" tabpos="7">
-		<Cursor position="791" topLine="0" />
+		<Cursor position="2728" topLine="59" />
 	</File>
 	<File name="src\goMidiManager.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="5189" topLine="141" />
+		<Cursor position="2795" topLine="92" />
 	</File>
-	<File name="src\goMidiManager.h" open="0" top="0" tabpos="22">
-		<Cursor position="225" topLine="33" />
+	<File name="src\goMidiManager.h" open="1" top="0" tabpos="11">
+		<Cursor position="729" topLine="24" />
 	</File>
 	<File name="src\goOSCManager.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="78" topLine="0" />

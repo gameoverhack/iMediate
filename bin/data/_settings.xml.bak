@@ -53,7 +53,7 @@
         <name>Blur Level</name>
         <value>4</value>
         <name>Blur Level</name>
-        <value>6</value>
+        <value>4</value>
     </SliderInt_Blur_Level>
     <Toggle_FlipX>
         <name>FlipX</name>
@@ -137,7 +137,7 @@
         <name>Brightness</name>
         <value>1</value>
         <name>Brightness</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Brightness>
     <SliderFloat_Brightness_Level>
         <name>Brightness Level</name>

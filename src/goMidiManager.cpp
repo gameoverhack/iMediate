@@ -84,48 +84,53 @@ void goMidiManager::update()
         lastMidiMsg.byteTwo = newMidiMsg.byteTwo;
         lastMidiMsg.timestamp = newMidiMsg.timestamp;
 
-        if (lastMidiMsg.channel >= LISTENCHBEG && lastMidiMsg.channel <= LISTENCHEND)
+        for(int i = 0; i < 3; i++)
         {
-            newMSGCH ^= true;
-            if (lastMidiMsg.byteOne >= LISTENNTBEG && LISTENNTEND)
+            if (lastMidiMsg.channel >= LISTENCHBEG[i] && lastMidiMsg.channel <= LISTENCHEND[i])
             {
-                newMSGNT ^= true;
+                newMSGCH[i] ^= true;
+                if (lastMidiMsg.byteOne >= LISTENNTBEG[i] && LISTENNTEND[i])
+                {
+                    newMSGNT[i] ^= true;
+                }
+
+                switch (REMAPMODE[i])
+                {
+                case NOTE_TO_VIDEOS:
+
+                    if (lastMidiMsg.byteOne >= LISTENNTBEG[i] &&
+                            lastMidiMsg.byteOne <= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f)
+                    {
+                        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[i], floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, 0, GROUPS[0].numberLoaded, true));
+                    }
+                    if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f &&
+                            lastMidiMsg.byteOne <= LISTENNTEND[i])
+                    {
+                        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, LISTENNTEND[i], 0, GROUPS[1].numberLoaded, true));
+                    }
+
+                    break;
+
+                case FX_BLUR:
+
+                    if (lastMidiMsg.byteOne >= LISTENNTBEG[i] &&
+                            lastMidiMsg.byteOne <= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f)
+                    {
+                        EFFECTS[0].blurAmount = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[i], floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, 0, 20.0, true);
+                    }
+                    if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f &&
+                            lastMidiMsg.byteOne <= LISTENNTEND[i])
+                    {
+                        EFFECTS[1].blurAmount = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, LISTENNTEND[i], 0, 20.0, true);
+                    }
+
+                    break;
+                }
+
             }
-
-            switch (remapMode)
-            {
-            case CHANGE_VIDEOS:
-
-                if (lastMidiMsg.byteOne >= LISTENNTBEG &&
-                        lastMidiMsg.byteOne <= floor(LISTENNTBEG + LISTENNTEND)/2.0f)
-                {
-                    GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG, floor(LISTENNTBEG + LISTENNTEND)/2.0f, 0, GROUPS[0].numberLoaded, true));
-                }
-                if (lastMidiMsg.byteOne >= floor(LISTENNTBEG + LISTENNTEND)/2.0f &&
-                        lastMidiMsg.byteOne <= LISTENNTEND)
-                {
-                    GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG + LISTENNTEND)/2.0f, LISTENNTEND, 0, GROUPS[1].numberLoaded, true));
-                }
-
-                break;
-
-            case CHANGE_BLUR:
-
-                if (lastMidiMsg.byteOne >= LISTENNTBEG &&
-                        lastMidiMsg.byteOne <= floor(LISTENNTBEG + LISTENNTEND)/2.0f)
-                {
-                    EFFECTS[0].blurAmount = ofMap(lastMidiMsg.byteOne, LISTENNTBEG, floor(LISTENNTBEG + LISTENNTEND)/2.0f, 0, 20.0, true);
-                }
-                if (lastMidiMsg.byteOne >= floor(LISTENNTBEG + LISTENNTEND)/2.0f &&
-                        lastMidiMsg.byteOne <= LISTENNTEND)
-                {
-                    EFFECTS[1].blurAmount = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG + LISTENNTEND)/2.0f, LISTENNTEND, 0, 20.0, true);
-                }
-
-                break;
-            }
-
         }
+
+
 
         if (lastMidiMsg.channel == CONTROLCHANNEL)
         {
@@ -170,7 +175,8 @@ void goMidiManager::update()
             {
                 PARTICLES->eraseParticle ^= true;
             }
-            if(lastMidiMsg.byteOne > 35 && lastMidiMsg.byteOne < 44) {
+            if(lastMidiMsg.byteOne > 35 && lastMidiMsg.byteOne < 44)
+            {
                 PARTICLES->generate(lastMidiMsg.byteOne-36, lastMidiMsg.byteTwo);
             }
 

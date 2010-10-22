@@ -34,6 +34,9 @@
 #define LISTENNTEND     GUIMANAGER->listenNoteEnd
 #define REMAPNTBEG      GUIMANAGER->remapNoteBegin
 #define REMAPNTEND      GUIMANAGER->remapNoteEnd
+#define REMAPMODE       GUIMANAGER->remapMode
+#define CHANNELMODE     GUIMANAGER->channelMode
+#define PARTICLEMODE    GUIMANAGER->particleMode
 
 class goGuiManager
 {
@@ -58,13 +61,17 @@ public:
     int                         solenoidChannel;
     bool                        playSolenoids;
     int                         controlChannel;
-    int                         listenChannelBegin;
-    int                         listenChannelEnd;
-    int                         remapChannel;
-    int                         listenNoteBegin;
-    int                         listenNoteEnd;
-    int                         remapNoteBegin;
-    int                         remapNoteEnd;
+
+    int                         listenChannelBegin[3];
+    int                         listenChannelEnd[3];
+    int                         remapChannel[3];
+    int                         listenNoteBegin[3];
+    int                         listenNoteEnd[3];
+    int                         remapNoteBegin[3];
+    int                         remapNoteEnd[3];
+    int                         remapMode[3];
+    int                         channelMode[3];
+    int                         particleMode[3];
 
 protected:
 

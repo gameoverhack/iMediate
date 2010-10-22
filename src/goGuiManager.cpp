@@ -31,7 +31,37 @@ void goGuiManager::setup()
         "DST_ALPHA",
         "ONE_MINUS_DST_ALPHA"
     };
-
+    string remapModeNames[] = {"NONE",
+                               "PARTICLE_GENERATE",
+                               "RANDOM_VIDEO",
+                               "NOTE_TO_VIDEOS",
+                               "FX_BLUR",
+                               "FX_FLIP_X",
+                               "FX_FLIP_Y",
+                               "FX_GREYSCALE",
+                               "FX_INVERT",
+                               "FX_THRESHOLD",
+                               "FX_SATURATION",
+                               "FX_CONTRAST",
+                               "FX_BRIGHTNESS",
+                               "X_FADER",
+                               "CH_FADER",
+                               "REVERSE_CHANNELS"
+                              };
+    string channelModeNames[] = {"CHANNEL_BOTH",
+                                 "CHANNEL_SPLIT",
+                                 "CHANNEL_A",
+                                 "CHANNEL_B"};
+    string particleModeNames[] = {"ALL_LAYERS",
+                                  "LAYER_01",
+                                  "LAYER_02",
+                                  "LAYER_03",
+                                  "LAYER_04",
+                                  "LAYER_05",
+                                  "LAYER_06",
+                                  "LAYER_07",
+                                  "LAYER_08"
+                                 };
     // create drop down video folder groups
     GUI.addTitle("Video");
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
@@ -95,19 +125,28 @@ void goGuiManager::setup()
     GUI.addToggle("Use Fade Modes", XFADEMUTE);
 
     GUI.addPage("MIDI");
+    GUI.addTitle("Controller Settings");
     GUI.addToggle("MIDI Recieve", MIDIMANAGER->newMSG);
     GUI.addSlider("Solenoid Channel", solenoidChannel, 1, 16);
     GUI.addToggle("Play Solenoids", playSolenoids);
     GUI.addSlider("Controller Channel", controlChannel, 1, 16);
-    GUI.addSlider("Listen Channel Begin", listenChannelBegin, 1, 16);
-    GUI.addSlider("Listen Channel End", listenChannelEnd, 1, 16);
-    GUI.addToggle("RX in Channel Range", MIDIMANAGER->newMSGCH);
-    GUI.addSlider("Map Listen To Channel", remapChannel, 1, 16);
-    GUI.addSlider("Listen Note Begin", listenNoteBegin, 1, 127);
-    GUI.addSlider("Listen Note End", listenNoteEnd, 1, 127);
-    GUI.addToggle("RX in Note Range", MIDIMANAGER->newMSGNT);
-    string remapModeNames[] = {"CHANGE_VIDEOS", "CHANGE_BLUR"};
-    GUI.addComboBox("Remap Mode", REMAPMODE, 2, remapModeNames);
+
+    for (int i = 0; i < 3; i++)
+    {
+        GUI.addTitle("MIDI Remapper" + i).setNewColumn(true);
+        GUI.addSlider("Listen Channel Begin", LISTENCHBEG[i], 1, 16);
+        GUI.addSlider("Listen Channel End", LISTENCHEND[i], 1, 16);
+        GUI.addToggle("RX in Channel Range", MIDIMANAGER->newMSGCH[i]);
+        GUI.addSlider("Map Listen To Channel", REMAPCHAN[i], 1, 16);
+        GUI.addSlider("Listen Note Begin", LISTENNTBEG[i], 1, 127);
+        GUI.addSlider("Listen Note End", LISTENNTEND[i], 1, 127);
+        GUI.addToggle("RX in Note Range", MIDIMANAGER->newMSGNT[i]);
+
+        GUI.addComboBox("Remap Mode", REMAPMODE[i], 16, remapModeNames);
+        GUI.addComboBox("Channel Mode", CHANNELMODE[i], 4, channelModeNames);
+        GUI.addComboBox("Particle Mode", PARTICLEMODE[i], 9, particleModeNames);
+    }
+
     //GUI.addSlider("Remap Note Begin", remapNoteBegin, 1, 127);
     //GUI.addSlider("Remap Note End", remapNoteEnd, 1, 127);
 

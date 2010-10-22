@@ -18,33 +18,101 @@
     <SliderInt_Listen_Channel_Begin>
         <name>Listen Channel Begin</name>
         <value>12</value>
+        <name>Listen Channel Begin</name>
+        <value>12</value>
+        <name>Listen Channel Begin</name>
+        <value>12</value>
     </SliderInt_Listen_Channel_Begin>
     <SliderInt_Listen_Channel_End>
+        <name>Listen Channel End</name>
+        <value>12</value>
+        <name>Listen Channel End</name>
+        <value>12</value>
         <name>Listen Channel End</name>
         <value>12</value>
     </SliderInt_Listen_Channel_End>
     <Toggle_RX_in_Channel_Range>
         <name>RX in Channel Range</name>
         <value>1</value>
+        <name>RX in Channel Range</name>
+        <value>1</value>
+        <name>RX in Channel Range</name>
+        <value>1</value>
     </Toggle_RX_in_Channel_Range>
     <SliderInt_Map_Listen_To_Channel>
         <name>Map Listen To Channel</name>
         <value>16</value>
+        <name>Map Listen To Channel</name>
+        <value>16</value>
+        <name>Map Listen To Channel</name>
+        <value>16</value>
     </SliderInt_Map_Listen_To_Channel>
     <SliderInt_Listen_Note_Begin>
+        <name>Listen Note Begin</name>
+        <value>62</value>
+        <name>Listen Note Begin</name>
+        <value>31</value>
         <name>Listen Note Begin</name>
         <value>31</value>
     </SliderInt_Listen_Note_Begin>
     <SliderInt_Listen_Note_End>
         <name>Listen Note End</name>
         <value>86</value>
+        <name>Listen Note End</name>
+        <value>86</value>
+        <name>Listen Note End</name>
+        <value>86</value>
     </SliderInt_Listen_Note_End>
     <Toggle_RX_in_Note_Range>
+        <name>RX in Note Range</name>
+        <value>1</value>
+        <name>RX in Note Range</name>
+        <value>1</value>
         <name>RX in Note Range</name>
         <value>1</value>
     </Toggle_RX_in_Note_Range>
     <ComboBox_Remap_Mode>
         <name>Remap Mode</name>
+        <value>3</value>
+        <name>Remap Mode</name>
+        <value>1</value>
+        <name>Remap Mode</name>
         <value>1</value>
     </ComboBox_Remap_Mode>
+    <ComboBox_Channel_Mode>
+        <name>Channel Mode</name>
+        <value>0</value>
+        <name>Channel Mode</name>
+        <value>0</value>
+        <name>Channel Mode</name>
+        <value>0</value>
+    </ComboBox_Channel_Mode>
+    <ComboBox_Particle_Mode>
+        <name>Particle Mode</name>
+        <value>0</value>
+        <name>Particle Mode</name>
+        <value>0</value>
+        <name>Particle Mode</name>
+        <value>0</value>
+    </ComboBox_Particle_Mode>
+    <SliderInt_Listen_Channel_Begin></SliderInt_Listen_Channel_Begin>
+    <SliderInt_Listen_Channel_End></SliderInt_Listen_Channel_End>
+    <Toggle_RX_in_Channel_Range></Toggle_RX_in_Channel_Range>
+    <SliderInt_Map_Listen_To_Channel></SliderInt_Map_Listen_To_Channel>
+    <SliderInt_Listen_Note_Begin></SliderInt_Listen_Note_Begin>
+    <SliderInt_Listen_Note_End></SliderInt_Listen_Note_End>
+    <Toggle_RX_in_Note_Range></Toggle_RX_in_Note_Range>
+    <ComboBox_Remap_Mode></ComboBox_Remap_Mode>
+    <ComboBox_Channel_Mode></ComboBox_Channel_Mode>
+    <ComboBox_Particle_Mode></ComboBox_Particle_Mode>
+    <SliderInt_Listen_Channel_Begin></SliderInt_Listen_Channel_Begin>
+    <SliderInt_Listen_Channel_End></SliderInt_Listen_Channel_End>
+    <Toggle_RX_in_Channel_Range></Toggle_RX_in_Channel_Range>
+    <SliderInt_Map_Listen_To_Channel></SliderInt_Map_Listen_To_Channel>
+    <SliderInt_Listen_Note_Begin></SliderInt_Listen_Note_Begin>
+    <SliderInt_Listen_Note_End></SliderInt_Listen_Note_End>
+    <Toggle_RX_in_Note_Range></Toggle_RX_in_Note_Range>
+    <ComboBox_Remap_Mode></ComboBox_Remap_Mode>
+    <ComboBox_Channel_Mode></ComboBox_Channel_Mode>
+    <ComboBox_Particle_Mode></ComboBox_Particle_Mode>
 </controls>

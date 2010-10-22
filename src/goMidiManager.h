@@ -14,12 +14,46 @@
 
 #define MIDIMANAGER		goMidiManagerSingleton::Instance()
 #define LASTMIDIMSG     MIDIMANAGER->lastMidiMsg
-#define REMAPMODE       MIDIMANAGER->remapMode
 
 enum remapModes
 {
-    CHANGE_VIDEOS,
-    CHANGE_BLUR
+    NONE,
+    PARTICLE_GENERATE,
+    RANDOM_VIDEO,
+    NOTE_TO_VIDEOS,
+    FX_BLUR,
+    FX_FLIP_X,
+    FX_FLIP_Y,
+    FX_GREYSCALE,
+    FX_INVERT,
+    FX_THRESHOLD,
+    FX_SATURATION,
+    FX_CONTRAST,
+    FX_BRIGHTNESS,
+    X_FADER,
+    CH_FADER,
+    REVERSE_CHANNELS
+};
+
+enum channelModes
+{
+    CHANNEL_BOTH,
+    CHANNEL_SPLIT,
+    CHANNEL_A,
+    CHANNEL_B
+};
+
+enum particleModes
+{
+    ALL_LAYERS,
+    LAYER_01,
+    LAYER_02,
+    LAYER_03,
+    LAYER_04,
+    LAYER_05,
+    LAYER_06,
+    LAYER_07,
+    LAYER_08
 };
 
 struct midiMSG {
@@ -52,11 +86,10 @@ class goMidiManager
         ofxMidiIn			midiIn;
         void				newMidiMessage(ofxMidiEventArgs& eventArgs);
 
-        bool                newMSG, newMSGCH, newMSGNT;
+        bool                newMSG, newMSGCH[3], newMSGNT[3];
         midiMSG             newMidiMsg;
         midiMSG				lastMidiMsg;
 
-        int                 remapMode;
     protected:
     private:
 };
