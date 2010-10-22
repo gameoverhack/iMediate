@@ -111,6 +111,14 @@ void goGuiManager::setup()
     //GUI.addSlider("Remap Note Begin", remapNoteBegin, 1, 127);
     //GUI.addSlider("Remap Note End", remapNoteEnd, 1, 127);
 
+    GUI.addPage("OSC");
+    GUI.addToggle("OSC Recieve", OSCMANAGER->newMSG);
+    GUI.addSlider("Coefficient 1", OSCMANAGER->co1, 0, 1.0);
+    GUI.addSlider("Coefficient 2", OSCMANAGER->co2, 0, 1.0);
+    GUI.addSlider("Coefficient 3", OSCMANAGER->co3, 0, 1.0);
+    GUI.addSlider("Amplitude", OSCMANAGER->amp, 0, 1.0);
+    GUI.addSlider("Note", OSCMANAGER->note, 0, 127);
+
     GUI.loadFromXML();
 
     GUI.show();

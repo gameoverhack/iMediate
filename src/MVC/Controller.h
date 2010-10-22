@@ -21,6 +21,7 @@
 #include "goVideoGroup.h"
 #include "goGuiManager.h"
 #include "goMidiManager.h"
+#include "goOSCManager.h"
 
 #define GROUPS          CONTROLLER->groups
 

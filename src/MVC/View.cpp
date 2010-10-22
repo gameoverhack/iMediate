@@ -33,8 +33,9 @@ void View::update(ofEventArgs &e)
 {
     ofBackground(0, 0, 0);
 
-    GUIMANAGER->update();
+    OSCMANAGER->update();
     MIDIMANAGER->update();
+    GUIMANAGER->update();
 
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
     {

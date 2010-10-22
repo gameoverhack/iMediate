@@ -2097,10 +2097,10 @@
 	"Singleton.h"
 	"ofUtils.h"
 
-1287729574 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
+1287783413 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.cpp
 	"Controller.h"
 
-1287711270 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
+1287783055 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\controller.h
 	"Singleton.h"
 	"Model.h"
 	"View.h"
@@ -2109,6 +2109,7 @@
 	"goVideoGroup.h"
 	"goGuiManager.h"
 	"goMidiManager.h"
+	"goOSCManager.h"
 
 1287771240 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\mvc\view.h
 	"Singleton.h"
@@ -2709,7 +2710,7 @@
 1287776812 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
 	"goMidiManager.h"
 
-1287779025 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
+1287783593 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
 	"goGuiManager.h"
 
 1287737259 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideopreview.h
@@ -2744,4 +2745,17 @@
 
 1227750742 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\particle.cpp
 	"particle.h"
+
+1287783319 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gooscmanager.h
+	"Singleton.h"
+	"ofxOsc.h"
+
+1286349224 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\addons\ofxosc\src\ofxosc.h
+	"ofxOscArg.h"
+	"ofxOscMessage.h"
+	"ofxOscSender.h"
+	"ofxOscReceiver.h"
+
+1287783616 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gooscmanager.cpp
+	"goOSCManager.h"
 

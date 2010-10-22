@@ -37,7 +37,7 @@
     </SliderInt_Listen_Note_Begin>
     <SliderInt_Listen_Note_End>
         <name>Listen Note End</name>
-        <value>64</value>
+        <value>67</value>
     </SliderInt_Listen_Note_End>
     <Toggle_RX_in_Note_Range>
         <name>RX in Note Range</name>
