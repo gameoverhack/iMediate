@@ -5,7 +5,7 @@
     </Toggle_OSC_Recieve>
     <SliderFloat_Coefficient_1>
         <name>Coefficient 1</name>
-        <value>0.077393</value>
+        <value>0.123657</value>
     </SliderFloat_Coefficient_1>
     <Toggle_CO1_Remap_to_Midi>
         <name>CO1 Remap to Midi</name>
@@ -17,7 +17,7 @@
     </SliderInt_Remap_Channel_1>
     <SliderFloat_Coefficient_2>
         <name>Coefficient 2</name>
-        <value>0.581604</value>
+        <value>0.647949</value>
     </SliderFloat_Coefficient_2>
     <Toggle_CO2_Remap_to_Midi>
         <name>CO2 Remap to Midi</name>
@@ -29,7 +29,7 @@
     </SliderInt_Remap_Channel_2>
     <SliderFloat_Coefficient_3>
         <name>Coefficient 3</name>
-        <value>0.617676</value>
+        <value>0.098633</value>
     </SliderFloat_Coefficient_3>
     <Toggle_CO3_Remap_to_Midi>
         <name>CO3 Remap to Midi</name>
@@ -41,7 +41,7 @@
     </SliderInt_Remap_Channel_3>
     <SliderFloat_Amplitude>
         <name>Amplitude</name>
-        <value>0.636475</value>
+        <value>0.680542</value>
     </SliderFloat_Amplitude>
     <Toggle_AMP_Remap_to_Midi>
         <name>AMP Remap to Midi</name>
@@ -53,7 +53,7 @@
     </SliderInt_Remap_Channel_4>
     <SliderFloat_Note>
         <name>Note</name>
-        <value>19.000000</value>
+        <value>119.000000</value>
     </SliderFloat_Note>
     <Toggle_NTA_Remap_to_Midi>
         <name>NTA Remap to Midi</name>
@@ -133,7 +133,7 @@
     </SliderInt_Listen_Note_End4>
     <Toggle_RX_in_Note_Range4>
         <name>RX in Note Range4</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Note_Range4>
     <Toggle_Learn_Note_Range4>
         <name>Learn Note Range4</name>
@@ -177,7 +177,7 @@
     </SliderInt_Listen_Note_End5>
     <Toggle_RX_in_Note_Range5>
         <name>RX in Note Range5</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Note_Range5>
     <Toggle_Learn_Note_Range5>
         <name>Learn Note Range5</name>

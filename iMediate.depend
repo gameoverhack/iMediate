@@ -2707,7 +2707,7 @@
 	"ofxMidiIn.h"
 	"ofxMidiOut.h"
 
-1287822646 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
+1287823829 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
 	"goMidiManager.h"
 
 1287823421 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
@@ -2761,6 +2761,6 @@
 	"ofxOscSender.h"
 	"ofxOscReceiver.h"
 
-1287822065 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gooscmanager.cpp
+1287823829 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gooscmanager.cpp
 	"goOSCManager.h"
 

@@ -89,7 +89,7 @@
     </SliderInt_Listen_Note_End3>
     <Toggle_RX_in_Note_Range3>
         <name>RX in Note Range3</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_RX_in_Note_Range3>
     <Toggle_Learn_Note_Range3>
         <name>Learn Note Range3</name>
@@ -125,7 +125,7 @@
     </SliderInt_Map_Listen_To_Channel4>
     <SliderInt_Listen_Note_Begin4>
         <name>Listen Note Begin4</name>
-        <value>0</value>
+        <value>1</value>
     </SliderInt_Listen_Note_Begin4>
     <SliderInt_Listen_Note_End4>
         <name>Listen Note End4</name>
@@ -169,7 +169,7 @@
     </SliderInt_Map_Listen_To_Channel5>
     <SliderInt_Listen_Note_Begin5>
         <name>Listen Note Begin5</name>
-        <value>0</value>
+        <value>1</value>
     </SliderInt_Listen_Note_Begin5>
     <SliderInt_Listen_Note_End5>
         <name>Listen Note End5</name>

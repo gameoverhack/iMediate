@@ -81,11 +81,11 @@
     </Toggle_Invert0>
     <Toggle_Threshold0>
         <name>Threshold0</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Threshold0>
     <SliderFloat_Threshold_Level0>
         <name>Threshold Level0</name>
-        <value>0.545000</value>
+        <value>0.550000</value>
     </SliderFloat_Threshold_Level0>
     <Toggle_Hue0>
         <name>Hue0</name>

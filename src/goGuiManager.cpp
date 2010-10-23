@@ -95,7 +95,7 @@ void goGuiManager::setup()
         GUI.addToggle("Greyscale" + ofToString(i), EFFECTS[i].doGreyscale);
         GUI.addToggle("Invert" + ofToString(i), EFFECTS[i].doInvert);
         GUI.addToggle("Threshold" + ofToString(i), EFFECTS[i].doThreshold);
-        GUI.addSlider("Threshold Level" + ofToString(i), EFFECTS[i].threshLevel, 0.0, 10.0);
+        GUI.addSlider("Threshold Level" + ofToString(i), EFFECTS[i].threshLevel, 0.0, 1.0);
         GUI.addToggle("Hue" + ofToString(i), EFFECTS[i].doHue);
         GUI.addColorPicker("Hue Colour" + ofToString(i), &(EFFECTS[i].hueColour.r));
         GUI.addToggle("Saturation" + ofToString(i), EFFECTS[i].doSaturation);
