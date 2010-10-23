@@ -5,8 +5,6 @@ static const int ports[] = {2,3,4,5,6,7,8,9,10};
 //static const int keys[] = {48,50,52,53,55,57,59,60,62,64};
 static const int keys[] = {60,61,62,63,64,65,66,68};
 
-#define NUM_SOLENOIDS 8
-
 goMidiManager::goMidiManager()
 {
     //ctor
@@ -25,6 +23,7 @@ void goMidiManager::setup()
     PLAYSOLENOIDS = bSetupArduino	= false;							// flag so we setup arduino when its ready, you don't need to touch this :)
 
     // setup midi
+    //midiOut.openPort();
     midiIn.openPort();
     midiIn.setVerbose(false);
 
@@ -89,11 +88,19 @@ void goMidiManager::update()
         lastMidiMsg.byteTwo = newMidiMsg.byteTwo;
         lastMidiMsg.timestamp = newMidiMsg.timestamp;
 
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 6; i++)
         {
             if (lastMidiMsg.channel >= LISTENCHBEG[i] && lastMidiMsg.channel <= LISTENCHEND[i])
             {
+
+                if(LEARNRANGE[i])
+                {
+                    LISTENNTBEG[i] = MIN(lastMidiMsg.byteOne, LISTENNTBEG[i]);
+                    LISTENNTEND[i] = MAX(lastMidiMsg.byteOne, LISTENNTEND[i]);
+                }
+
                 newMSGCH[i] ^= true;
+
                 if (lastMidiMsg.byteOne >= LISTENNTBEG[i] &&  LISTENNTEND[i])
                 {
                     newMSGNT[i] ^= true;
@@ -108,7 +115,7 @@ void goMidiManager::update()
                         {
                             if(lastMidiMsg.status == 144)
                             {
-                                int mapPort = (int)ofMap(lastMidiMsg.byteOne, LISTENNTBEG[i],  LISTENNTEND[i], 2, 10, false);
+                                int mapPort = (int)floor(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[i],  LISTENNTEND[i], 0, 9, false));
                                 ard.sendDigital(ports[mapPort], ARD_HIGH);
                                 ardTimer[mapPort] = ofGetElapsedTimeMillis();
                             }
@@ -117,11 +124,12 @@ void goMidiManager::update()
                     }
                     break;
                 case PARTICLE_GENERATE:
+                    cout << PARTICLEMODE[i] << endl;
                     if(PARTICLEMODE[i] == 0)
                     {
                         for (int j = 0; j < 8; j++)
                         {
-                            PARTICLES->generate(j, lastMidiMsg.byteTwo);
+                            PARTICLES->generate(j, (int)ofRandom(0,lastMidiMsg.byteTwo));
                         }
                     }
                     else
@@ -204,7 +212,7 @@ void goMidiManager::update()
             }
             if(lastMidiMsg.byteOne == 11)
             {
-                PARTICLES->pDamp = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 127.0, false);
+                PARTICLES->pDamp = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 40.0, false);
             }
             if(lastMidiMsg.byteOne == 43)
             {
@@ -236,25 +244,25 @@ void goMidiManager::update()
                 // x-fades
                 if (lastMidiMsg.byteOne == 1)
                 {
-                    XFADE = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, false);
+                    XFADE = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
                 }
                 if (lastMidiMsg.byteOne == 2)
                 {
-                    EFFECTS[0].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, false);
+                    EFFECTS[0].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
                 }
                 if (lastMidiMsg.byteOne == 3)
                 {
-                    EFFECTS[1].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, false);
+                    EFFECTS[1].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
                 }
 
                 // channel speeds
                 if (lastMidiMsg.byteOne == 17)
                 {
-                    EFFECTS[0].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, false);
+                    EFFECTS[0].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
                 }
                 if (lastMidiMsg.byteOne == 18)
                 {
-                    EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, false);
+                    EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
                 }
 
             }
@@ -293,31 +301,32 @@ void goMidiManager::update()
 
 void goMidiManager::remap(int & index, bool * var0, bool * var1)
 {
+    bool decision = (bool)floor(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 2, true));
     switch (CHANNELMODE[index])
     {
     case CHANNEL_BOTH:
-        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
-        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
+        *var0 = decision;
+        *var1 = decision;
         break;
 
     case CHANNEL_A:
-        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
+        *var0 = decision;
         break;
 
     case CHANNEL_B:
-        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
+        *var1 = decision;
         break;
 
     case CHANNEL_SPLIT:
         if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
                 lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
         {
-            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, 0, 1, false);
+            *var0 = (bool)floor(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, 0, 2, true));
         }
         if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
                 lastMidiMsg.byteOne <=  LISTENNTEND[index])
         {
-            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], 0, 1, false);
+            *var1 = (bool)floor(ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], 0, 2, true));
         }
         break;
     }
@@ -328,28 +337,28 @@ void goMidiManager::remap(int & index, int rBegin0, int rEnd0, int rBegin1, int 
     switch (CHANNELMODE[index])
     {
     case CHANNEL_BOTH:
-        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false));
-        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false));
+        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, true));
+        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, true));
         break;
 
     case CHANNEL_A:
-        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false));
+        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, true));
         break;
 
     case CHANNEL_B:
-        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false));
+        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, true));
         break;
 
     case CHANNEL_SPLIT:
         if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
                 lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
         {
-            GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, false));
+            GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, true));
         }
         if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
                 lastMidiMsg.byteOne <=  LISTENNTEND[index])
         {
-            GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, false));
+            GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, true));
         }
         break;
     }
@@ -392,28 +401,28 @@ void goMidiManager::remap(int & index, int * var0, int * var1, float rBegin0, fl
     switch (CHANNELMODE[index])
     {
     case CHANNEL_BOTH:
-        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
-        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, true);
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, true);
         break;
 
     case CHANNEL_A:
-        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, true);
         break;
 
     case CHANNEL_B:
-        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, true);
         break;
 
     case CHANNEL_SPLIT:
         if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
                 lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
         {
-            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, false);
+            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, true);
         }
         if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
                 lastMidiMsg.byteOne <=  LISTENNTEND[index])
         {
-            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, false);
+            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, true);
         }
         break;
     }
@@ -424,28 +433,28 @@ void goMidiManager::remap(int & index, float * var0, float * var1, float rBegin0
     switch (CHANNELMODE[index])
     {
     case CHANNEL_BOTH:
-        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
-        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, true);
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, true);
         break;
 
     case CHANNEL_A:
-        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, true);
         break;
 
     case CHANNEL_B:
-        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, true);
         break;
 
     case CHANNEL_SPLIT:
         if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
                 lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
         {
-            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, false);
+            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, true);
         }
         if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
                 lastMidiMsg.byteOne <=  LISTENNTEND[index])
         {
-            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, false);
+            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, true);
         }
         break;
     }

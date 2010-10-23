@@ -14,6 +14,7 @@
 
 #define MIDIMANAGER		goMidiManagerSingleton::Instance()
 #define LASTMIDIMSG     MIDIMANAGER->lastMidiMsg
+#define ARD             MIDIMANAGER->ard
 
 enum remapModes
 {
@@ -86,6 +87,7 @@ class goMidiManager
         bool				bSetupArduino;			// flag variable for setting up arduino once
 
         ofxMidiIn			midiIn;
+        ofxMidiOut          midiOut;
         void				newMidiMessage(ofxMidiEventArgs& eventArgs);
 
         bool                newMSG, newMSGCH[3], newMSGNT[3];

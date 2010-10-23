@@ -37,6 +37,10 @@
 #define REMAPMODE       GUIMANAGER->remapMode
 #define CHANNELMODE     GUIMANAGER->channelMode
 #define PARTICLEMODE    GUIMANAGER->particleMode
+#define LEARNRANGE      GUIMANAGER->learnRange
+#define MUTE            GUIMANAGER->mute
+#define REMAPOSC        GUIMANAGER->remaposc
+#define OSCCHANNEL      GUIMANAGER->oscchannel
 
 class goGuiManager
 {
@@ -53,7 +57,7 @@ public:
     int                         lastFolderBox[MAX_VIDEO_CHANNELS];
 
     float                       xfade;
-    bool                        xfademute, xfuncmute, trueXFader, reversechannels;
+    bool                        xfademute, xfuncmute, trueXFader, reversechannels, mute[2];
     bool                        channeladirect, channelbdirect;
 
     int                         xmodes[2], xfuncs[2];
@@ -62,16 +66,20 @@ public:
     bool                        playSolenoids;
     int                         controlChannel;
 
-    int                         listenChannelBegin[3];
-    int                         listenChannelEnd[3];
-    int                         remapChannel[3];
-    int                         listenNoteBegin[3];
-    int                         listenNoteEnd[3];
-    int                         remapNoteBegin[3];
-    int                         remapNoteEnd[3];
-    int                         remapMode[3];
-    int                         channelMode[3];
-    int                         particleMode[3];
+    int                         listenChannelBegin[6];
+    int                         listenChannelEnd[6];
+    int                         remapChannel[6];
+    int                         listenNoteBegin[6];
+    int                         listenNoteEnd[6];
+    int                         remapNoteBegin[6];
+    int                         remapNoteEnd[6];
+    int                         remapMode[6];
+    int                         channelMode[6];
+    int                         particleMode[6];
+    bool                        learnRange[6];
+
+    bool                        remaposc[5];
+    int                         oscchannel[5];
 
 protected:
 

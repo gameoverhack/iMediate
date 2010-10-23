@@ -72,36 +72,38 @@ void goGuiManager::setup()
     }
 
     GUI.addSlider("Channel A Speed", EFFECTS[0].videoSpeed, -5.0f, 5.0f);
+    GUI.addToggle("Channel A MUTE", MUTE[0]);
     GUI.addSlider("Channel B Speed", EFFECTS[1].videoSpeed, -5.0f, 5.0f);
+    GUI.addToggle("Channel B MUTE", MUTE[1]);
     GUI.addToggle("Particle Color", PARTICLES->particleColors);
     GUI.addToggle("Particle Size", PARTICLES->sizeParticle);
     GUI.addToggle("Particle Speed", PARTICLES->speedParticle);
     GUI.addToggle("Particle Link", PARTICLES->linkParticle);
     GUI.addToggle("Particle Erase", PARTICLES->eraseParticle);
     GUI.addSlider("Particle Size", PARTICLES->pWidth, 0, 720.0f);
-    GUI.addSlider("Particle Speed", PARTICLES->pDamp, 0, 127.0f);
+    GUI.addSlider("Particle Speed", PARTICLES->pDamp, 0, 40.0f);
     GUI.addSlider("Particle Type", PARTICLES->particlePattern, 0, 16);
 
     // create effects interface for video groups
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
     {
-        GUI.addTitle("Effects Group" + i).setNewColumn(true);
-        GUI.addToggle("Blur", EFFECTS[i].doBlur);
-        GUI.addSlider("Blur Level", EFFECTS[i].blurAmount, 0.0, 20);
-        GUI.addToggle("FlipX", EFFECTS[i].doFlipX);
-        GUI.addToggle("FlipY", EFFECTS[i].doFlipY);
-        GUI.addToggle("Greyscale", EFFECTS[i].doGreyscale);
-        GUI.addToggle("Invert", EFFECTS[i].doInvert);
-        GUI.addToggle("Threshold", EFFECTS[i].doThreshold);
-        GUI.addSlider("Threshold Level", EFFECTS[i].threshLevel, 0.0, 1);
-        GUI.addToggle("Hue", EFFECTS[i].doHue);
-        GUI.addColorPicker("Hue Colour", &(EFFECTS[i].hueColour.r));
-        GUI.addToggle("Saturation", EFFECTS[i].doSaturation);
-        GUI.addSlider("Saturation Level", EFFECTS[i].saturationLevel, 0.0, 10);
-        GUI.addToggle("Contrast", EFFECTS[i].doContrast);
-        GUI.addSlider("Contrast Level", EFFECTS[i].contrastLevel, 0.0, 10);
-        GUI.addToggle("Brightness", EFFECTS[i].doBrightness);
-        GUI.addSlider("Brightness Level", EFFECTS[i].brightnessLevel, 0.0, 10);
+        GUI.addTitle("Effects Group" + ofToString(i)).setNewColumn(true);
+        GUI.addToggle("Blur" + ofToString(i), EFFECTS[i].doBlur);
+        GUI.addSlider("Blur Level" + ofToString(i), EFFECTS[i].blurAmount, 0, 20);
+        GUI.addToggle("FlipX" + ofToString(i), EFFECTS[i].doFlipX);
+        GUI.addToggle("FlipY" + ofToString(i), EFFECTS[i].doFlipY);
+        GUI.addToggle("Greyscale" + ofToString(i), EFFECTS[i].doGreyscale);
+        GUI.addToggle("Invert" + ofToString(i), EFFECTS[i].doInvert);
+        GUI.addToggle("Threshold" + ofToString(i), EFFECTS[i].doThreshold);
+        GUI.addSlider("Threshold Level" + ofToString(i), EFFECTS[i].threshLevel, 0.0, 10.0);
+        GUI.addToggle("Hue" + ofToString(i), EFFECTS[i].doHue);
+        GUI.addColorPicker("Hue Colour" + ofToString(i), &(EFFECTS[i].hueColour.r));
+        GUI.addToggle("Saturation" + ofToString(i), EFFECTS[i].doSaturation);
+        GUI.addSlider("Saturation Level" + ofToString(i), EFFECTS[i].saturationLevel, 0.0, 10.0);
+        GUI.addToggle("Contrast" + ofToString(i), EFFECTS[i].doContrast);
+        GUI.addSlider("Contrast Level" + ofToString(i), EFFECTS[i].contrastLevel, 0.0, 10.0);
+        GUI.addToggle("Brightness" + ofToString(i), EFFECTS[i].doBrightness);
+        GUI.addSlider("Brightness Level" + ofToString(i), EFFECTS[i].brightnessLevel, 0.0, 10.0);
     }
 
     GUI.addTitle("X-Faders & Blends").setNewColumn(true);
@@ -136,17 +138,18 @@ void goGuiManager::setup()
     for (int i = 0; i < 3; i++)
     {
         GUI.addTitle("MIDI Remapper" + i).setNewColumn(true);
-        GUI.addSlider("Listen Channel Begin", LISTENCHBEG[i], 1, 16);
-        GUI.addSlider("Listen Channel End", LISTENCHEND[i], 1, 16);
-        GUI.addToggle("RX in Channel Range", MIDIMANAGER->newMSGCH[i]);
-        GUI.addSlider("Map Listen To Channel", REMAPCHAN[i], 1, 16);
-        GUI.addSlider("Listen Note Begin", LISTENNTBEG[i], 1, 127);
-        GUI.addSlider("Listen Note End", LISTENNTEND[i], 1, 127);
-        GUI.addToggle("RX in Note Range", MIDIMANAGER->newMSGNT[i]);
+        GUI.addSlider("Listen Channel Begin" + ofToString(i), LISTENCHBEG[i], 1, 16);
+        GUI.addSlider("Listen Channel End" + ofToString(i), LISTENCHEND[i], 1, 16);
+        GUI.addToggle("RX in Channel Range" + ofToString(i), MIDIMANAGER->newMSGCH[i]);
+        GUI.addSlider("Map Listen To Channel" + ofToString(i), REMAPCHAN[i], 1, 16);
+        GUI.addSlider("Listen Note Begin" + ofToString(i), LISTENNTBEG[i], 1, 127);
+        GUI.addSlider("Listen Note End" + ofToString(i), LISTENNTEND[i], 1, 127);
+        GUI.addToggle("RX in Note Range" + ofToString(i), MIDIMANAGER->newMSGNT[i]);
+        GUI.addToggle("Learn Note Range" + ofToString(i), LEARNRANGE[i]);
 
-        GUI.addComboBox("Remap Mode", REMAPMODE[i], 16, remapModeNames);
-        GUI.addComboBox("Channel Mode", CHANNELMODE[i], 4, channelModeNames);
-        GUI.addComboBox("Particle Mode", PARTICLEMODE[i], 9, particleModeNames);
+        GUI.addComboBox("Remap Mode" + ofToString(i), REMAPMODE[i], 16, remapModeNames);
+        GUI.addComboBox("Channel Mode" + ofToString(i), CHANNELMODE[i], 4, channelModeNames);
+        GUI.addComboBox("Particle Mode" + ofToString(i), PARTICLEMODE[i], 9, particleModeNames);
     }
 
     //GUI.addSlider("Remap Note Begin", remapNoteBegin, 1, 127);
@@ -154,11 +157,38 @@ void goGuiManager::setup()
 
     GUI.addPage("OSC");
     GUI.addToggle("OSC Recieve", OSCMANAGER->newMSG);
-    GUI.addSlider("Coefficient 1", OSCMANAGER->co1, 0, 1.0);
-    GUI.addSlider("Coefficient 2", OSCMANAGER->co2, 0, 1.0);
-    GUI.addSlider("Coefficient 3", OSCMANAGER->co3, 0, 1.0);
-    GUI.addSlider("Amplitude", OSCMANAGER->amp, 0, 1.0);
-    GUI.addSlider("Note", OSCMANAGER->note, 0, 127);
+    GUI.addSlider("Coefficient 1", OSCDATA[0], 0, 1.0);
+    GUI.addToggle("CO1 Remap to Midi", REMAPOSC[0]);
+    GUI.addSlider("Remap Channel 1", OSCCHANNEL[0], 1, 19);
+    GUI.addSlider("Coefficient 2", OSCDATA[1], 0, 1.0);
+    GUI.addToggle("CO2 Remap to Midi", REMAPOSC[1]);
+    GUI.addSlider("Remap Channel 2", OSCCHANNEL[1], 1, 19);
+    GUI.addSlider("Coefficient 3", OSCDATA[2], 0, 1.0);
+    GUI.addToggle("CO3 Remap to Midi", REMAPOSC[2]);
+    GUI.addSlider("Remap Channel 3", OSCCHANNEL[2], 1, 19);
+    GUI.addSlider("Amplitude", OSCDATA[3], 0, 1.0);
+    GUI.addToggle("AMP Remap to Midi", REMAPOSC[3]);
+    GUI.addSlider("Remap Channel 4", OSCCHANNEL[3], 1, 19);
+    GUI.addSlider("Note", OSCDATA[4], 0, 127);
+    GUI.addToggle("NTA Remap to Midi", REMAPOSC[4]);
+    GUI.addSlider("Remap Channel 5", OSCCHANNEL[4], 1, 19);
+
+    for (int i = 3; i < 6; i++)
+    {
+        GUI.addTitle("OSC->MIDI Remapper" + i).setNewColumn(true);
+        GUI.addSlider("Listen Channel Begin" + ofToString(i), LISTENCHBEG[i], 1, 19);
+        GUI.addSlider("Listen Channel End" + ofToString(i), LISTENCHEND[i], 1, 19);
+        GUI.addToggle("RX in Channel Range" + ofToString(i), OSCMANAGER->newMSGCH[i-3]);
+        GUI.addSlider("Map Listen To Channel" + ofToString(i), REMAPCHAN[i], 1, 19);
+        GUI.addSlider("Listen Note Begin" + ofToString(i), LISTENNTBEG[i], 1, 127);
+        GUI.addSlider("Listen Note End" + ofToString(i), LISTENNTEND[i], 1, 127);
+        GUI.addToggle("RX in Note Range" + ofToString(i), OSCMANAGER->newMSGNT[i-3]);
+        GUI.addToggle("Learn Note Range" + ofToString(i), LEARNRANGE[i]);
+
+        GUI.addComboBox("Remap Mode" + ofToString(i), REMAPMODE[i], 16, remapModeNames);
+        GUI.addComboBox("Channel Mode" + ofToString(i), CHANNELMODE[i], 4, channelModeNames);
+        GUI.addComboBox("Particle Mode" + ofToString(i), PARTICLEMODE[i], 9, particleModeNames);
+    }
 
     GUI.loadFromXML();
 

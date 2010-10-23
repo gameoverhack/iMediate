@@ -58,9 +58,9 @@ void View::update(ofEventArgs &e)
     {
         glPushMatrix();
         glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-        if (CHANNELADIRECT) EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
+        if (CHANNELADIRECT && !MUTE[0]) EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
         glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-        if (CHANNELBDIRECT) EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
+        if (CHANNELBDIRECT && !MUTE[1]) EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
         glPopMatrix();
     }
 
@@ -83,7 +83,7 @@ void View::drawBlend()
     else fadeLevel = 1.0f - (XFADE >= 0 ? XFADE : 0);
 
     glColor4f(fadeLevel, fadeLevel, fadeLevel, fadeLevel);         // cross fade
-    EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
+    if(!MUTE[0]) EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
 
     PARTICLES->draw(0x000000, 0);
     PARTICLES->draw(0xFFFFFF, 1);
@@ -108,7 +108,7 @@ void View::drawBlend()
     else fadeLevel = 1.0f - (XFADE <= 0 ? -XFADE : 0);
 
     glColor4f(fadeLevel, fadeLevel, fadeLevel, fadeLevel);         // cross fade
-    EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
+    if(!MUTE[0]) EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
 
     PARTICLES->draw(0x000000, 6);
     PARTICLES->draw(0xFFFFFF, 7);

@@ -15,104 +15,136 @@
         <name>Controller Channel</name>
         <value>16</value>
     </SliderInt_Controller_Channel>
-    <SliderInt_Listen_Channel_Begin>
-        <name>Listen Channel Begin</name>
-        <value>16</value>
-        <name>Listen Channel Begin</name>
-        <value>16</value>
-        <name>Listen Channel Begin</name>
-        <value>16</value>
-    </SliderInt_Listen_Channel_Begin>
-    <SliderInt_Listen_Channel_End>
-        <name>Listen Channel End</name>
-        <value>16</value>
-        <name>Listen Channel End</name>
-        <value>16</value>
-        <name>Listen Channel End</name>
-        <value>16</value>
-    </SliderInt_Listen_Channel_End>
-    <Toggle_RX_in_Channel_Range>
-        <name>RX in Channel Range</name>
+    <SliderInt_Listen_Channel_Begin0>
+        <name>Listen Channel Begin0</name>
         <value>1</value>
-        <name>RX in Channel Range</name>
-        <value>1</value>
-        <name>RX in Channel Range</name>
-        <value>1</value>
-    </Toggle_RX_in_Channel_Range>
-    <SliderInt_Map_Listen_To_Channel>
-        <name>Map Listen To Channel</name>
-        <value>12</value>
-        <name>Map Listen To Channel</name>
-        <value>12</value>
-        <name>Map Listen To Channel</name>
-        <value>12</value>
-    </SliderInt_Map_Listen_To_Channel>
-    <SliderInt_Listen_Note_Begin>
-        <name>Listen Note Begin</name>
-        <value>48</value>
-        <name>Listen Note Begin</name>
-        <value>48</value>
-        <name>Listen Note Begin</name>
-        <value>48</value>
-    </SliderInt_Listen_Note_Begin>
-    <SliderInt_Listen_Note_End>
-        <name>Listen Note End</name>
-        <value>59</value>
-        <name>Listen Note End</name>
-        <value>59</value>
-        <name>Listen Note End</name>
-        <value>59</value>
-    </SliderInt_Listen_Note_End>
-    <Toggle_RX_in_Note_Range>
-        <name>RX in Note Range</name>
-        <value>1</value>
-        <name>RX in Note Range</name>
-        <value>1</value>
-        <name>RX in Note Range</name>
-        <value>1</value>
-    </Toggle_RX_in_Note_Range>
-    <ComboBox_Remap_Mode>
-        <name>Remap Mode</name>
-        <value>1</value>
-        <name>Remap Mode</name>
-        <value>1</value>
-        <name>Remap Mode</name>
-        <value>1</value>
-    </ComboBox_Remap_Mode>
-    <ComboBox_Channel_Mode>
-        <name>Channel Mode</name>
+    </SliderInt_Listen_Channel_Begin0>
+    <SliderInt_Listen_Channel_End0>
+        <name>Listen Channel End0</name>
+        <value>8</value>
+    </SliderInt_Listen_Channel_End0>
+    <Toggle_RX_in_Channel_Range0>
+        <name>RX in Channel Range0</name>
         <value>0</value>
-        <name>Channel Mode</name>
+    </Toggle_RX_in_Channel_Range0>
+    <SliderInt_Map_Listen_To_Channel0>
+        <name>Map Listen To Channel0</name>
+        <value>9</value>
+    </SliderInt_Map_Listen_To_Channel0>
+    <SliderInt_Listen_Note_Begin0>
+        <name>Listen Note Begin0</name>
+        <value>127</value>
+    </SliderInt_Listen_Note_Begin0>
+    <SliderInt_Listen_Note_End0>
+        <name>Listen Note End0</name>
+        <value>1</value>
+    </SliderInt_Listen_Note_End0>
+    <Toggle_RX_in_Note_Range0>
+        <name>RX in Note Range0</name>
         <value>0</value>
-        <name>Channel Mode</name>
+    </Toggle_RX_in_Note_Range0>
+    <Toggle_Learn_Note_Range0>
+        <name>Learn Note Range0</name>
         <value>0</value>
-    </ComboBox_Channel_Mode>
-    <ComboBox_Particle_Mode>
-        <name>Particle Mode</name>
+    </Toggle_Learn_Note_Range0>
+    <ComboBox_Remap_Mode0>
+        <name>Remap Mode0</name>
         <value>0</value>
-        <name>Particle Mode</name>
+    </ComboBox_Remap_Mode0>
+    <ComboBox_Channel_Mode0>
+        <name>Channel Mode0</name>
         <value>0</value>
-        <name>Particle Mode</name>
+    </ComboBox_Channel_Mode0>
+    <ComboBox_Particle_Mode0>
+        <name>Particle Mode0</name>
         <value>0</value>
-    </ComboBox_Particle_Mode>
-    <SliderInt_Listen_Channel_Begin></SliderInt_Listen_Channel_Begin>
-    <SliderInt_Listen_Channel_End></SliderInt_Listen_Channel_End>
-    <Toggle_RX_in_Channel_Range></Toggle_RX_in_Channel_Range>
-    <SliderInt_Map_Listen_To_Channel></SliderInt_Map_Listen_To_Channel>
-    <SliderInt_Listen_Note_Begin></SliderInt_Listen_Note_Begin>
-    <SliderInt_Listen_Note_End></SliderInt_Listen_Note_End>
-    <Toggle_RX_in_Note_Range></Toggle_RX_in_Note_Range>
-    <ComboBox_Remap_Mode></ComboBox_Remap_Mode>
-    <ComboBox_Channel_Mode></ComboBox_Channel_Mode>
-    <ComboBox_Particle_Mode></ComboBox_Particle_Mode>
-    <SliderInt_Listen_Channel_Begin></SliderInt_Listen_Channel_Begin>
-    <SliderInt_Listen_Channel_End></SliderInt_Listen_Channel_End>
-    <Toggle_RX_in_Channel_Range></Toggle_RX_in_Channel_Range>
-    <SliderInt_Map_Listen_To_Channel></SliderInt_Map_Listen_To_Channel>
-    <SliderInt_Listen_Note_Begin></SliderInt_Listen_Note_Begin>
-    <SliderInt_Listen_Note_End></SliderInt_Listen_Note_End>
-    <Toggle_RX_in_Note_Range></Toggle_RX_in_Note_Range>
-    <ComboBox_Remap_Mode></ComboBox_Remap_Mode>
-    <ComboBox_Channel_Mode></ComboBox_Channel_Mode>
-    <ComboBox_Particle_Mode></ComboBox_Particle_Mode>
+    </ComboBox_Particle_Mode0>
+    <SliderInt_Listen_Channel_Begin1>
+        <name>Listen Channel Begin1</name>
+        <value>15</value>
+    </SliderInt_Listen_Channel_Begin1>
+    <SliderInt_Listen_Channel_End1>
+        <name>Listen Channel End1</name>
+        <value>8</value>
+    </SliderInt_Listen_Channel_End1>
+    <Toggle_RX_in_Channel_Range1>
+        <name>RX in Channel Range1</name>
+        <value>0</value>
+    </Toggle_RX_in_Channel_Range1>
+    <SliderInt_Map_Listen_To_Channel1>
+        <name>Map Listen To Channel1</name>
+        <value>9</value>
+    </SliderInt_Map_Listen_To_Channel1>
+    <SliderInt_Listen_Note_Begin1>
+        <name>Listen Note Begin1</name>
+        <value>127</value>
+    </SliderInt_Listen_Note_Begin1>
+    <SliderInt_Listen_Note_End1>
+        <name>Listen Note End1</name>
+        <value>115</value>
+    </SliderInt_Listen_Note_End1>
+    <Toggle_RX_in_Note_Range1>
+        <name>RX in Note Range1</name>
+        <value>0</value>
+    </Toggle_RX_in_Note_Range1>
+    <Toggle_Learn_Note_Range1>
+        <name>Learn Note Range1</name>
+        <value>0</value>
+    </Toggle_Learn_Note_Range1>
+    <ComboBox_Remap_Mode1>
+        <name>Remap Mode1</name>
+        <value>0</value>
+    </ComboBox_Remap_Mode1>
+    <ComboBox_Channel_Mode1>
+        <name>Channel Mode1</name>
+        <value>0</value>
+    </ComboBox_Channel_Mode1>
+    <ComboBox_Particle_Mode1>
+        <name>Particle Mode1</name>
+        <value>0</value>
+    </ComboBox_Particle_Mode1>
+    <SliderInt_Listen_Channel_Begin2>
+        <name>Listen Channel Begin2</name>
+        <value>1</value>
+    </SliderInt_Listen_Channel_Begin2>
+    <SliderInt_Listen_Channel_End2>
+        <name>Listen Channel End2</name>
+        <value>8</value>
+    </SliderInt_Listen_Channel_End2>
+    <Toggle_RX_in_Channel_Range2>
+        <name>RX in Channel Range2</name>
+        <value>0</value>
+    </Toggle_RX_in_Channel_Range2>
+    <SliderInt_Map_Listen_To_Channel2>
+        <name>Map Listen To Channel2</name>
+        <value>9</value>
+    </SliderInt_Map_Listen_To_Channel2>
+    <SliderInt_Listen_Note_Begin2>
+        <name>Listen Note Begin2</name>
+        <value>127</value>
+    </SliderInt_Listen_Note_Begin2>
+    <SliderInt_Listen_Note_End2>
+        <name>Listen Note End2</name>
+        <value>1</value>
+    </SliderInt_Listen_Note_End2>
+    <Toggle_RX_in_Note_Range2>
+        <name>RX in Note Range2</name>
+        <value>0</value>
+    </Toggle_RX_in_Note_Range2>
+    <Toggle_Learn_Note_Range2>
+        <name>Learn Note Range2</name>
+        <value>0</value>
+    </Toggle_Learn_Note_Range2>
+    <ComboBox_Remap_Mode2>
+        <name>Remap Mode2</name>
+        <value>0</value>
+    </ComboBox_Remap_Mode2>
+    <ComboBox_Channel_Mode2>
+        <name>Channel Mode2</name>
+        <value>0</value>
+    </ComboBox_Channel_Mode2>
+    <ComboBox_Particle_Mode2>
+        <name>Particle Mode2</name>
+        <value>0</value>
+    </ComboBox_Particle_Mode2>
 </controls>

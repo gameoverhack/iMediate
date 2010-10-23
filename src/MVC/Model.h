@@ -11,6 +11,7 @@
 #define __MODEL_H
 
 #define MAX_VIDEO_CHANNELS 2
+#define NUM_SOLENOIDS 8
 
 #include "ofxXmlSettings.h"
 #include "goThreadedVideo.h"
