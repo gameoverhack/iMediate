@@ -2139,7 +2139,7 @@
 1287710925 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\testapp.cpp
 	"testApp.h"
 
-1287721801 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
+1287802943 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideoeffectcl.h
 	"MSAOpenCL.h"
 	"goThreadedVideo.h"
 	"ofxFbo.h"
@@ -2689,7 +2689,7 @@
 	"Model.h"
 	"Logger.h"
 
-1287790951 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.h
+1287811864 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.h
 	"ofMain.h"
 	"Singleton.h"
 	"Controller.h"
@@ -2707,10 +2707,10 @@
 	"ofxMidiIn.h"
 	"ofxMidiOut.h"
 
-1287791065 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
+1287813271 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gomidimanager.cpp
 	"goMidiManager.h"
 
-1287783593 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
+1287811864 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\goguimanager.cpp
 	"goGuiManager.h"
 
 1287737259 c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\govideopreview.h
@@ -2756,6 +2756,6 @@
 	"ofxOscSender.h"
 	"ofxOscReceiver.h"
 
-1287783616 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gooscmanager.cpp
+1287812178 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gooscmanager.cpp
 	"goOSCManager.h"
 

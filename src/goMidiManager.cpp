@@ -72,6 +72,11 @@ void goMidiManager::update()
         }
         // auto test by using the update arduino
         //updateArduino();
+        for (int i = 0; i < 8; i++)
+        {
+            if(ofGetElapsedTimeMillis() - ardTimer[i] > 10)  ard.sendDigital(ports[i], ARD_LOW);
+        }
+
     }
 
     if(newMSG)
@@ -89,42 +94,84 @@ void goMidiManager::update()
             if (lastMidiMsg.channel >= LISTENCHBEG[i] && lastMidiMsg.channel <= LISTENCHEND[i])
             {
                 newMSGCH[i] ^= true;
-                if (lastMidiMsg.byteOne >= LISTENNTBEG[i] && LISTENNTEND[i])
+                if (lastMidiMsg.byteOne >= LISTENNTBEG[i] &&  LISTENNTEND[i])
                 {
                     newMSGNT[i] ^= true;
                 }
 
                 switch (REMAPMODE[i])
                 {
+                case SOLENOID_CONTROL:
+                    if (ard.isArduinoReady())
+                    {
+                        for (int j = 0; j < NUM_SOLENOIDS; j++)
+                        {
+                            if(lastMidiMsg.status == 144)
+                            {
+                                int mapPort = (int)ofMap(lastMidiMsg.byteOne, LISTENNTBEG[i],  LISTENNTEND[i], 2, 10, false);
+                                ard.sendDigital(ports[mapPort], ARD_HIGH);
+                                ardTimer[mapPort] = ofGetElapsedTimeMillis();
+                            }
+                            //ard.sendDigital(ports[i], ARD_LOW);
+                        }
+                    }
+                    break;
+                case PARTICLE_GENERATE:
+                    if(PARTICLEMODE[i] == 0)
+                    {
+                        for (int j = 0; j < 8; j++)
+                        {
+                            PARTICLES->generate(j, lastMidiMsg.byteTwo);
+                        }
+                    }
+                    else
+                    {
+                        PARTICLES->generate(PARTICLEMODE[i]-1, lastMidiMsg.byteTwo);
+                    }
+                    break;
                 case NOTE_TO_VIDEOS:
-
-                    if (lastMidiMsg.byteOne >= LISTENNTBEG[i] &&
-                            lastMidiMsg.byteOne <= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f)
-                    {
-                        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[i], floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, 0, GROUPS[0].numberLoaded, true));
-                    }
-                    if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f &&
-                            lastMidiMsg.byteOne <= LISTENNTEND[i])
-                    {
-                        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, LISTENNTEND[i], 0, GROUPS[1].numberLoaded, true));
-                    }
-
+                    remap(i, 0.0f, GROUPS[0].numberLoaded, 0.0f, GROUPS[1].numberLoaded);
                     break;
-
+                case RANDOM_VIDEO:
+                    remap(i, GROUPS[0].numberLoaded, GROUPS[1].numberLoaded);
+                    break;
                 case FX_BLUR:
-
-                    if (lastMidiMsg.byteOne >= LISTENNTBEG[i] &&
-                            lastMidiMsg.byteOne <= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f)
-                    {
-                        EFFECTS[0].blurAmount = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[i], floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, 0, 20.0, true);
-                    }
-                    if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f &&
-                            lastMidiMsg.byteOne <= LISTENNTEND[i])
-                    {
-                        EFFECTS[1].blurAmount = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[i] + LISTENNTEND[i])/2.0f, LISTENNTEND[i], 0, 20.0, true);
-                    }
-
+                    remap(i, &EFFECTS[0].blurAmount, &EFFECTS[1].blurAmount, 0.0f, 20.0f, 0.0f, 20.0f);
                     break;
+                case FX_FLIP_X:
+                    remap(i, &EFFECTS[0].doFlipX, &EFFECTS[1].doFlipX);
+                    break;
+                case FX_FLIP_Y:
+                    remap(i, &EFFECTS[0].doFlipY, &EFFECTS[1].doFlipY);
+                    break;
+                case FX_GREYSCALE:
+                    remap(i, &EFFECTS[0].doGreyscale, &EFFECTS[1].doGreyscale);
+                    break;
+                case FX_INVERT:
+                    remap(i, &EFFECTS[0].doInvert, &EFFECTS[1].doInvert);
+                    break;
+                case FX_THRESHOLD:
+                    remap(i, &EFFECTS[0].threshLevel, &EFFECTS[1].threshLevel, 0.0f, 10.0f, 0.0f, 10.0f);
+                    break;
+                case FX_SATURATION:
+                    remap(i, &EFFECTS[0].saturationLevel, &EFFECTS[1].saturationLevel, 0.0f, 10.0f, 0.0f, 10.0f);
+                    break;
+                case FX_CONTRAST:
+                    remap(i, &EFFECTS[0].contrastLevel, &EFFECTS[1].contrastLevel, 0.0f, 10.0f, 0.0f, 10.0f);
+                    break;
+                case FX_BRIGHTNESS:
+                    remap(i, &EFFECTS[0].brightnessLevel, &EFFECTS[1].brightnessLevel, 0.0f, 10.0f, 0.0f, 10.0f);
+                    break;
+                case X_FADER:
+                    remap(i, &XFADE, &XFADE, -1.0, 1.0, -1.0, 1.0);
+                    break;
+                case CH_FADER:
+                    remap(i, &EFFECTS[0].fadeLevel, &EFFECTS[1].fadeLevel, 0.0f, 1.0f, 0.0f, 1.0f);
+                    break;
+                case REVERSE_CHANNELS:
+                    remap(i, &REVERSECHANNELS, &REVERSECHANNELS);
+                    break;
+
                 }
 
             }
@@ -149,11 +196,15 @@ void goMidiManager::update()
             // particles
             if(lastMidiMsg.byteOne == 9)
             {
-                PARTICLES->pWidth = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 127.0, true);
+                PARTICLES->pWidth = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 127.0, false);
             }
             if(lastMidiMsg.byteOne == 10)
             {
                 PARTICLES->particlePattern = ofMap(lastMidiMsg.byteTwo, 0, 16, 0, 16, false);
+            }
+            if(lastMidiMsg.byteOne == 11)
+            {
+                PARTICLES->pDamp = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 127.0, false);
             }
             if(lastMidiMsg.byteOne == 43)
             {
@@ -185,25 +236,25 @@ void goMidiManager::update()
                 // x-fades
                 if (lastMidiMsg.byteOne == 1)
                 {
-                    XFADE = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
+                    XFADE = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, false);
                 }
                 if (lastMidiMsg.byteOne == 2)
                 {
-                    EFFECTS[0].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
+                    EFFECTS[0].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, false);
                 }
                 if (lastMidiMsg.byteOne == 3)
                 {
-                    EFFECTS[1].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
+                    EFFECTS[1].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, false);
                 }
 
                 // channel speeds
                 if (lastMidiMsg.byteOne == 17)
                 {
-                    EFFECTS[0].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
+                    EFFECTS[0].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, false);
                 }
                 if (lastMidiMsg.byteOne == 18)
                 {
-                    EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
+                    EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, false);
                 }
 
             }
@@ -226,8 +277,12 @@ void goMidiManager::update()
                 {
                     if (keys[i] == lastMidiMsg.byteOne)
                     {
-                        if(lastMidiMsg.status == 144) ard.sendDigital(ports[i], ARD_HIGH);
-                        if(lastMidiMsg.status == 128) ard.sendDigital(ports[i], ARD_LOW);
+                        if(lastMidiMsg.status == 144)
+                        {
+                            ard.sendDigital(ports[i], ARD_HIGH);
+                            ardTimer[i] = ofGetElapsedTimeMillis();
+                        }
+                        //if(lastMidiMsg.status == 128) ard.sendDigital(ports[i], ARD_LOW);
                     }
                 }
             }
@@ -235,6 +290,167 @@ void goMidiManager::update()
 
     }
 }
+
+void goMidiManager::remap(int & index, bool * var0, bool * var1)
+{
+    switch (CHANNELMODE[index])
+    {
+    case CHANNEL_BOTH:
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
+        break;
+
+    case CHANNEL_A:
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
+        break;
+
+    case CHANNEL_B:
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], 0, 1, false);
+        break;
+
+    case CHANNEL_SPLIT:
+        if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
+                lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
+        {
+            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, 0, 1, false);
+        }
+        if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
+                lastMidiMsg.byteOne <=  LISTENNTEND[index])
+        {
+            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], 0, 1, false);
+        }
+        break;
+    }
+}
+
+void goMidiManager::remap(int & index, int rBegin0, int rEnd0, int rBegin1, int rEnd1)
+{
+    switch (CHANNELMODE[index])
+    {
+    case CHANNEL_BOTH:
+        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false));
+        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false));
+        break;
+
+    case CHANNEL_A:
+        GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false));
+        break;
+
+    case CHANNEL_B:
+        GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false));
+        break;
+
+    case CHANNEL_SPLIT:
+        if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
+                lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
+        {
+            GROUPS[0].playVideoInGroup(ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, false));
+        }
+        if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
+                lastMidiMsg.byteOne <=  LISTENNTEND[index])
+        {
+            GROUPS[1].playVideoInGroup(ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, false));
+        }
+        break;
+    }
+}
+
+void goMidiManager::remap(int & index, int maxR0, int maxR1)
+{
+    switch (CHANNELMODE[index])
+    {
+    case CHANNEL_BOTH:
+        GROUPS[0].playVideoInGroup(ofRandom(0, maxR0));
+        GROUPS[1].playVideoInGroup(ofRandom(0, maxR1));
+        break;
+
+    case CHANNEL_A:
+        GROUPS[0].playVideoInGroup(ofRandom(0, maxR0));
+        break;
+
+    case CHANNEL_B:
+        GROUPS[1].playVideoInGroup(ofRandom(0, maxR1));
+        break;
+
+    case CHANNEL_SPLIT:
+        if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
+                lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
+        {
+            GROUPS[0].playVideoInGroup(ofRandom(0, maxR0));
+        }
+        if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
+                lastMidiMsg.byteOne <=  LISTENNTEND[index])
+        {
+            GROUPS[1].playVideoInGroup(ofRandom(0, maxR1));
+        }
+        break;
+    }
+}
+
+void goMidiManager::remap(int & index, int * var0, int * var1, float rBegin0, float rEnd0, float rBegin1, float rEnd1)
+{
+    switch (CHANNELMODE[index])
+    {
+    case CHANNEL_BOTH:
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        break;
+
+    case CHANNEL_A:
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
+        break;
+
+    case CHANNEL_B:
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        break;
+
+    case CHANNEL_SPLIT:
+        if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
+                lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
+        {
+            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, false);
+        }
+        if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
+                lastMidiMsg.byteOne <=  LISTENNTEND[index])
+        {
+            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, false);
+        }
+        break;
+    }
+}
+
+void goMidiManager::remap(int & index, float * var0, float * var1, float rBegin0, float rEnd0, float rBegin1, float rEnd1)
+{
+    switch (CHANNELMODE[index])
+    {
+    case CHANNEL_BOTH:
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        break;
+
+    case CHANNEL_A:
+        *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin0, rEnd0, false);
+        break;
+
+    case CHANNEL_B:
+        *var1 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index],  LISTENNTEND[index], rBegin1, rEnd1, false);
+        break;
+
+    case CHANNEL_SPLIT:
+        if (lastMidiMsg.byteOne >= LISTENNTBEG[index] &&
+                lastMidiMsg.byteOne <= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f)
+        {
+            *var0 = ofMap(lastMidiMsg.byteOne, LISTENNTBEG[index], floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f, rBegin0, rEnd0, false);
+        }
+        if (lastMidiMsg.byteOne >= floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f &&
+                lastMidiMsg.byteOne <=  LISTENNTEND[index])
+        {
+            *var1 = ofMap(lastMidiMsg.byteOne, floor(LISTENNTBEG[index] +  LISTENNTEND[index])/2.0f,  LISTENNTEND[index], rBegin1, rEnd0, false);
+        }
+        break;
+    }
+}
+
 //--------------------------------------------------------------
 void goMidiManager::setupArduino()
 {

@@ -42,10 +42,10 @@ void goOSCManager::update()
             //cout << m.getArgAsFloat(0) << endl;
             amp = ABS(m.getArgAsFloat(0));
         }
-        if (m.getAddress() == "/note")
+        if (m.getAddress() == "/nota")
         {
             //cout << m.getArgAsFloat(0) << endl;
-            note = m.getArgAsFloat(0);
+            note = m.getArgAsInt32(0);
         }
 
     }

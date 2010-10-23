@@ -17,51 +17,51 @@
     </SliderInt_Controller_Channel>
     <SliderInt_Listen_Channel_Begin>
         <name>Listen Channel Begin</name>
-        <value>12</value>
+        <value>16</value>
         <name>Listen Channel Begin</name>
-        <value>12</value>
+        <value>16</value>
         <name>Listen Channel Begin</name>
-        <value>12</value>
+        <value>16</value>
     </SliderInt_Listen_Channel_Begin>
     <SliderInt_Listen_Channel_End>
         <name>Listen Channel End</name>
-        <value>12</value>
+        <value>16</value>
         <name>Listen Channel End</name>
-        <value>12</value>
+        <value>16</value>
         <name>Listen Channel End</name>
-        <value>12</value>
+        <value>16</value>
     </SliderInt_Listen_Channel_End>
     <Toggle_RX_in_Channel_Range>
         <name>RX in Channel Range</name>
-        <value>1</value>
+        <value>0</value>
         <name>RX in Channel Range</name>
-        <value>1</value>
+        <value>0</value>
         <name>RX in Channel Range</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Channel_Range>
     <SliderInt_Map_Listen_To_Channel>
         <name>Map Listen To Channel</name>
-        <value>16</value>
+        <value>12</value>
         <name>Map Listen To Channel</name>
-        <value>16</value>
+        <value>12</value>
         <name>Map Listen To Channel</name>
-        <value>16</value>
+        <value>12</value>
     </SliderInt_Map_Listen_To_Channel>
     <SliderInt_Listen_Note_Begin>
         <name>Listen Note Begin</name>
-        <value>62</value>
+        <value>48</value>
         <name>Listen Note Begin</name>
-        <value>31</value>
+        <value>48</value>
         <name>Listen Note Begin</name>
-        <value>31</value>
+        <value>48</value>
     </SliderInt_Listen_Note_Begin>
     <SliderInt_Listen_Note_End>
         <name>Listen Note End</name>
-        <value>86</value>
+        <value>59</value>
         <name>Listen Note End</name>
-        <value>86</value>
+        <value>59</value>
         <name>Listen Note End</name>
-        <value>86</value>
+        <value>59</value>
     </SliderInt_Listen_Note_End>
     <Toggle_RX_in_Note_Range>
         <name>RX in Note Range</name>
@@ -73,7 +73,7 @@
     </Toggle_RX_in_Note_Range>
     <ComboBox_Remap_Mode>
         <name>Remap Mode</name>
-        <value>3</value>
+        <value>1</value>
         <name>Remap Mode</name>
         <value>1</value>
         <name>Remap Mode</name>

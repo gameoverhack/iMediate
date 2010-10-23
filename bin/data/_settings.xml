@@ -1,11 +1,11 @@
 <controls>
     <ComboBox_folderBrowser_1>
         <name>folderBrowser 1</name>
-        <value>14</value>
+        <value>16</value>
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>6</value>
+        <value>15</value>
     </ComboBox_folderBrowser_2>
     <SliderFloat_Channel_A_Speed>
         <name>Channel A Speed</name>
@@ -25,7 +25,7 @@
     </Toggle_Particle_Size>
     <Toggle_Particle_Speed>
         <name>Particle Speed</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Particle_Speed>
     <Toggle_Particle_Link>
         <name>Particle Link</name>
@@ -37,11 +37,15 @@
     </Toggle_Particle_Erase>
     <SliderInt_Particle_Size>
         <name>Particle Size</name>
-        <value>648</value>
+        <value>27</value>
     </SliderInt_Particle_Size>
+    <SliderInt_Particle_Speed>
+        <name>Particle Speed</name>
+        <value>127</value>
+    </SliderInt_Particle_Speed>
     <SliderInt_Particle_Type>
         <name>Particle Type</name>
-        <value>16</value>
+        <value>10</value>
     </SliderInt_Particle_Type>
     <Toggle_Blur>
         <name>Blur</name>
@@ -51,9 +55,9 @@
     </Toggle_Blur>
     <SliderInt_Blur_Level>
         <name>Blur Level</name>
-        <value>4</value>
+        <value>5</value>
         <name>Blur Level</name>
-        <value>4</value>
+        <value>5</value>
     </SliderInt_Blur_Level>
     <Toggle_FlipX>
         <name>FlipX</name>
@@ -87,9 +91,9 @@
     </Toggle_Threshold>
     <SliderFloat_Threshold_Level>
         <name>Threshold Level</name>
-        <value>0.630000</value>
+        <value>1.000000</value>
         <name>Threshold Level</name>
-        <value>0.630000</value>
+        <value>1.000000</value>
     </SliderFloat_Threshold_Level>
     <Toggle_Hue>
         <name>Hue</name>
@@ -111,15 +115,15 @@
     </ColorPicker_Hue_Colour>
     <Toggle_Saturation>
         <name>Saturation</name>
-        <value>0</value>
+        <value>1</value>
         <name>Saturation</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Saturation>
     <SliderFloat_Saturation_Level>
         <name>Saturation Level</name>
-        <value>0.650000</value>
+        <value>5.555555</value>
         <name>Saturation Level</name>
-        <value>0.650000</value>
+        <value>5.555555</value>
     </SliderFloat_Saturation_Level>
     <Toggle_Contrast>
         <name>Contrast</name>
@@ -129,9 +133,9 @@
     </Toggle_Contrast>
     <SliderFloat_Contrast_Level>
         <name>Contrast Level</name>
-        <value>1.850000</value>
+        <value>9.777778</value>
         <name>Contrast Level</name>
-        <value>1.850000</value>
+        <value>9.777778</value>
     </SliderFloat_Contrast_Level>
     <Toggle_Brightness>
         <name>Brightness</name>
@@ -191,7 +195,7 @@
     </SliderFloat_Channel_B_Fade>
     <SliderFloat_X-Fade>
         <name>X-Fade</name>
-        <value>-0.055118</value>
+        <value>-0.090000</value>
     </SliderFloat_X-Fade>
     <ComboBox_X-Fade_Func_Top>
         <name>X-Fade Func Top</name>

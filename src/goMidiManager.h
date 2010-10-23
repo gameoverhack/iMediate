@@ -18,6 +18,7 @@
 enum remapModes
 {
     NONE,
+    SOLENOID_CONTROL,
     PARTICLE_GENERATE,
     RANDOM_VIDEO,
     NOTE_TO_VIDEOS,
@@ -81,6 +82,7 @@ class goMidiManager
         void updateArduino();
 
         ofArduino			ard;
+        int                 ardTimer[8];
         bool				bSetupArduino;			// flag variable for setting up arduino once
 
         ofxMidiIn			midiIn;
@@ -92,6 +94,12 @@ class goMidiManager
 
     protected:
     private:
+        void                remap(int & index, bool * var0, bool * var1);
+        void                remap(int & index, int * var0, int * var1, float rBegin0, float rEnd0, float rBegin1, float rEnd1);
+        void                remap(int & index, int rBegin0, int rEnd0, int rBegin1, int rEnd1);
+        void                remap(int & index, int maxR0, int maxR1);
+        //void                remap(cl_float * var0, cl_float * var1, float rBegin0, float rEnd0, float rBegin1, float rEnd1);
+        void                remap(int & index, float * var0, float * var1, float rBegin0, float rEnd0, float rBegin1, float rEnd1);
 };
 
 typedef Singleton<goMidiManager> goMidiManagerSingleton;   // Global declaration

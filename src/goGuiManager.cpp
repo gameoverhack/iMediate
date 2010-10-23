@@ -32,6 +32,7 @@ void goGuiManager::setup()
         "ONE_MINUS_DST_ALPHA"
     };
     string remapModeNames[] = {"NONE",
+                               "SOLENOID_CONTROL",
                                "PARTICLE_GENERATE",
                                "RANDOM_VIDEO",
                                "NOTE_TO_VIDEOS",
@@ -78,6 +79,7 @@ void goGuiManager::setup()
     GUI.addToggle("Particle Link", PARTICLES->linkParticle);
     GUI.addToggle("Particle Erase", PARTICLES->eraseParticle);
     GUI.addSlider("Particle Size", PARTICLES->pWidth, 0, 720.0f);
+    GUI.addSlider("Particle Speed", PARTICLES->pDamp, 0, 127.0f);
     GUI.addSlider("Particle Type", PARTICLES->particlePattern, 0, 16);
 
     // create effects interface for video groups
