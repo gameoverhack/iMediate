@@ -18,9 +18,8 @@ bool View::setup()
         enableViewEvents();
         showMSG = true;
         //ofHideCursor();
-        bCustomFullscreen = false;
     }
-
+    SELECTIONGRP[0] = SELECTIONGRP[1] = 0;
     FBO_OUTPUT.setup(720, 405);
     FBO_PREVIEW.setup(720, 405);
 
@@ -181,6 +180,18 @@ void View::draw(ofEventArgs &e)
            GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].height+1);
     glPopMatrix();
 
+    glPushMatrix();
+    glColor4f(0.0f, 0.0f, 1.0f, 0.0f);
+    ofNoFill();
+    ofRect(900.0f-1.0f, (405 + 10.0f + 405/10.0f) + (405/10.0f * 3 + 4.0f) * SELECTIONGRP[0], 720/10.0f * 4.0 + 8.0f, 405/10.0f * 3 + 4.0f);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor4f(0.0f, 0.0f, 1.0f, 0.0f);
+    ofNoFill();
+    ofRect(900.0f + 720/10.0f * 4.0 + 10.0f - 1.0f, (405 + 10.0f + 405/10.0f) + (405/10.0f * 3 + 4.0f) * SELECTIONGRP[1], 720/10.0f * 4.0 + 8.0f, 405/10.0f * 3 + 4.0f);
+    glPopMatrix();
+
     if(showMSG)
     {
 
@@ -227,42 +238,7 @@ void View::keyPressed(ofKeyEventArgs &e)
         exit(0);
         break;
     case OF_KEY_F1:
-#ifdef TARGET_WIN32
-        if (!bCustomFullscreen)
-        {
-            LOG("Trying to force fullscreen on Windows 7" + ofToString(ofGetWidth()));
-            windowTitle = "imMediate";
-            ofSetWindowTitle(windowTitle);
-            int x = 0;
-            int y = 0;
-            int width = 1680 + 1024;
-            int height = 1050;
-            int storedWindowX, storedWindowY, storedWindowH, storedWindowW;
-            HWND vWnd  = FindWindow(NULL,  "imMediate");
-            long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
-            windowStyle &= ~WS_OVERLAPPEDWINDOW;
-            windowStyle |= WS_POPUP;
-            SetWindowLong(vWnd, GWL_STYLE, windowStyle);
-            SetWindowPos(vWnd, HWND_TOP, x, y, width, height, SWP_FRAMECHANGED);
-            bCustomFullscreen = true;
-        }
-        else
-        {
-            int x = 0;
-            int y = 0;
-            int width = 1680;
-            int height = 1050;
-            HWND vWnd  = FindWindow(NULL,  "imMediate");
-            long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
-            windowStyle |= WS_TILEDWINDOW;
-            SetWindowLong(vWnd, GWL_STYLE, windowStyle);
-            SetWindowPos(vWnd, HWND_TOP, x, y, width, height, SWP_FRAMECHANGED);
-            bCustomFullscreen = false;
-        }
-
-#else
-        ofToggleFullscreen();
-#endif
+        CONTROLLER->fullScreen();
         break;
     }
 

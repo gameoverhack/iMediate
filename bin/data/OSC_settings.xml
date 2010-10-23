@@ -5,11 +5,11 @@
     </Toggle_OSC_Recieve>
     <SliderFloat_Coefficient_1>
         <name>Coefficient 1</name>
-        <value>0.123657</value>
+        <value>0.072021</value>
     </SliderFloat_Coefficient_1>
     <Toggle_CO1_Remap_to_Midi>
         <name>CO1 Remap to Midi</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_CO1_Remap_to_Midi>
     <SliderInt_Remap_Channel_1>
         <name>Remap Channel 1</name>
@@ -17,11 +17,11 @@
     </SliderInt_Remap_Channel_1>
     <SliderFloat_Coefficient_2>
         <name>Coefficient 2</name>
-        <value>0.647949</value>
+        <value>0.183350</value>
     </SliderFloat_Coefficient_2>
     <Toggle_CO2_Remap_to_Midi>
         <name>CO2 Remap to Midi</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_CO2_Remap_to_Midi>
     <SliderInt_Remap_Channel_2>
         <name>Remap Channel 2</name>
@@ -29,7 +29,7 @@
     </SliderInt_Remap_Channel_2>
     <SliderFloat_Coefficient_3>
         <name>Coefficient 3</name>
-        <value>0.098633</value>
+        <value>0.526917</value>
     </SliderFloat_Coefficient_3>
     <Toggle_CO3_Remap_to_Midi>
         <name>CO3 Remap to Midi</name>
@@ -41,7 +41,7 @@
     </SliderInt_Remap_Channel_3>
     <SliderFloat_Amplitude>
         <name>Amplitude</name>
-        <value>0.680542</value>
+        <value>0.765381</value>
     </SliderFloat_Amplitude>
     <Toggle_AMP_Remap_to_Midi>
         <name>AMP Remap to Midi</name>
@@ -53,11 +53,11 @@
     </SliderInt_Remap_Channel_4>
     <SliderFloat_Note>
         <name>Note</name>
-        <value>119.000000</value>
+        <value>105.000000</value>
     </SliderFloat_Note>
     <Toggle_NTA_Remap_to_Midi>
         <name>NTA Remap to Midi</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_NTA_Remap_to_Midi>
     <SliderInt_Remap_Channel_5>
         <name>Remap Channel 5</name>
@@ -65,19 +65,19 @@
     </SliderInt_Remap_Channel_5>
     <SliderInt_Listen_Channel_Begin3>
         <name>Listen Channel Begin3</name>
-        <value>14</value>
+        <value>19</value>
     </SliderInt_Listen_Channel_Begin3>
     <SliderInt_Listen_Channel_End3>
         <name>Listen Channel End3</name>
-        <value>14</value>
+        <value>19</value>
     </SliderInt_Listen_Channel_End3>
     <Toggle_RX_in_Channel_Range3>
         <name>RX in Channel Range3</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Channel_Range3>
     <SliderInt_Map_Listen_To_Channel3>
         <name>Map Listen To Channel3</name>
-        <value>14</value>
+        <value>19</value>
     </SliderInt_Map_Listen_To_Channel3>
     <SliderInt_Listen_Note_Begin3>
         <name>Listen Note Begin3</name>
@@ -89,11 +89,11 @@
     </SliderInt_Listen_Note_End3>
     <Toggle_RX_in_Note_Range3>
         <name>RX in Note Range3</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Note_Range3>
     <Toggle_Learn_Note_Range3>
         <name>Learn Note Range3</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Learn_Note_Range3>
     <ComboBox_Remap_Mode3>
         <name>Remap Mode3</name>
@@ -105,7 +105,7 @@
     </ComboBox_Channel_Mode3>
     <ComboBox_Particle_Mode3>
         <name>Particle Mode3</name>
-        <value>0</value>
+        <value>5</value>
     </ComboBox_Particle_Mode3>
     <SliderInt_Listen_Channel_Begin4>
         <name>Listen Channel Begin4</name>
@@ -121,7 +121,7 @@
     </Toggle_RX_in_Channel_Range4>
     <SliderInt_Map_Listen_To_Channel4>
         <name>Map Listen To Channel4</name>
-        <value>14</value>
+        <value>19</value>
     </SliderInt_Map_Listen_To_Channel4>
     <SliderInt_Listen_Note_Begin4>
         <name>Listen Note Begin4</name>
@@ -133,11 +133,11 @@
     </SliderInt_Listen_Note_End4>
     <Toggle_RX_in_Note_Range4>
         <name>RX in Note Range4</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Note_Range4>
     <Toggle_Learn_Note_Range4>
         <name>Learn Note Range4</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Learn_Note_Range4>
     <ComboBox_Remap_Mode4>
         <name>Remap Mode4</name>
@@ -161,7 +161,7 @@
     </SliderInt_Listen_Channel_End5>
     <Toggle_RX_in_Channel_Range5>
         <name>RX in Channel Range5</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Channel_Range5>
     <SliderInt_Map_Listen_To_Channel5>
         <name>Map Listen To Channel5</name>
@@ -177,11 +177,11 @@
     </SliderInt_Listen_Note_End5>
     <Toggle_RX_in_Note_Range5>
         <name>RX in Note Range5</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_RX_in_Note_Range5>
     <Toggle_Learn_Note_Range5>
         <name>Learn Note Range5</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Learn_Note_Range5>
     <ComboBox_Remap_Mode5>
         <name>Remap Mode5</name>

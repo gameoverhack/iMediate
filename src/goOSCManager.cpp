@@ -26,33 +26,36 @@ void goOSCManager::update()
         ofxOscMessage m;
         receiver.getNextMessage( &m );
 
-        newMSG ^= true;
-
         if (m.getAddress() == "/co1")
         {
             //cout << m.getArgAsFloat(0) << endl;
             data[0] = ABS(m.getArgAsFloat(0));
+            newMSG = true;
 
         }
         if (m.getAddress() == "/co2")
         {
             //cout << m.getArgAsFloat(0) << endl;
             data[1] = ABS(m.getArgAsFloat(0));
+            newMSG = true;
         }
         if (m.getAddress() == "/co3")
         {
             //cout << m.getArgAsFloat(0) << endl;
             data[2] = ABS(m.getArgAsFloat(0));
+            newMSG = true;
         }
         if (m.getAddress() == "/amp")
         {
             //cout << m.getArgAsFloat(0) << endl;
             data[3] = ABS(m.getArgAsFloat(0));
+            newMSG = true;
         }
         if (m.getAddress() == "/nota")
         {
             //cout << m.getArgAsFloat(0) << endl;
             data[4] = (float)m.getArgAsInt32(0);
+            newMSG = true;
         }
 
     }
@@ -67,38 +70,33 @@ void goOSCManager::update()
 
     }
 
-
-    if (REMAPOSC[oscMapCount])
-    {
-        newMidiMsg.port = 0;
-        newMidiMsg.channel = OSCCHANNEL[oscMapCount];
-        newMidiMsg.status = 144;
-        newMidiMsg.byteOne = ofMap(OSCDATA[oscMapCount], OSCRANGEMIN[oscMapCount], OSCRANGEMAX[oscMapCount], 0, 127);
-        newMidiMsg.byteTwo = ofRandom(0, 127);
-        newMidiMsg.timestamp = 0;
-
-        newMSG = true;
-        //midiOut.sendNoteOn(OSCCHANNEL[i], , );
-    }
-
-    if (oscMapCount < 5)
-    {
-        oscMapCount++;
-    }
-    else
-    {
-        oscMapCount = 0;
-    }
-
     if(newMSG)
     {
         newMSG = false;
-        lastMidiMsg.port = newMidiMsg.port;
-        lastMidiMsg.channel = newMidiMsg.channel;
-        lastMidiMsg.status = newMidiMsg.status;
-        lastMidiMsg.byteOne = newMidiMsg.byteOne;
-        lastMidiMsg.byteTwo = newMidiMsg.byteTwo;
-        lastMidiMsg.timestamp = newMidiMsg.timestamp;
+
+        if (REMAPOSC[oscMapCount])
+        {
+
+            lastMidiMsg.port = 0;
+            lastMidiMsg.channel = OSCCHANNEL[oscMapCount];
+            lastMidiMsg.status = 144;
+            lastMidiMsg.byteOne = ofMap(OSCDATA[oscMapCount], OSCRANGEMIN[oscMapCount], OSCRANGEMAX[oscMapCount], 0, 127);
+            lastMidiMsg.byteTwo = ofRandom(0, 127);
+            lastMidiMsg.timestamp = ofGetElapsedTimeMillis();
+
+            //midiOut.sendNoteOn(OSCCHANNEL[i], , );
+        }
+
+        if (oscMapCount < 5)
+        {
+            oscMapCount++;
+        }
+        else
+        {
+            oscMapCount = 0;
+        }
+
+
 
         for(int i = 3; i < 6; i++)
         {

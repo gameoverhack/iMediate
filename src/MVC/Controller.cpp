@@ -92,9 +92,49 @@ void Controller::setup()
         */
 
         // start application
+        bCustomFullscreen = false;
         SETAPPSTATE(APP_READY);
     }
-
-
 }
+
+void Controller::fullScreen()
+{
+#ifdef TARGET_WIN32
+    if (!bCustomFullscreen)
+    {
+        LOG("Trying to force fullscreen on Windows 7" + ofToString(ofGetWidth()));
+        windowTitle = "imMediate";
+        ofSetWindowTitle(windowTitle);
+        int x = 0;
+        int y = 0;
+        int width = 1680 + 1024;
+        int height = 1050;
+        int storedWindowX, storedWindowY, storedWindowH, storedWindowW;
+        HWND vWnd  = FindWindow(NULL,  "imMediate");
+        long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
+        windowStyle &= ~WS_OVERLAPPEDWINDOW;
+        windowStyle |= WS_POPUP;
+        SetWindowLong(vWnd, GWL_STYLE, windowStyle);
+        SetWindowPos(vWnd, HWND_TOP, x, y, width, height, SWP_FRAMECHANGED);
+        bCustomFullscreen = true;
+    }
+    else
+    {
+        int x = 0;
+        int y = 0;
+        int width = 1680;
+        int height = 1050;
+        HWND vWnd  = FindWindow(NULL,  "imMediate");
+        long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
+        windowStyle |= WS_TILEDWINDOW;
+        SetWindowLong(vWnd, GWL_STYLE, windowStyle);
+        SetWindowPos(vWnd, HWND_TOP, x, y, width, height, SWP_FRAMECHANGED);
+        bCustomFullscreen = false;
+    }
+
+#else
+    ofToggleFullscreen();
+#endif
+}
+
 

@@ -94,6 +94,8 @@ class goMidiManager
         midiMSG             newMidiMsg;
         midiMSG				lastMidiMsg;
 
+        int                 midiFXChannel;
+
     protected:
     private:
         void                remap(int & index, bool * var0, bool * var1);

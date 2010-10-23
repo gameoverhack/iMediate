@@ -15,6 +15,10 @@
         <name>Controller Channel</name>
         <value>16</value>
     </SliderInt_Controller_Channel>
+    <Toggle_Protect_Control_CH>
+        <name>Protect Control CH</name>
+        <value>1</value>
+    </Toggle_Protect_Control_CH>
     <SliderInt_Listen_Channel_Begin0>
         <name>Listen Channel Begin0</name>
         <value>1</value>
@@ -61,7 +65,7 @@
     </ComboBox_Particle_Mode0>
     <SliderInt_Listen_Channel_Begin1>
         <name>Listen Channel Begin1</name>
-        <value>15</value>
+        <value>1</value>
     </SliderInt_Listen_Channel_Begin1>
     <SliderInt_Listen_Channel_End1>
         <name>Listen Channel End1</name>

@@ -23,7 +23,7 @@ void goMidiManager::setup()
     PLAYSOLENOIDS = bSetupArduino	= false;							// flag so we setup arduino when its ready, you don't need to touch this :)
 
     // setup midi
-    //midiOut.openPort();
+    midiFXChannel = 0;
     midiIn.openPort();
     midiIn.setVerbose(false);
 
@@ -189,58 +189,172 @@ void goMidiManager::update()
 
         if (lastMidiMsg.channel == CONTROLCHANNEL)
         {
-            // Novation control data
 
-            // note values change video
-            if (lastMidiMsg.byteOne >= 48 && lastMidiMsg.byteOne <=59)
+            if (lastMidiMsg.status == 144 || !PROTECTCONTROL)
             {
-                GROUPS[0].playVideoInGroup((int)lastMidiMsg.byteOne - 48);
+                // note values change video
+                if (lastMidiMsg.byteOne >= 48 && lastMidiMsg.byteOne <=59)
+                {
+                    GROUPS[0].playVideoInGroup((int)lastMidiMsg.byteOne - 48 + 12 * SELECTIONGRP[0]);
+                }
+                if (lastMidiMsg.byteOne >= 60 && lastMidiMsg.byteOne <=72)
+                {
+                    GROUPS[1].playVideoInGroup((int)lastMidiMsg.byteOne - 60 + 12 * SELECTIONGRP[1]);
+                }
+                if(lastMidiMsg.byteOne > 35 && lastMidiMsg.byteOne < 44)
+                {
+                    PARTICLES->generate(lastMidiMsg.byteOne-36, lastMidiMsg.byteTwo);
+                }
             }
-            if (lastMidiMsg.byteOne >= 60 && lastMidiMsg.byteOne <=72)
+            if (lastMidiMsg.status == 176 || !PROTECTCONTROL)
             {
-                GROUPS[1].playVideoInGroup((int)lastMidiMsg.byteOne - 60);
-            }
+                // Novation control data
 
-            // particles
-            if(lastMidiMsg.byteOne == 9)
-            {
-                PARTICLES->pWidth = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 127.0, false);
-            }
-            if(lastMidiMsg.byteOne == 10)
-            {
-                PARTICLES->particlePattern = ofMap(lastMidiMsg.byteTwo, 0, 16, 0, 16, false);
-            }
-            if(lastMidiMsg.byteOne == 11)
-            {
-                PARTICLES->pDamp = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 40.0, false);
-            }
-            if(lastMidiMsg.byteOne == 43)
-            {
-                PARTICLES->particleColors ^= true;
-            }
-            if(lastMidiMsg.byteOne == 44)
-            {
-                PARTICLES->sizeParticle ^= true;
-            }
-            if(lastMidiMsg.byteOne == 45)
-            {
-                PARTICLES->speedParticle ^= true;
-            }
-            if(lastMidiMsg.byteOne == 46)
-            {
-                PARTICLES->linkParticle ^= true;
-            }
-            if(lastMidiMsg.byteOne == 48)
-            {
-                PARTICLES->eraseParticle ^= true;
-            }
-            if(lastMidiMsg.byteOne > 35 && lastMidiMsg.byteOne < 44)
-            {
-                PARTICLES->generate(lastMidiMsg.byteOne-36, lastMidiMsg.byteTwo);
-            }
-
-            if (lastMidiMsg.status == 176)
-            {
+                if(lastMidiMsg.byteOne == 17)
+                {
+                    PARTICLES->pWidth = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 720.0, false);
+                }
+                if(lastMidiMsg.byteOne == 18)
+                {
+                    PARTICLES->pDamp = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 40.0, false);
+                }
+                if(lastMidiMsg.byteOne == 19)
+                {
+                    PARTICLES->particlePattern = ofMap(lastMidiMsg.byteTwo, 0, 16, 0, 16, false);
+                }
+                if(lastMidiMsg.byteOne == 33)
+                {
+                    SELECTIONGRP[0] = 0;
+                }
+                if(lastMidiMsg.byteOne == 34)
+                {
+                    SELECTIONGRP[0] = 1;
+                }
+                if(lastMidiMsg.byteOne == 35)
+                {
+                    SELECTIONGRP[0] = 2;
+                }
+                if(lastMidiMsg.byteOne == 36)
+                {
+                    SELECTIONGRP[1] = 0;
+                }
+                if(lastMidiMsg.byteOne == 37)
+                {
+                    SELECTIONGRP[1] = 1;
+                }
+                if(lastMidiMsg.byteOne == 38)
+                {
+                    SELECTIONGRP[1] = 2;
+                }
+                if(lastMidiMsg.byteOne == 49)
+                {
+                    PARTICLES->sizeParticle = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 50)
+                {
+                    PARTICLES->speedParticle = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 51)
+                {
+                    PARTICLES->linkParticle = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 52)
+                {
+                    PARTICLES->particleColors = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 53)
+                {
+                    PARTICLES->eraseParticle = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 56)
+                {
+                    CONTROLLER->fullScreen();
+                }
+                if(lastMidiMsg.byteOne == 41 || lastMidiMsg.byteOne == 47)
+                {
+                    MUTE[0] = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 42 || lastMidiMsg.byteOne == 48)
+                {
+                    MUTE[1] = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 43)
+                {
+                    CHANNELADIRECT = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 44)
+                {
+                    EFFECTS[0].muteAll = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 45)
+                {
+                    CHANNELBDIRECT = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 46)
+                {
+                    EFFECTS[1].muteAll = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 30)
+                {
+                    if (lastMidiMsg.byteTwo == 127) midiFXChannel = 0;
+                    else midiFXChannel = 1;
+                }
+                if(lastMidiMsg.byteOne == 25)
+                {
+                    EFFECTS[midiFXChannel].doBlur = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 26)
+                {
+                    EFFECTS[midiFXChannel].doThreshold = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 27)
+                {
+                    EFFECTS[midiFXChannel].doSaturation = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 28)
+                {
+                    EFFECTS[midiFXChannel].doContrast = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 29)
+                {
+                    EFFECTS[midiFXChannel].doBrightness = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 9)
+                {
+                    EFFECTS[midiFXChannel].blurAmount = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 20, true);
+                }
+                if(lastMidiMsg.byteOne == 10)
+                {
+                    EFFECTS[midiFXChannel].threshLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0.0f, 1.0f, true);
+                }
+                if(lastMidiMsg.byteOne == 11)
+                {
+                    EFFECTS[midiFXChannel].saturationLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0.0f, 10.0f, true);
+                }
+                if(lastMidiMsg.byteOne == 12)
+                {
+                    EFFECTS[midiFXChannel].contrastLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0.0f, 10.0f, true);
+                }
+                if(lastMidiMsg.byteOne == 13)
+                {
+                    EFFECTS[midiFXChannel].brightnessLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0.0f, 10.0f, true);
+                }
+                if(lastMidiMsg.byteOne == 41)
+                {
+                    EFFECTS[0].videoSpeed = 1;
+                }
+                if(lastMidiMsg.byteOne == 42)
+                {
+                    EFFECTS[1].videoSpeed = 1;
+                }
+                if(lastMidiMsg.byteOne == 7)
+                {
+                    EFFECTS[0].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
+                }
+                if(lastMidiMsg.byteOne == 8)
+                {
+                    EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
+                }
                 // x-fades
                 if (lastMidiMsg.byteOne == 1)
                 {
@@ -248,21 +362,11 @@ void goMidiManager::update()
                 }
                 if (lastMidiMsg.byteOne == 2)
                 {
-                    EFFECTS[0].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
+                    EFFECTS[0].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0.0f, 1.0f, true);
                 }
                 if (lastMidiMsg.byteOne == 3)
                 {
-                    EFFECTS[1].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -1.0f, 1.0f, true);
-                }
-
-                // channel speeds
-                if (lastMidiMsg.byteOne == 17)
-                {
-                    EFFECTS[0].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
-                }
-                if (lastMidiMsg.byteOne == 18)
-                {
-                    EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
+                    EFFECTS[1].fadeLevel = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0.0f, 1.0f, true);
                 }
 
             }

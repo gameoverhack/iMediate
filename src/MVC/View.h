@@ -41,9 +41,6 @@ public:
 
 private:
 
-    string              windowTitle;
-    bool                bCustomFullscreen;
-
     bool				showMSG;
 
     bool				enabled;

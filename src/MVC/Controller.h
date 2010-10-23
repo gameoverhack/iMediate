@@ -42,11 +42,13 @@ public:
     goVideoGroup                groups[MAX_VIDEO_CHANNELS];
 
     void						setup();
+    void                        fullScreen();
 
     string                      folderArray[1000]; // silly big number for max number of directories
 
 private:
-
+    string                      windowTitle;
+    bool                        bCustomFullscreen;
 };
 
 typedef Singleton<Controller> ControllerSingleton;   // Global declaration

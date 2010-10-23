@@ -134,6 +134,7 @@ void goGuiManager::setup()
     GUI.addSlider("Solenoid Channel", solenoidChannel, 1, 16);
     GUI.addToggle("Play Solenoids", playSolenoids);
     GUI.addSlider("Controller Channel", controlChannel, 1, 16);
+    GUI.addToggle("Protect Control CH", PROTECTCONTROL);
 
     for (int i = 0; i < 3; i++)
     {

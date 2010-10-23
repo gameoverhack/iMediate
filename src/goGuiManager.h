@@ -41,6 +41,8 @@
 #define MUTE            GUIMANAGER->mute
 #define REMAPOSC        GUIMANAGER->remaposc
 #define OSCCHANNEL      GUIMANAGER->oscchannel
+#define PROTECTCONTROL  GUIMANAGER->protect
+#define SELECTIONGRP    GUIMANAGER->selectiongroup
 
 class goGuiManager
 {
@@ -63,8 +65,9 @@ public:
     int                         xmodes[2], xfuncs[2];
 
     int                         solenoidChannel;
-    bool                        playSolenoids;
+    bool                        playSolenoids, protect;
     int                         controlChannel;
+    int                         selectiongroup[2];
 
     int                         listenChannelBegin[6];
     int                         listenChannelEnd[6];
