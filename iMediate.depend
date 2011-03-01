@@ -1403,11 +1403,11 @@
 	"MSAOpenCLImage.h"
 	"MSAOpenCLImagePingPong.h"
 
-1275996184 c:\cuda\include\\cl\cl.h
+1275945784 c:\cuda\include\\cl\cl.h
 	<OpenCL/cl_platform.h>
 	<CL/cl_platform.h>
 
-1275996184 c:\cuda\include\\cl\cl_platform.h
+1275945784 c:\cuda\include\\cl\cl_platform.h
 	<AvailabilityMacros.h>
 	<stdint.h>
 	<stddef.h>
@@ -1419,7 +1419,7 @@
 	<mmintrin.h>
 	<gmmintrin.h>
 
-1275996184 c:\cuda\include\\cl\cl_gl.h
+1275945784 c:\cuda\include\\cl\cl_gl.h
 	<OpenCL/cl.h>
 	<CL/cl.h>
 
@@ -2763,4 +2763,2347 @@
 
 1287857044 source:c:\users\gameoverwell\desktop\of_prerelease_v0061_all\apps\devdonotdelete\imediate\src\gooscmanager.cpp
 	"goOSCManager.h"
+
+1298950072 source:c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\model3ds.cpp
+	"model3DS.h"
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\model3ds.h
+	"ofMain.h"
+	"texture3DS.h"
+	"Vector3DS.h"
+	"ofx3DBaseLoader.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<list>
+	<map>
+	<string>
+	<sstream>
+	<cctype>
+	<algorithm>
+	<functional>
+	<iostream>
+	<assert.h>
+
+1298950054 c:\users\gameover\code\of062cb\libs\openframeworks\ofmain.h
+	"ofConstants.h"
+	"ofMath.h"
+	"ofUtils.h"
+	"ofTypes.h"
+	"ofSerial.h"
+	"ofArduino.h"
+	"ofTexture.h"
+	"ofTrueTypeFont.h"
+	"ofGraphics.h"
+	"ofImage.h"
+	"ofBaseApp.h"
+	"ofAppRunner.h"
+	"ofSoundStream.h"
+	"ofSoundPlayer.h"
+	"ofVideoGrabber.h"
+	"ofVideoPlayer.h"
+	"ofEvents.h"
+
+1298950055 c:\users\gameover\code\of062cb\libs\openframeworks\utils\ofconstants.h
+	<TargetConditionals.h>
+	<windows.h>
+	"GLee.h"
+	"glu.h"
+	<unistd.h>
+	"GLee.h"
+	<OpenGL/glu.h>
+	<ApplicationServices/ApplicationServices.h>
+	<unistd.h>
+	"GLee.h"
+	<GL/glu.h>
+	<cstdlib>
+	<cstdio>
+	<cstdarg>
+	<cmath>
+	<ctime>
+	<cstdlib>
+	<string>
+	<iostream>
+	<vector>
+	<cstring>
+	<sstream>
+	<iomanip>
+	<fstream>
+
+1298950052 c:\users\gameover\code\of062cb\libs\glee\include\glee.h
+	<windows.h>
+	<GL/gl.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<GL/glx.h>
+	<stddef.h>
+
+1298950050 c:\users\gameover\code\of062cb\libs\glu\include\glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\utils\ofmath.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\utils\oftypes.h
+	"ofConstants.h"
+	"ofUtils.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\utils\ofutils.h
+	"ofConstants.h"
+	<shellapi.h>
+
+1298950054 c:\users\gameover\code\of062cb\libs\openframeworks\communication\ofserial.h
+	"ofConstants.h"
+	<termios.h>
+	<sys/ioctl.h>
+	<getopt.h>
+	<dirent.h>
+	<winbase.h>
+	<tchar.h>
+	<iostream>
+	<string.h>
+	<setupapi.h>
+	<regstr.h>
+	<winioctl.h>
+	<initguid.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fcntl.h>
+	<errno.h>
+	<ctype.h>
+
+1298950054 c:\users\gameover\code\of062cb\libs\openframeworks\communication\ofarduino.h
+	<list>
+	<vector>
+	<string>
+	<iostream>
+	"ofEvents.h"
+	"ofSerial.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\events\ofevents.h
+	"ofConstants.h"
+	"ofUtils.h"
+	"ofEventUtils.h"
+	"ofxEventUtils.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\events\ofeventutils.h
+	"ofConstants.h"
+	"Poco/FIFOEvent.h"
+	"Poco/Delegate.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\fifoevent.h
+	"Poco/AbstractEvent.h"
+	"Poco/FIFOStrategy.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/CompareFunctions.h"
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\abstractevent.h
+	"Poco/Foundation.h"
+	"Poco/SingletonHolder.h"
+	"Poco/SharedPtr.h"
+	"Poco/ActiveResult.h"
+	"Poco/ActiveMethod.h"
+	"Poco/Mutex.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\foundation.h
+	"Poco/Config.h"
+	"Poco/Platform.h"
+	"Poco/Platform_WIN32.h"
+	"Poco/Platform_VMS.h"
+	"Poco/Platform_POSIX.h"
+	"Poco/Bugcheck.h"
+	"Poco/Types.h"
+	<string>
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\config.h
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\platform.h
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\platform_win32.h
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\platform_vms.h
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\platform_posix.h
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\bugcheck.h
+	"Poco/Foundation.h"
+	<string>
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\types.h
+	"Poco/Foundation.h"
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\singletonholder.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\mutex.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/ScopedLock.h"
+	"Poco/Mutex_WIN32.h"
+	"Poco/Mutex_POSIX.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\exception.h
+	"Poco/Foundation.h"
+	<stdexcept>
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\scopedlock.h
+	"Poco/Foundation.h"
+
+1298950065 c:\users\gameover\code\of062cb\libs\poco\include\poco\mutex_win32.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/UnWindows.h"
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\unwindows.h
+	<windows.h>
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\mutex_posix.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\sharedptr.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/Mutex.h"
+	<algorithm>
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\activeresult.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+	"Poco/Event.h"
+	"Poco/RefCountedObject.h"
+	"Poco/Exception.h"
+	<algorithm>
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\event.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/Event_WIN32.h"
+	"Poco/Event_POSIX.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\event_win32.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/UnWindows.h"
+
+1298950065 c:\users\gameover\code\of062cb\libs\poco\include\poco\event_posix.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\refcountedobject.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\activemethod.h
+	"Poco/Foundation.h"
+	"Poco/ActiveResult.h"
+	"Poco/ActiveRunnable.h"
+	"Poco/ActiveStarter.h"
+	"Poco/AutoPtr.h"
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\activerunnable.h
+	"Poco/Foundation.h"
+	"Poco/ActiveResult.h"
+	"Poco/Runnable.h"
+	"Poco/RefCountedObject.h"
+	"Poco/AutoPtr.h"
+	"Poco/Exception.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\runnable.h
+	"Poco/Foundation.h"
+
+1298950065 c:\users\gameover\code\of062cb\libs\poco\include\poco\autoptr.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<algorithm>
+
+1298950065 c:\users\gameover\code\of062cb\libs\poco\include\poco\activestarter.h
+	"Poco/Foundation.h"
+	"Poco/ThreadPool.h"
+	"Poco/ActiveRunnable.h"
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\threadpool.h
+	"Poco/Foundation.h"
+	"Poco/Thread.h"
+	"Poco/Mutex.h"
+	<vector>
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\thread.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+	"Poco/Thread_WIN32.h"
+	"Poco/Thread_POSIX.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\thread_win32.h
+	"Poco/Foundation.h"
+	"Poco/Runnable.h"
+	"Poco/UnWindows.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\thread_posix.h
+	"Poco/Foundation.h"
+	"Poco/Runnable.h"
+	"Poco/SignalHandler.h"
+	"Poco/Event.h"
+	"Poco/RefCountedObject.h"
+	"Poco/AutoPtr.h"
+	<pthread.h>
+	<sys/select.h>
+	<errno.h>
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\signalhandler.h
+	"Poco/Foundation.h"
+	<vector>
+	<setjmp.h>
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\fifostrategy.h
+	"Poco/NotificationStrategy.h"
+	<map>
+	<list>
+	<memory>
+
+1298950063 c:\users\gameover\code\of062cb\libs\poco\include\poco\notificationstrategy.h
+	"Poco/Foundation.h"
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\abstractdelegate.h
+	"Poco/Foundation.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\comparefunctions.h
+	"Poco/Foundation.h"
+	<functional>
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\delegate.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/FunctionDelegate.h"
+	"Poco/Expire.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\functiondelegate.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\expire.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/Timestamp.h"
+
+1298950065 c:\users\gameover\code\of062cb\libs\poco\include\poco\timestamp.h
+	"Poco/Foundation.h"
+	<ctime>
+
+1298950054 c:\users\gameover\code\of062cb\libs\openframeworks\graphics\oftexture.h
+	"ofConstants.h"
+	"ofGraphics.h"
+
+1298950054 c:\users\gameover\code\of062cb\libs\openframeworks\graphics\ofgraphics.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1298950054 c:\users\gameover\code\of062cb\libs\openframeworks\graphics\oftruetypefont.h
+	"ofConstants.h"
+	"ofGraphics.h"
+	"ofUtils.h"
+	"ofTypes.h"
+
+1298950054 c:\users\gameover\code\of062cb\libs\openframeworks\graphics\ofimage.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGraphics.h"
+	"ofAppRunner.h"
+	"FreeImage.h"
+	"ofUtils.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\app\ofapprunner.h
+	"ofMain.h"
+	"ofBaseApp.h"
+	"ofAppBaseWindow.h"
+	"ofAppGlutWindow.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\app\ofbaseapp.h
+	"ofTypes.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\app\ofappbasewindow.h
+	"ofTypes.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\app\ofappglutwindow.h
+	"ofConstants.h"
+	"ofAppBaseWindow.h"
+	"glut.h"
+	<GLUT/glut.h>
+	<GL/glut.h>
+
+1298950051 c:\users\gameover\code\of062cb\libs\glut\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1298950051 c:\users\gameover\code\of062cb\libs\freeimage\include\freeimage.h
+	<wchar.h>
+	<inttypes.h>
+
+1298950055 c:\users\gameover\code\of062cb\libs\openframeworks\sound\ofsoundstream.h
+	"ofConstants.h"
+	"ofBaseApp.h"
+	"ofEvents.h"
+	"ofMath.h"
+
+1298950055 c:\users\gameover\code\of062cb\libs\openframeworks\sound\ofsoundplayer.h
+	"ofConstants.h"
+	"fmod.h"
+	"fmod_errors.h"
+
+1298950060 c:\users\gameover\code\of062cb\libs\fmodex\include\fmod.h
+	"fmod_codec.h"
+	"fmod_dsp.h"
+	"fmod_memoryinfo.h"
+
+1298950061 c:\users\gameover\code\of062cb\libs\fmodex\include\fmod_codec.h
+
+1298950060 c:\users\gameover\code\of062cb\libs\fmodex\include\fmod_dsp.h
+
+1298950060 c:\users\gameover\code\of062cb\libs\fmodex\include\fmod_memoryinfo.h
+
+1298950060 c:\users\gameover\code\of062cb\libs\fmodex\include\fmod_errors.h
+	"fmod.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\video\ofvideograbber.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGraphics.h"
+	"ofTypes.h"
+	"ofQtUtils.h"
+	"videoInput.h"
+	"ofUCUtils.h"
+	"ofGstUtils.h"
+
+1298958321 c:\users\gameover\code\of062cb\libs\openframeworks\video\ofqtutils.h
+	"ofConstants.h"
+	"ofGraphics.h"
+	<QuickTime/QuickTime.h>
+	<CoreServices/CoreServices.h>
+	<ApplicationServices/ApplicationServices.h>
+	<QTML.h>
+	<FixMath.h>
+	<QuickTimeComponents.h>
+	<TextUtils.h>
+	<MediaHandlers.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\qtml.h
+	<MacTypes.h>
+	<MacMemory.h>
+	<MacWindows.h>
+	<OSUtils.h>
+	<Files.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\mactypes.h
+	<ConditionalMacros.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\conditionalmacros.h
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\macmemory.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\mixedmode.h
+	<MacTypes.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\macwindows.h
+	<MacTypes.h>
+	<Aliases.h>
+	<AppleEvents.h>
+	<Collections.h>
+	<Drag.h>
+	<Events.h>
+	<Menus.h>
+	<MixedMode.h>
+	<QDOffscreen.h>
+	<Quickdraw.h>
+	<TextCommon.h>
+	<Icons.h>
+	<MacErrors.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\aliases.h
+	<MacTypes.h>
+	<AppleTalk.h>
+	<Files.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\appletalk.h
+	<MacTypes.h>
+	<OSUtils.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\osutils.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<MacMemory.h>
+	<Patches.h>
+	<DateTimeUtils.h>
+	<Endian.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\patches.h
+	<MacTypes.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\datetimeutils.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\endian.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\files.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<OSUtils.h>
+	<TextCommon.h>
+	<UTCUtils.h>
+	<Finder.h>
+
+1298950060 c:\users\gameover\code\of062cb\libs\quicktime\include\textcommon.h
+	<MacTypes.h>
+
+1298950060 c:\users\gameover\code\of062cb\libs\quicktime\include\utcutils.h
+	<MacTypes.h>
+	<MacErrors.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\macerrors.h
+	<ConditionalMacros.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\finder.h
+	<MacTypes.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\appleevents.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Notification.h>
+	<Events.h>
+	<AEDataModel.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\notification.h
+	<MacTypes.h>
+	<OSUtils.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\events.h
+	<OSUtils.h>
+	<Quickdraw.h>
+	<MacTypes.h>
+	<Endian.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\quickdraw.h
+	<Components.h>
+	<MacTypes.h>
+	<MixedMode.h>
+	<QuickdrawText.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\components.h
+	<MacErrors.h>
+	<MacTypes.h>
+	<MixedMode.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\quickdrawtext.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\aedatamodel.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\collections.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\drag.h
+	<MacTypes.h>
+	<Events.h>
+	<Files.h>
+	<AppleEvents.h>
+	<Quickdraw.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\menus.h
+	<MacTypes.h>
+	<Events.h>
+	<Quickdraw.h>
+	<Fonts.h>
+	<TextCommon.h>
+	<Processes.h>
+	<AppleEvents.h>
+	<Collections.h>
+	<MacErrors.h>
+
+1298950060 c:\users\gameover\code\of062cb\libs\quicktime\include\fonts.h
+	<MacTypes.h>
+	<Files.h>
+	<Quickdraw.h>
+	<TextCommon.h>
+	<MacErrors.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\processes.h
+	<MacTypes.h>
+	<Events.h>
+	<Files.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\qdoffscreen.h
+	<MacErrors.h>
+	<Quickdraw.h>
+
+1298950060 c:\users\gameover\code\of062cb\libs\quicktime\include\icons.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<Files.h>
+	<CodeFragments.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\codefragments.h
+	<MacTypes.h>
+	<Files.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\fixmath.h
+	<MacTypes.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\quicktimecomponents.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Components.h>
+	<ImageCompression.h>
+	<Movies.h>
+	<Quickdraw.h>
+	<Video.h>
+	<Sound.h>
+	<QuickTimeMusic.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\imagecompression.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<QDOffscreen.h>
+	<Components.h>
+	<StandardFile.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\standardfile.h
+	<MacTypes.h>
+	<Dialogs.h>
+	<Files.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\dialogs.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Events.h>
+	<MacWindows.h>
+	<TextEdit.h>
+	<Controls.h>
+	<MacErrors.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\textedit.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<MixedMode.h>
+
+1298950060 c:\users\gameover\code\of062cb\libs\quicktime\include\controls.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<Menus.h>
+	<TextEdit.h>
+	<Drag.h>
+	<Icons.h>
+	<Collections.h>
+	<MacErrors.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\movies.h
+	<Quickdraw.h>
+	<Aliases.h>
+	<Events.h>
+	<Menus.h>
+	<Components.h>
+	<ImageCompression.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\video.h
+	<Quickdraw.h>
+
+1298950059 c:\users\gameover\code\of062cb\libs\quicktime\include\sound.h
+	<MacTypes.h>
+	<Dialogs.h>
+	<Components.h>
+	<MixedMode.h>
+	<Movies.h>
+
+1298950058 c:\users\gameover\code\of062cb\libs\quicktime\include\quicktimemusic.h
+	<Components.h>
+	<ImageCompression.h>
+	<Movies.h>
+	<Quickdraw.h>
+	<Video.h>
+	<MacMemory.h>
+	<Sound.h>
+	<Endian.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\textutils.h
+	<MacTypes.h>
+	<NumberFormatting.h>
+	<StringCompare.h>
+	<DateTimeUtils.h>
+
+1298950060 c:\users\gameover\code\of062cb\libs\quicktime\include\numberformatting.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<IntlResources.h>
+
+1298950057 c:\users\gameover\code\of062cb\libs\quicktime\include\intlresources.h
+	<MacTypes.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\stringcompare.h
+	<MacTypes.h>
+	<TextCommon.h>
+	<Script.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\script.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<IntlResources.h>
+	<Events.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\quicktime\include\mediahandlers.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<Components.h>
+	<Movies.h>
+	<Sound.h>
+
+1298950051 c:\users\gameover\code\of062cb\libs\videoinput\include\videoinput.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<wchar.h>
+	<windows.h>
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\video\ofgstutils.h
+	<gst/gst.h>
+	<pthread.h>
+	"ofConstants.h"
+
+1298950056 c:\users\gameover\code\of062cb\libs\openframeworks\video\ofvideoplayer.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGstUtils.h"
+	"ofQtUtils.h"
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\texture3ds.h
+	"ofMain.h"
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\vector3ds.h
+	<math.h>
+	<iostream>
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\\ofx3dbaseloader.h
+
+1298950072 source:c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\texture3ds.cpp
+	"texture3DS.h"
+
+1298950072 source:c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\ofx3dmodelloader.cpp
+	"ofx3DModelLoader.h"
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\ofx3dmodelloader.h
+	"ofMain.h"
+	"model3DS.h"
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\\model3ds.h
+	"ofMain.h"
+	"texture3DS.h"
+	"Vector3DS.h"
+	"ofx3DBaseLoader.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<list>
+	<map>
+	<string>
+	<sstream>
+	<cctype>
+	<algorithm>
+	<functional>
+	<iostream>
+	<assert.h>
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\\texture3ds.h
+	"ofMain.h"
+
+1298950072 c:\users\gameover\code\of062cb\addons\ofx3dmodelloader\src\3ds\\vector3ds.h
+	<math.h>
+	<iostream>
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxtcpclient.cpp
+	"ofxTCPClient.h"
+	"ofAppRunner.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxtcpclient.h
+	"ofConstants.h"
+	"ofxTCPManager.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxtcpmanager.h
+	"ofConstants.h"
+	<string.h>
+	<wchar.h>
+	<stdio.h>
+	<ctype.h>
+	<netdb.h>
+	<string.h>
+	<fcntl.h>
+	<time.h>
+	<errno.h>
+	<unistd.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<sys/timeb.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<sys/ioctl.h>
+	<sys/signal.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxtcpmanager.cpp
+	"ofxTCPManager.h"
+	<stdio.h>
+	"ofxNetworkUtils.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxnetworkutils.h
+	<cerrno>
+	<ofMain.h>
+	<winsock.h>
+	<winsock2.h>
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxtcpserver.cpp
+	"ofxTCPServer.h"
+	"ofxTCPClient.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxtcpserver.h
+	"ofConstants.h"
+	"ofxThread.h"
+	"ofxTCPManager.h"
+	<map>
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxthread\src\ofxthread.h
+	"ofConstants.h"
+	<process.h>
+	<pthread.h>
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxudpmanager.cpp
+	"ofxUDPManager.h"
+	"ofxNetworkUtils.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxnetwork\src\ofxudpmanager.h
+	"ofConstants.h"
+	<string.h>
+	<wchar.h>
+	<stdio.h>
+	<ctype.h>
+	<netdb.h>
+	<string.h>
+	<fcntl.h>
+	<errno.h>
+	<unistd.h>
+	<arpa/inet.h>
+	<netinet/in.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<sys/ioctl.h>
+	<netinet/tcp.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvcolorimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvgrayscaleimage.h
+	"ofxCvImage.h"
+	"ofxCvBlob.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvimage.h
+	"ofxCvConstants.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvconstants.h
+	"cv.h"
+	<vector>
+	"ofMain.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cv.h
+	<chdl.h>
+	"cxcore.h"
+	"cvtypes.h"
+	"cv.hpp"
+	"cvcompat.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cxcore.h
+	"ipl.h"
+	"ipl/ipl.h"
+	"cxtypes.h"
+	"cxerror.h"
+	"cvver.h"
+	"cxcore.hpp"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cxtypes.h
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<float.h>
+	<emmintrin.h>
+	<fastmath.h>
+	<mathimf.h>
+	<math.h>
+	<ipl.h>
+	<ipl/ipl.h>
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cxerror.h
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cvver.h
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cxcore.hpp
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cvtypes.h
+	<assert.h>
+	<stdlib.h>
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cv.hpp
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\libs\opencv\include\cvcompat.h
+	<string.h>
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvblob.h
+	"ofxCvConstants.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvcolorimage.h
+	"ofxCvImage.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvfloatimage.h
+	"ofxCvImage.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvshortimage.h
+	"ofxCvImage.h"
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvcontourfinder.cpp
+	"ofxCvContourFinder.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvcontourfinder.h
+	"ofxCvConstants.h"
+	"ofxCvBlob.h"
+	"ofxCvGrayscaleImage.h"
+	<algorithm>
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvfloatimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvgrayscaleimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvimage.cpp
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvBlob.h"
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxopencv\src\ofxcvshortimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscbundle.cpp
+	"ofxOscBundle.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscbundle.h
+	<vector>
+	"ofxOscMessage.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscmessage.h
+	"ofxOscArg.h"
+	<vector>
+	<string>
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscarg.h
+	"ofConstants.h"
+	<string>
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscmessage.cpp
+	"ofxOscMessage.h"
+	<iostream>
+	<assert.h>
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscreceiver.cpp
+	"ofxOscReceiver.h"
+	<pthread.h>
+	<iostream>
+	<assert.h>
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscreceiver.h
+	<deque>
+	"ofMain.h"
+	<windows.h>
+	<pthread.h>
+	"OscTypes.h"
+	"OscPacketListener.h"
+	"UdpSocket.h"
+	"ofxOscMessage.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\osc\osctypes.h
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\osc\oscpacketlistener.h
+	"OscReceivedElements.h"
+	"../ip/PacketListener.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\osc\oscreceivedelements.h
+	"OscTypes.h"
+	"OscException.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\osc\oscexception.h
+	<exception>
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\ip\packetlistener.h
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\ip\udpsocket.h
+	"NetworkingUtils.h"
+	"IpEndpointName.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\ip\networkingutils.h
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\ip\ipendpointname.h
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscsender.cpp
+	"ofxOscSender.h"
+	"UdpSocket.h"
+	<assert.h>
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxoscsender.h
+	<string>
+	"OscTypes.h"
+	"OscOutboundPacketStream.h"
+	"ofxOscBundle.h"
+	"ofxOscMessage.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\libs\oscpack\include\osc\oscoutboundpacketstream.h
+	"OscTypes.h"
+	"OscException.h"
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxthread\src\ofxthread.cpp
+	"ofxThread.h"
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxvectorgraphics\libs\creeps.cpp
+	"CreEPS.hpp"
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxvectorgraphics\libs\creeps.hpp
+	<stdio.h>
+	<stdarg.h>
+	"CreEPS_Types.hpp"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxvectorgraphics\libs\creeps_types.hpp
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxvectorgraphics\src\ofxvectorgraphics.cpp
+	"ofxVectorGraphics.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxvectorgraphics\src\ofxvectorgraphics.h
+	"CreEPS.hpp"
+	"ofMain.h"
+	<vector>
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxmatrix3x3.cpp
+	"ofxMatrix3x3.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxmatrix3x3.h
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxmatrix4x4.cpp
+	"ofxMatrix4x4.h"
+	<limits>
+	<stdlib.h>
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxmatrix4x4.h
+	"ofxVec3f.h"
+	"ofxVec4f.h"
+	"ofxQuaternion.h"
+	<cmath>
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxvec3f.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxvec4f.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxquaternion.h
+	"ofxVec3f.h"
+	"ofxVec4f.h"
+	<cmath>
+
+1298950071 source:c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxquaternion.cpp
+	<stdio.h>
+	"ofxQuaternion.h"
+	"ofxMatrix4x4.h"
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxxmlsettings\libs\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxxmlsettings\libs\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxxmlsettings\libs\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxxmlsettings\libs\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1298950070 source:c:\users\gameover\code\of062cb\addons\ofxxmlsettings\src\ofxxmlsettings.cpp
+	"ofxXmlSettings.h"
+	<vector>
+	<string>
+	<iostream>
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxxmlsettings\src\ofxxmlsettings.h
+	"ofMain.h"
+	<string.h>
+	"tinyxml.h"
+
+1298950258 source:c:\users\gameover\code\of062cb\addons\gothreadedvideo\src\gothreadedvideo.cpp
+	"goThreadedVideo.h"
+
+1298950258 c:\users\gameover\code\of062cb\addons\gothreadedvideo\src\gothreadedvideo.h
+	"ofxThread.h"
+	"ofEvents.h"
+	"string.h"
+	"goVideoPlayer.h"
+
+1298950293 c:\users\gameover\code\of062cb\addons\govideoplayer\src\govideoplayer.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGstUtils.h"
+	"ofQtUtils.h"
+
+1298958609 source:c:\users\gameover\code\of062cb\addons\govideoplayer\src\govideoplayer.cpp
+	"goVideoPlayer.h"
+	"ofUtils.h"
+	<gst/video/video.h>
+
+1298951262 source:c:\users\gameover\code\of062cb\addons\godirlist\src\godirlist.cpp
+	"goDirList.h"
+
+1298951770 c:\users\gameover\code\of062cb\addons\godirlist\src\godirlist.h
+	"ofMain.h"
+	"goUtils.h"
+	<map>
+	<queue>
+	"Poco/DirectoryIterator.h"
+	"Poco/File.h"
+	"Poco/Path.h"
+	"Poco/DateTimeFormatter.h"
+	"Poco/DateTimeFormat.h"
+
+1298951762 c:\users\gameover\code\of062cb\addons\goutils\src\goutils.h
+	"ofMain.h"
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\directoryiterator.h
+	"Poco/Foundation.h"
+	"Poco/File.h"
+	"Poco/Path.h"
+
+1298950064 c:\users\gameover\code\of062cb\libs\poco\include\poco\file.h
+	"Poco/Foundation.h"
+	"Poco/Timestamp.h"
+	<vector>
+	"Poco/File_WIN32U.h"
+	"Poco/File_WIN32.h"
+	"Poco/File_UNIX.h"
+	"Poco/File_VMS.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\file_win32u.h
+	"Poco/Foundation.h"
+	"Poco/Timestamp.h"
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\file_win32.h
+	"Poco/Foundation.h"
+	"Poco/Timestamp.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\file_unix.h
+	"Poco/Foundation.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\file_vms.h
+	"Poco/Foundation.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\path.h
+	"Poco/Foundation.h"
+	<vector>
+
+1298950067 c:\users\gameover\code\of062cb\libs\poco\include\poco\datetimeformatter.h
+	"Poco/Foundation.h"
+
+1298950066 c:\users\gameover\code\of062cb\libs\poco\include\poco\datetimeformat.h
+	"Poco/Foundation.h"
+
+1298951762 source:c:\users\gameover\code\of062cb\addons\goutils\src\goutils.cpp
+	"goUtils.h"
+
+1286419584 source:c:\users\gameover\code\of062cb\addons\ofxfbo\src\ofxfbo.cpp
+	"ofxFbo.h"
+
+1286417614 c:\users\gameover\code\of062cb\addons\ofxfbo\src\ofxfbo.h
+	"ofAppRunner.h"
+	"ofGraphics.h"
+
+1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\applicationloader.cpp
+	"ApplicationLoader.h"
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\applicationloader.h
+	"Model.h"
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\model.h
+	"ofxXmlSettings.h"
+	"goThreadedVideo.h"
+	"goVideoEffectCL.h"
+	"goDirList.h"
+	"goTextLoader.h"
+	"ofxSimpleGuiToo.h"
+	"ofxFbo.h"
+	"Singleton.h"
+	"Constants.h"
+	"Logger.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideoeffectcl.h
+	"MSAOpenCL.h"
+	"goThreadedVideo.h"
+	"ofxFbo.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopencl.h
+	"MSACore.h"
+	<OpenCL/opencl.h>
+	"windows.h"
+	"assert.h"
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	"MSAOpenCLKernel.h"
+	"MSAOpenCLProgram.h"
+	"MSAOpenCLBuffer.h"
+	"MSAOpenCLTypes.h"
+	"MSAOpenCLImage.h"
+	"MSAOpenCLImagePingPong.h"
+
+1298954346 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\msacore.h
+	"MSACore-OF.h"
+	"MSACore-Cinder.h"
+	"MSACoreCommon.h"
+
+1298950346 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\msacore-of.h
+	"ofMain.h"
+	"cinder-lite/CinderMath.h"
+	"cinder-lite/Color.h"
+	"cinder-lite/Vector.h"
+	<string>
+	<vector>
+	<map>
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\cinder-lite\cindermath.h
+	<math.h>
+	<limits.h>
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\cinder-lite\color.h
+	"ChanTraits.h"
+	"Vector.h"
+	"CinderMath.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\cinder-lite\chantraits.h
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\cinder-lite\vector.h
+	<cmath>
+	<cstring>
+	<iostream>
+	<cassert>
+	<limits>
+	"CinderMath.h"
+
+1298950346 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\msacore-cinder.h
+	"cinder/Cinder.h"
+	"cinder/gl/gl.h"
+	"cinder/Rand.h"
+	"cinder/Vector.h"
+	"cinder/Color.h"
+	"cinder/app/AppBasic.h"
+	<string>
+	<vector>
+	<map>
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\msacorecommon.h
+	"MSACoreMath.h"
+	"MSACoreGL.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\msacoremath.h
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\msacoregl.h
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclkernel.h
+	<OpenCL/opencl.h>
+	"windows.h"
+	"assert.h"
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	"MSACore.h"
+	"MSAOpenCLMemoryObject.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclmemoryobject.h
+	<OpenCL/opencl.h>
+	"windows.h"
+	"assert.h"
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	<CL/cl.h>
+	<CL/cl_gl.h>
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclprogram.h
+	<OpenCL/opencl.h>
+	"windows.h"
+	"assert.h"
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	"MSACore.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclbuffer.h
+	<OpenCL/opencl.h>
+	"windows.h"
+	"assert.h"
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	"MSACore.h"
+	"MSAOpenCLMemoryObject.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopencltypes.h
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclimage.h
+	<OpenCL/opencl.h>
+	"windows.h"
+	"assert.h"
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	<CL/cl.h>
+	<CL/cl_gl.h>
+	"MSACore.h"
+	"MSAOpenCLMemoryObject.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclimagepingpong.h
+	"MSACore.h"
+	"MSAPingPong.h"
+	"MSAOpenCLImage.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\msapingpong\src\msapingpong.h
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gotextloader.h
+	"ofMain.h"
+
+1298954273 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguitoo.h
+	"ofMain.h"
+	"ofxXmlSettings.h"
+	"ofxSimpleGuiIncludes.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguiincludes.h
+	"ofxSimpleGuiPage.h"
+	"ofxSimpleGuiConfig.h"
+	"ofxSimpleGuiButton.h"
+	"ofxSimpleGuiContent.h"
+	"ofxSimpleGuiFPSCounter.h"
+	"ofxSimpleGuiQuadWarp.h"
+	"ofxSimpleGuiSliderFloat.h"
+	"ofxSimpleGuiSliderInt.h"
+	"ofxSimpleGuiSlider2d.h"
+	"ofxSimpleGuiMovieSlider.h"
+	"ofxSimpleGuiToggle.h"
+	"ofxSimpleGuiTitle.h"
+	"ofxSimpleGuiColorPicker.h"
+	"ofxSimpleGuiComboBox.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguipage.h
+	"ofxSimpleGuiIncludes.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguiconfig.h
+	"ofTypes.h"
+
+1286351099 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguibutton.h
+	"ofxSimpleGuiValueControl.h"
+
+1286351099 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguicontrol.h
+	"ofxMSAInteractiveObject.h"
+	"ofxSimpleGuiConfig.h"
+	"ofxXmlSettings.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxmsainteractiveobject\src\ofxmsainteractiveobject.h
+	"ofMain.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguicontent.h
+	"ofxSimpleGuiControl.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguifpscounter.h
+	"ofxSimpleGuiControl.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguiquadwarp.h
+	"ofxSimpleGuiControl.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguisliderfloat.h
+	"ofxSimpleGuiControl.h"
+	"ofxSimpleGuiSliderBase.h"
+
+1298954047 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguisliderbase.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguisliderint.h
+	"ofxSimpleGuiControl.h"
+	"ofxSimpleGuiSliderBase.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguislider2d.h
+	"ofxSimpleGuiControl.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguimovieslider.h
+	"ofxSimpleGuiControl.h"
+	"ofxSimpleGuiButton.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguitoggle.h
+	"ofxSimpleGuiControl.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguititle.h
+	"ofxSimpleGuiControl.h"
+
+1286351099 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguicolorpicker.h
+	"ofxSimpleGuiControl.h"
+
+1298953446 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguicombobox.h
+	"ofxSimpleGuiControl.h"
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\singleton.h
+	"assert.h"
+	<cstdlib>
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\constants.h
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\logger.h
+	<iostream>
+	<fstream>
+	"Singleton.h"
+	"ofUtils.h"
+
+1286349215 source:c:\users\gameover\code\of062cb\addons\ofxmidi\libs\rtmidi.cpp
+	"RtMidi.h"
+	<sstream>
+	<CoreMIDI/CoreMIDI.h>
+	<CoreAudio/HostTime.h>
+	<pthread.h>
+	<sys/time.h>
+	<alsa/asoundlib.h>
+	<pthread.h>
+	<sys/time.h>
+	<unistd.h>
+	<dmedia/midi.h>
+	<windows.h>
+	<mmsystem.h>
+
+1286349204 c:\users\gameover\code\of062cb\addons\ofxmidi\libs\rtmidi.h
+	"RtError.h"
+	<string>
+	"ofxMidiConstants.h"
+	<vector>
+	<queue>
+
+1286349215 c:\users\gameover\code\of062cb\addons\ofxmidi\libs\rterror.h
+	<iostream>
+	<string>
+
+1286349215 c:\users\gameover\code\of062cb\addons\ofxmidi\src\ofxmidiconstants.h
+	"ofConstants.h"
+
+1286349216 source:c:\users\gameover\code\of062cb\addons\ofxmidi\src\ofxmidiin.cpp
+	"ofxMidiIn.h"
+
+1286349216 c:\users\gameover\code\of062cb\addons\ofxmidi\src\ofxmidiin.h
+	<iostream>
+	"RtMidi.h"
+	"ofxMidiConstants.h"
+	"ofxMidiEvents.h"
+	"ofMain.h"
+
+1286349216 c:\users\gameover\code\of062cb\addons\ofxmidi\src\ofxmidievents.h
+	"ofMain.h"
+	<map>
+
+1286349217 source:c:\users\gameover\code\of062cb\addons\ofxmidi\src\ofxmidiout.cpp
+	"ofxMidiOut.h"
+
+1286349217 c:\users\gameover\code\of062cb\addons\ofxmidi\src\ofxmidiout.h
+	<iostream>
+	"RtMidi.h"
+	"ofxMidiConstants.h"
+	"ofxMidiEvents.h"
+	"ofMain.h"
+
+1286351099 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguivaluecontrol.h
+	"ofxSimpleGuiControl.h"
+
+1298959153 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\controller.cpp
+	"Controller.h"
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\controller.h
+	"Singleton.h"
+	"Model.h"
+	"View.h"
+	"Logger.h"
+	"ApplicationLoader.h"
+	"goVideoGroup.h"
+	"goGuiManager.h"
+	"goMidiManager.h"
+	"goOSCManager.h"
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\view.h
+	"Singleton.h"
+	"Controller.h"
+	"Logger.h"
+	"goParticleMask.h"
+	"ofEvents.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goparticlemask.h
+	"Singleton.h"
+	"particle.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\particle.h
+	"ofMain.h"
+	"ofxVectorMath.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxvectormath.h
+	"ofxVec2f.h"
+	"ofxVec3f.h"
+	"ofxVec4f.h"
+	"ofxMatrix3x3.h"
+	"ofxMatrix4x4.h"
+	"ofxQuaternion.h"
+
+1298950071 c:\users\gameover\code\of062cb\addons\ofxvectormath\src\ofxvec2f.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideogroup.h
+	"Model.h"
+	"goThreadedVideo.h"
+	"goVideoEffectCL.h"
+	"goVideoPreview.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideopreview.h
+	"ofxMSAInteractiveObject.h"
+	"goThreadedImage.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gothreadedimage.h
+	"ofMain.h"
+	"ofxThread.h"
+
+1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goguimanager.h
+	"ofMain.h"
+	"Singleton.h"
+	"Controller.h"
+	"Model.h"
+	"Logger.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gomidimanager.h
+	"ofMain.h"
+	"Singleton.h"
+	"Controller.h"
+	"Model.h"
+	"Logger.h"
+	"goGuiManager.h"
+	"goParticleMask.h"
+	"ofxMidi.h"
+
+1286349215 c:\users\gameover\code\of062cb\addons\ofxmidi\src\ofxmidi.h
+	<iostream>
+	"RtMidi.h"
+	"ofxMidiConstants.h"
+	"ofxMidiEvents.h"
+	"ofxMidiIn.h"
+	"ofxMidiOut.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gooscmanager.h
+	"Singleton.h"
+	"Controller.h"
+	"Model.h"
+	"Logger.h"
+	"goGuiManager.h"
+	"ofxOsc.h"
+	"ofxMidi.h"
+
+1298950070 c:\users\gameover\code\of062cb\addons\ofxosc\src\ofxosc.h
+	"ofxOscArg.h"
+	"ofxOscMessage.h"
+	"ofxOscSender.h"
+	"ofxOscReceiver.h"
+
+1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\logger.cpp
+	"Logger.h"
+
+1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\model.cpp
+	"Model.h"
+
+1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\view.cpp
+	"View.h"
+
+1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goguimanager.cpp
+	"goGuiManager.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gomidimanager.cpp
+	"goMidiManager.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gooscmanager.cpp
+	"goOSCManager.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goparticlemask.cpp
+	"goParticleMask.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gotextloader.cpp
+	"goTextLoader.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gothreadedimage.cpp
+	"goThreadedImage.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
+	"goVideoEffectCL.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideogroup.cpp
+	"goVideoGroup.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideopreview.cpp
+	"goVideoPreview.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\main.cpp
+	"ofMain.h"
+	"testApp.h"
+	"ofAppGlutWindow.h"
+
+1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\testapp.h
+	"ofMain.h"
+	"Controller.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\particle.cpp
+	"particle.h"
+
+1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\testapp.cpp
+	"testApp.h"
+
+1286351099 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguibutton.cpp
+	"ofxSimpleGuiButton.h"
+
+1286351099 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguicolorpicker.cpp
+	"ofxSimpleGuiColorPicker.h"
+
+1286351099 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguiquadwarp.cpp
+	"ofxSimpleGuiQuadWarp.h"
+
+1286351099 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguislider2d.cpp
+	"ofxSimpleGuiSlider2d.h"
+
+1286351099 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguivaluecontrol.cpp
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\msacoregl.cpp
+	"MSACore.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\msacore\src\cinder-lite\color.cpp
+	"MSACore.h"
+	"Color.h"
+	"Vector.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopencl.cpp
+	"MSAOpenCL.h"
+	"MSAOpenCLProgram.h"
+	"MSAOpenCLKernel.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclbuffer.cpp
+	"MSAOpenCL.h"
+	"MSAOpenCLBuffer.h"
+
+1298953605 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclimage.cpp
+	"MSAOpenCL.h"
+	"MSAOpenCLImage.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclkernel.cpp
+	"MSAOpenCL.h"
+	"MSAOpenCLKernel.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclmemoryobject.cpp
+	"MSAOpenCL.h"
+	"MSAOpenCLMemoryObject.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclprogram.cpp
+	"MSAOpenCL.h"
+	"MSAOpenCLProgram.h"
+	"MSAOpenCLKernel.h"
+
+1298954484 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguicombobox.cpp
+	"ofxSimpleGuiComboBox.h"
+	"ofxSimpleGuiPage.h"
+
+1298954492 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguicontent.cpp
+	"ofxSimpleGuiContent.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguifpscounter.cpp
+	"ofxSimpleGuiFPSCounter.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguimovieslider.cpp
+
+1298954503 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguititle.cpp
+	"ofxSimpleGuiTitle.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\controls\ofxsimpleguitoggle.cpp
+	"ofxSimpleGuiToggle.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguiconfig.cpp
+	"ofxSimpleGuiConfig.h"
+
+1298954532 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguicontrol.cpp
+	"ofxSimpleGuiControl.h"
+
+1298954555 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguipage.cpp
+	"ofxSimpleGuiPage.h"
+
+1298954564 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguitoo.cpp
+	"ofxSimpleGuiToo.h"
+
+1298953446 source:c:\users\gameover\code\of062cb\addons\msalibs\ofxmsainteractiveobject\src\ofxmsainteractiveobject.cpp
+	"ofxMSAInteractiveObject.h"
+	"ofMain.h"
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\targetconditionals.h
+	"ConditionalMacros.h"
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfdate.h
+	<CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfbase.h
+	<CoreFoundation/CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfbase.h
+	<ConditionalMacros.h>
+	"QTMLCompilerOptions.h"
+	"QTCFRenames.h"
+	<stdint.h>
+	<stdbool.h>
+	<GNUCompatibility/stdint.h>
+	<GNUCompatibility/stdbool.h>
+	<AvailabilityMacros.h>
+	<MacTypes.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\gnucompatibility\stdint.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\gnucompatibility\stdbool.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\availabilitymacros.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfstring.h
+	<CoreFoundation/CFString.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfstring.h
+	<CoreFoundation/CFBase.h>
+	<CoreFoundation/CFArray.h>
+	<CoreFoundation/CFData.h>
+	<CoreFoundation/CFDictionary.h>
+	<CoreFoundation/CFCharacterSet.h>
+	<CoreFoundation/CFLocale.h>
+	<stdarg.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfarray.h
+	<CoreFoundation/CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfdata.h
+	<CoreFoundation/CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfdictionary.h
+	<CoreFoundation/CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfcharacterset.h
+	<CoreFoundation/CFBase.h>
+	<CoreFoundation/CFData.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cflocale.h
+	<CoreFoundation/CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgcontext.h
+	<CGBase.h>
+	<CGAffineTransform.h>
+	<CGColorSpace.h>
+	<CGFont.h>
+	<CGImage.h>
+	<CGPDFDocument.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgbase.h
+	<ConditionalMacros.h>
+	<stddef.h>
+	<stdint.h>
+	<stdint.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgaffinetransform.h
+	<CGBase.h>
+	<CGGeometry.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cggeometry.h
+	<CGBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgcolorspace.h
+	<CGBase.h>
+	<CGDataProvider.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgdataprovider.h
+	<CGBase.h>
+	<CFURL.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfurl.h
+	<CoreFoundation/CFURL.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfurl.h
+	<CoreFoundation/CFBase.h>
+	<CoreFoundation/CFData.h>
+	<CoreFoundation/CFString.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgfont.h
+	<CGBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgimage.h
+	<CGBase.h>
+	<CGColorSpace.h>
+	<CGDataProvider.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cgpdfdocument.h
+	<CGBase.h>
+	<CGDataProvider.h>
+	<CGGeometry.h>
+	<CFURL.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfbundle.h
+	<CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\multiprocessing.h
+	<MacTypes.h>
+	<stdarg.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\iconstorage.h
+	<MacTypes.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfuuid.h
+	<CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\atstypes.h
+	<MacTypes.h>
+	<Files.h>
+	<MixedMode.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\carboneventscore.h
+	<CFString.h>
+	<AERegistry.h>
+	<AEDataModel.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\aeregistry.h
+	<MacTypes.h>
+	<MacErrors.h>
+	<AppleEvents.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\hiobject.h
+	<CoreServices.h>
+	<CoreFoundation.h>
+	<CarbonEventsCore.h>
+
+1298958053 c:\users\gameover\code\of062cb\libs\quicktime\include\coreservices.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<Finder.h>
+	<FixMath.h>
+	<Script.h>
+	<UTCUtils.h>
+	<TextCommon.h>
+	<Collections.h>
+	<Endian.h>
+	<Patches.h>
+	<Gestalt.h>
+	<MacMemory.h>
+	<MixedMode.h>
+	<MacErrors.h>
+	<Components.h>
+	<OSUtils.h>
+	<Files.h>
+	<Resources.h>
+	<CodeFragments.h>
+	<Aliases.h>
+	<MacLocales.h>
+	<Debugging.h>
+	<PLStringFuncs.h>
+	<DriverSynchronization.h>
+	<Devices.h>
+	<DriverServices.h>
+	<IntlResources.h>
+	<NumberFormatting.h>
+	<DateTimeUtils.h>
+	<StringCompare.h>
+	<TextUtils.h>
+	<ToolUtils.h>
+	<NameRegistry.h>
+	<UnicodeUtilities.h>
+	<fp.h>
+	<TextEncodingConverter.h>
+	<UnicodeConverter.h>
+	<Threads.h>
+	<Folders.h>
+	<Timer.h>
+	<MultiprocessingInfo.h>
+	<Multiprocessing.h>
+	<MachineExceptions.h>
+	<AVLTree.h>
+	<PEFBinaryFormat.h>
+	<HFSVolumes.h>
+	<AIFF.h>
+	<TextEncodingPlugin.h>
+	<AppleDiskPartitions.h>
+	<Power.h>
+	<SCSI.h>
+	<SystemSound.h>
+	<IconStorage.h>
+	<CFBase.h>
+	<CFArray.h>
+	<CFBag.h>
+	<CFBundle.h>
+	<CFCharacterSet.h>
+	<CFData.h>
+	<CFDate.h>
+	<CFDictionary.h>
+	<CFNumber.h>
+	<CFPlugIn.h>
+	<CFPreferences.h>
+	<CFPropertyList.h>
+	<CFSet.h>
+	<CFString.h>
+	<CFStringEncodingExt.h>
+	<CFTimeZone.h>
+	<CFTree.h>
+	<CFURL.h>
+	<CFURLAccess.h>
+	<CFUUID.h>
+	<CFXMLNode.h>
+	<CFXMLParser.h>
+	<CFPlugInCOM.h>
+	<CFBinaryHeap.h>
+	<CFBitVector.h>
+	<CFMachPort.h>
+	<CFMessagePort.h>
+	<CFNotificationCenter.h>
+	<CFRunLoop.h>
+	<CFSocket.h>
+	<CFStream.h>
+	<CFNetwork.h>
+	<WSMethodInvocation.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\gestalt.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\resources.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Files.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\maclocales.h
+	<MacTypes.h>
+	<MacErrors.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\debugging.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<MacErrors.h>
+	<Events.h>
+	<Gestalt.h>
+	<AssertMacros.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\assertmacros.h
+	<syslog.h>
+	<stdio.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\plstringfuncs.h
+	<MacTypes.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\driversynchronization.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\devices.h
+	<OSUtils.h>
+	<Files.h>
+	<NameRegistry.h>
+	<CodeFragments.h>
+	<Multiprocessing.h>
+	<Quickdraw.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\nameregistry.h
+	<MacTypes.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\driverservices.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<MacErrors.h>
+	<MachineExceptions.h>
+	<Devices.h>
+	<DriverSynchronization.h>
+	<NameRegistry.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\machineexceptions.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\toolutils.h
+	<MacTypes.h>
+	<FixMath.h>
+	<TextUtils.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\unicodeutilities.h
+	<MacTypes.h>
+	<MacLocales.h>
+	<TextCommon.h>
+
+1298958427 c:\users\gameover\code\of062cb\libs\quicktime\include\fp.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\textencodingconverter.h
+	<MacTypes.h>
+	<TextCommon.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\unicodeconverter.h
+	<MacTypes.h>
+	<TextCommon.h>
+	<MixedMode.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\threads.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<MacErrors.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\folders.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Files.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\timer.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<OSUtils.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\multiprocessinginfo.h
+	<MacTypes.h>
+	<Multiprocessing.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\avltree.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\pefbinaryformat.h
+	<MacTypes.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\hfsvolumes.h
+	<MacTypes.h>
+	<Files.h>
+	<Finder.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\aiff.h
+	<MacTypes.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\textencodingplugin.h
+	<MacTypes.h>
+	<TextCommon.h>
+	<TextEncodingConverter.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\applediskpartitions.h
+	<MacTypes.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\power.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Multiprocessing.h>
+	<NameRegistry.h>
+	<MacErrors.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\scsi.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<AppleDiskPartitions.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\systemsound.h
+	<MacTypes.h>
+	<Files.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfarray.h
+	<CoreFoundation/CFArray.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfbag.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfcharacterset.h
+	<CoreFoundation/CFCharacterSet.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfdata.h
+	<CoreFoundation/CFData.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfdictionary.h
+	<CoreFoundation/CFDictionary.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfnumber.h
+	<CoreFoundation/CFNumber.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfnumber.h
+	<CoreFoundation/CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfplugin.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfpreferences.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfpropertylist.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfset.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfstringencodingext.h
+	<CoreFoundation/CFStringEncodingExt.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation\cfstringencodingext.h
+	<CoreFoundation/CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cftimezone.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cftree.h
+	<CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfurlaccess.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfxmlnode.h
+	<CFTree.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfxmlparser.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfplugincom.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfbinaryheap.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfbitvector.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfmachport.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfmessageport.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfnotificationcenter.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfrunloop.h
+	<CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfsocket.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfstream.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cfnetwork.h
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\wsmethodinvocation.h
+	<MixedMode.h>
+	<CFString.h>
+	<CFURL.h>
+	<CFRunLoop.h>
+	<CFXMLParser.h>
+	<CFXMLNode.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corefoundation.h
+	<CFBase.h>
+	<CFArray.h>
+	<CFBag.h>
+	<CFBundle.h>
+	<CFCharacterSet.h>
+	<CFData.h>
+	<CFDate.h>
+	<CFDictionary.h>
+	<CFNumber.h>
+	<CFPlugIn.h>
+	<CFPreferences.h>
+	<CFPropertyList.h>
+	<CFSet.h>
+	<CFString.h>
+	<CFStringEncodingExt.h>
+	<CFTimeZone.h>
+	<CFTree.h>
+	<CFURL.h>
+	<CFURLAccess.h>
+	<CFUUID.h>
+	<CFXMLNode.h>
+	<CFXMLParser.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\hitoolbar.h
+	<Icons.h>
+	<HIObject.h>
+	<Menus.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\carbonevents.h
+	<CFString.h>
+	<AERegistry.h>
+	<AEDataModel.h>
+	<CarbonEventsCore.h>
+	<Events.h>
+	<Menus.h>
+	<Controls.h>
+	<MacWindows.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\corevideo.h
+	<TargetConditionals.h>
+	<AvailabilityMacros.h>
+	<QuartzCore/CVReturn.h>
+	<QuartzCore/CVBase.h>
+	<QuartzCore/CVHostTime.h>
+	<QuartzCore/CVDisplayLink.h>
+	<QuartzCore/CVBuffer.h>
+	<QuartzCore/CVPixelBuffer.h>
+	<QuartzCore/CVPixelBufferPool.h>
+	<QuartzCore/CVOpenGLBuffer.h>
+	<QuartzCore/CVOpenGLBufferPool.h>
+	<QuartzCore/CVOpenGLTexture.h>
+	<QuartzCore/CVOpenGLTextureCache.h>
+	<QuartzCore/CVPixelFormatDescription.h>
+	<CVReturn.h>
+	<CVBase.h>
+	<CVHostTime.h>
+	<CVBuffer.h>
+	<CVPixelBuffer.h>
+	<CVPixelBufferPool.h>
+	<CVPixelFormatDescription.h>
+	<CVDirect3DBuffer.h>
+	<CVDirect3DBufferPool.h>
+	<CVDirect3DTexture.h>
+	<CVDirect3DTextureCache.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvreturn.h
+	<TargetConditionals.h>
+	<QuartzCore/CVBase.h>
+	<CVBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvbase.h
+	<TargetConditionals.h>
+	<AvailabilityMacros.h>
+	<CoreFoundation/CFBase.h>
+	<MacTypes.h>
+	<CFBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvhosttime.h
+	<TargetConditionals.h>
+	<QuartzCore/CVBase.h>
+	<CVBase.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvbuffer.h
+	<TargetConditionals.h>
+	<QuartzCore/CVBase.h>
+	<QuartzCore/CVReturn.h>
+	<CoreFoundation/CFDictionary.h>
+	<stddef.h>
+	<stdint.h>
+	<CVBase.h>
+	<CVReturn.h>
+	<CFDictionary.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvpixelbuffer.h
+	<TargetConditionals.h>
+	<QuartzCore/CVImageBuffer.h>
+	<CoreFoundation/CFArray.h>
+	<CVImageBuffer.h>
+	<CFArray.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvimagebuffer.h
+	<TargetConditionals.h>
+	<ApplicationServices/ApplicationServices.h>
+	<QuartzCore/CVBuffer.h>
+	<CVBuffer.h>
+	<CGGeometry.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvpixelbufferpool.h
+	<TargetConditionals.h>
+	<QuartzCore/CVBase.h>
+	<QuartzCore/CVReturn.h>
+	<QuartzCore/CVPixelBuffer.h>
+	<CVBase.h>
+	<CVReturn.h>
+	<CVPixelBuffer.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvpixelformatdescription.h
+	<TargetConditionals.h>
+	<QuartzCore/CoreVideo.h>
+	<CoreFoundation/CFDictionary.h>
+	<CoreFoundation/CFArray.h>
+	<CoreVideo.h>
+	<CFDictionary.h>
+	<CFArray.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvdirect3dbuffer.h
+	<CVImageBuffer.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvdirect3dbufferpool.h
+	<CVBase.h>
+	<CVReturn.h>
+	<CVDirect3DBuffer.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvdirect3dtexture.h
+	<CVBase.h>
+	<CVReturn.h>
+	<CVImageBuffer.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\cvdirect3dtexturecache.h
+	<CVBase.h>
+	<CVReturn.h>
+	<CVBuffer.h>
+	<CVDirect3DTexture.h>
+
+1193876848 c:\users\gameover\code\of062cb\libs\quicktime\include\quicktimeerrors.h
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\coreaudiotypes.h
+	<TargetConditionals.h>
+	<CoreServices/../Frameworks/CarbonCore.framework/Headers/MacTypes.h>
+	<MacTypes.h>
+	<string.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\moviesformat.h
+	<MacTypes.h>
+	<Movies.h>
+
+1193876846 c:\users\gameover\code\of062cb\libs\quicktime\include\math64.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
 

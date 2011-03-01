@@ -56,7 +56,7 @@ void Controller::setup()
 #ifdef TARGET_OSX
         rootVideoFolder = "/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/";
 #else
-        rootVideoFolder = "E:/vjMedia"; //C:/Users/gameoverwell/Desktop/vjMedia";
+        rootVideoFolder = "E:/gameoverload/VideoProjects/Eulogy"; //C:/Users/gameoverwell/Desktop/vjMedia";
 #endif
 
         //FILES.setVerbose(true);

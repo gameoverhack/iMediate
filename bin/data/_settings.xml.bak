@@ -1,15 +1,15 @@
 <controls>
     <ComboBox_folderBrowser_1>
         <name>folderBrowser 1</name>
-        <value>0</value>
+        <value>3</value>
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>1</value>
+        <value>3</value>
     </ComboBox_folderBrowser_2>
     <SliderFloat_Channel_A_Speed>
         <name>Channel A Speed</name>
-        <value>1.000000</value>
+        <value>-2.400000</value>
     </SliderFloat_Channel_A_Speed>
     <Toggle_Channel_A_MUTE>
         <name>Channel A MUTE</name>
@@ -17,11 +17,11 @@
     </Toggle_Channel_A_MUTE>
     <SliderFloat_Channel_B_Speed>
         <name>Channel B Speed</name>
-        <value>1.000000</value>
+        <value>5.000000</value>
     </SliderFloat_Channel_B_Speed>
     <Toggle_Channel_B_MUTE>
         <name>Channel B MUTE</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Channel_B_MUTE>
     <Toggle_Particle_Color>
         <name>Particle Color</name>
@@ -104,7 +104,7 @@
     </Toggle_Saturation0>
     <SliderFloat_Saturation_Level0>
         <name>Saturation Level0</name>
-        <value>0.000000</value>
+        <value>3.600000</value>
     </SliderFloat_Saturation_Level0>
     <Toggle_Contrast0>
         <name>Contrast0</name>
@@ -195,7 +195,7 @@
     </Toggle_Reverse_Channels>
     <Toggle_Channel_A_Direct>
         <name>Channel A Direct</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Channel_A_Direct>
     <Toggle_Channel_A_FXMute>
         <name>Channel A FXMute</name>
