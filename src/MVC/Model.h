@@ -10,9 +10,6 @@
 #ifndef __MODEL_H
 #define __MODEL_H
 
-#define MAX_VIDEO_CHANNELS 2
-#define NUM_SOLENOIDS 8
-
 #include "ofxXmlSettings.h"
 #include "goThreadedVideo.h"
 #include "goVideoEffectCL.h"
@@ -37,6 +34,8 @@
 
 #define FBO_OUTPUT      MODEL->outputFbo
 #define FBO_PREVIEW     MODEL->previewFbo
+#define FBO_EFFECTS     MODEL->effectsFbo
+
 
 #define DICTIONARY      MODEL->text
 
@@ -80,6 +79,7 @@ public:
 
     ofxFbo                      outputFbo;
     ofxFbo                      previewFbo;
+    ofxFbo                      effectsFbo[MAX_VIDEO_CHANNELS];
 
 private:
 

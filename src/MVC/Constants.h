@@ -7,6 +7,20 @@
  *
  */
 
+#pragma once
+
+#define MAX_VIDEO_CHANNELS 2
+#define NUM_SOLENOIDS 8
+
+#define W_CONTROL_SCREEN 1920.0f
+#define H_CONTROL_SCREEN 1080.0f
+
+#define W_OUTPUT_SCREEN 1024.0f
+#define H_OUTPUT_SCREEN 768.0f
+
+#define W_FBODRAW_SCREEN 1024.0f
+#define H_FBODRAW_SCREEN 768.0f
+
 // config structur holds all the config info for the interactive
 typedef struct
 {

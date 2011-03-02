@@ -43,6 +43,7 @@
 #define OSCCHANNEL      GUIMANAGER->oscchannel
 #define PROTECTCONTROL  GUIMANAGER->protect
 #define SELECTIONGRP    GUIMANAGER->selectiongroup
+#define SCALEINTOME     GUIMANAGER->scaleIntoMe
 
 class goGuiManager
 {
@@ -83,6 +84,8 @@ public:
 
     bool                        remaposc[5];
     int                         oscchannel[5];
+
+    bool                        scaleIntoMe;
 
 protected:
 

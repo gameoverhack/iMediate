@@ -70,106 +70,109 @@
 	<File name="..\..\..\addons\ofxMidi\src\ofxMidiIn.cpp" open="0" top="0" tabpos="26">
 		<Cursor position="2327" topLine="62" />
 	</File>
-	<File name="src\MVC\ApplicationLoader.cpp" open="0" top="0" tabpos="15">
+	<File name="src\MVC\ApplicationLoader.cpp" open="1" top="0" tabpos="6">
 		<Cursor position="1087" topLine="5" />
 	</File>
-	<File name="src\MVC\ApplicationLoader.h" open="0" top="0" tabpos="25">
+	<File name="src\MVC\ApplicationLoader.h" open="1" top="0" tabpos="7">
 		<Cursor position="365" topLine="0" />
 	</File>
-	<File name="src\MVC\Constants.h" open="0" top="0" tabpos="19">
-		<Cursor position="856" topLine="41" />
+	<File name="src\MVC\Constants.h" open="1" top="0" tabpos="8">
+		<Cursor position="856" topLine="34" />
 	</File>
-	<File name="src\MVC\Controller.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="1106" topLine="40" />
+	<File name="src\MVC\Controller.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="2705" topLine="97" />
 	</File>
-	<File name="src\MVC\Controller.h" open="0" top="0" tabpos="9">
+	<File name="src\MVC\Controller.h" open="1" top="0" tabpos="9">
 		<Cursor position="999" topLine="15" />
 	</File>
-	<File name="src\MVC\Logger.cpp" open="0" top="0" tabpos="8">
+	<File name="src\MVC\Logger.cpp" open="1" top="0" tabpos="10">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\MVC\Model.cpp" open="0" top="0" tabpos="4">
+	<File name="src\MVC\Logger.h" open="1" top="0" tabpos="11">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\MVC\Model.h" open="0" top="0" tabpos="17">
-		<Cursor position="389" topLine="1" />
+	<File name="src\MVC\Model.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\MVC\Singleton.h" open="0" top="0" tabpos="16">
+	<File name="src\MVC\Model.h" open="1" top="0" tabpos="5">
+		<Cursor position="420" topLine="1" />
+	</File>
+	<File name="src\MVC\Singleton.h" open="1" top="0" tabpos="12">
 		<Cursor position="442" topLine="0" />
 	</File>
-	<File name="src\MVC\View.cpp" open="0" top="0" tabpos="10">
-		<Cursor position="4661" topLine="140" />
+	<File name="src\MVC\View.cpp" open="1" top="1" tabpos="13">
+		<Cursor position="3316" topLine="108" />
 	</File>
-	<File name="src\MVC\View.h" open="0" top="0" tabpos="18">
+	<File name="src\MVC\View.h" open="1" top="0" tabpos="14">
 		<Cursor position="609" topLine="24" />
 	</File>
-	<File name="src\goGuiManager.cpp" open="0" top="0" tabpos="5">
+	<File name="src\goGuiManager.cpp" open="1" top="0" tabpos="15">
 		<Cursor position="6031" topLine="3" />
 	</File>
-	<File name="src\goGuiManager.h" open="0" top="0" tabpos="7">
+	<File name="src\goGuiManager.h" open="1" top="0" tabpos="16">
 		<Cursor position="1677" topLine="37" />
 	</File>
-	<File name="src\goMidiManager.cpp" open="0" top="0" tabpos="6">
+	<File name="src\goMidiManager.cpp" open="1" top="0" tabpos="17">
 		<Cursor position="7511" topLine="187" />
 	</File>
-	<File name="src\goMidiManager.h" open="0" top="0" tabpos="11">
+	<File name="src\goMidiManager.h" open="1" top="0" tabpos="18">
 		<Cursor position="227" topLine="0" />
 	</File>
-	<File name="src\goOSCManager.cpp" open="0" top="0" tabpos="1">
+	<File name="src\goOSCManager.cpp" open="1" top="0" tabpos="19">
 		<Cursor position="1732" topLine="38" />
 	</File>
-	<File name="src\goOSCManager.h" open="0" top="0" tabpos="2">
+	<File name="src\goOSCManager.h" open="1" top="0" tabpos="20">
 		<Cursor position="1677" topLine="21" />
 	</File>
-	<File name="src\goParticleMask.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="1186" topLine="39" />
+	<File name="src\goParticleMask.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1262" topLine="69" />
 	</File>
-	<File name="src\goParticleMask.h" open="0" top="0" tabpos="4">
+	<File name="src\goParticleMask.h" open="1" top="0" tabpos="21">
 		<Cursor position="58" topLine="0" />
 	</File>
-	<File name="src\goTextLoader.cpp" open="0" top="0" tabpos="3">
+	<File name="src\goTextLoader.cpp" open="1" top="0" tabpos="22">
 		<Cursor position="840" topLine="18" />
 	</File>
-	<File name="src\goTextLoader.h" open="0" top="0" tabpos="2">
+	<File name="src\goTextLoader.h" open="1" top="0" tabpos="23">
 		<Cursor position="73" topLine="0" />
 	</File>
-	<File name="src\goThreadedImage.cpp" open="0" top="0" tabpos="15">
-		<Cursor position="908" topLine="9" />
+	<File name="src\goThreadedImage.cpp" open="1" top="0" tabpos="24">
+		<Cursor position="916" topLine="18" />
 	</File>
-	<File name="src\goThreadedImage.h" open="0" top="0" tabpos="17">
-		<Cursor position="374" topLine="0" />
+	<File name="src\goThreadedImage.h" open="1" top="0" tabpos="25">
+		<Cursor position="617" topLine="6" />
 	</File>
-	<File name="src\goVideoEffectCL.cpp" open="0" top="0" tabpos="12">
-		<Cursor position="2983" topLine="76" />
+	<File name="src\goVideoEffectCL.cpp" open="1" top="0" tabpos="26">
+		<Cursor position="2842" topLine="97" />
 	</File>
-	<File name="src\goVideoEffectCL.h" open="0" top="0" tabpos="13">
+	<File name="src\goVideoEffectCL.h" open="1" top="0" tabpos="27">
 		<Cursor position="114" topLine="0" />
 	</File>
-	<File name="src\goVideoGroup.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="3414" topLine="117" />
+	<File name="src\goVideoGroup.cpp" open="1" top="0" tabpos="28">
+		<Cursor position="3798" topLine="113" />
 	</File>
-	<File name="src\goVideoGroup.h" open="0" top="0" tabpos="14">
+	<File name="src\goVideoGroup.h" open="1" top="0" tabpos="29">
 		<Cursor position="1098" topLine="0" />
 	</File>
-	<File name="src\goVideoPreview.cpp" open="0" top="0" tabpos="31">
+	<File name="src\goVideoPreview.cpp" open="1" top="0" tabpos="30">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src\goVideoPreview.h" open="0" top="0" tabpos="30">
-		<Cursor position="421" topLine="10" />
+	<File name="src\goVideoPreview.h" open="1" top="0" tabpos="31">
+		<Cursor position="734" topLine="30" />
 	</File>
-	<File name="src\main.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="296" topLine="0" />
+	<File name="src\main.cpp" open="1" top="0" tabpos="32">
+		<Cursor position="484" topLine="0" />
 	</File>
-	<File name="src\particle.cpp" open="0" top="0" tabpos="35">
-		<Cursor position="595" topLine="12" />
+	<File name="src\particle.cpp" open="1" top="0" tabpos="33">
+		<Cursor position="595" topLine="8" />
 	</File>
-	<File name="src\particle.h" open="0" top="0" tabpos="34">
-		<Cursor position="592" topLine="5" />
+	<File name="src\particle.h" open="1" top="0" tabpos="34">
+		<Cursor position="592" topLine="0" />
 	</File>
-	<File name="src\testApp.cpp" open="0" top="0" tabpos="9">
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="35">
 		<Cursor position="328" topLine="0" />
 	</File>
-	<File name="src\testApp.h" open="0" top="0" tabpos="5">
+	<File name="src\testApp.h" open="1" top="0" tabpos="36">
 		<Cursor position="63" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

@@ -78,7 +78,7 @@ void goVideoGroup::loadVectorOfVideos(vector<string> * paths)
             delete PLAYERS[myID];
             PLAYERS[myID] = new goThreadedVideo();
             std::swap(PLAYERS[myID], videoGroup[currentlyPlayingVideo]);
-            EFFECTS[myID].reallocate(PLAYERS[myID], 720, 405);
+            EFFECTS[myID].reallocate(PLAYERS[myID], videoGroup[currentlyPlayingVideo]->getWidth(), videoGroup[currentlyPlayingVideo]->getHeight());
         }
 
         // delete all the listeners and old videoplayers
@@ -129,7 +129,7 @@ void goVideoGroup::playVideoInGroup(int index)
     {
         // start rolling the video and reallocate to Effects
         videoGroup[index]->setPaused(false);
-        EFFECTS[myID].reallocate(videoGroup[index], 720, 405);
+        EFFECTS[myID].reallocate(videoGroup[index], videoGroup[index]->getWidth(), videoGroup[index]->getHeight());
 
         // update variables
         if (currentlyPlayingVideo != -1)

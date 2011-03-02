@@ -17,7 +17,7 @@ void goParticleMask::update()
         for( int j = 0; j < particles[i].size(); j++)
         {
             particles[i][j]->update();
-            if(particles[i][j]->getX() > 720 || particles[i][j]->getY() > 405 || eraseParticle)
+            if(particles[i][j]->getX() > W_OUTPUT_SCREEN || particles[i][j]->getY() > H_OUTPUT_SCREEN || eraseParticle)
             {
                 if(eraseParticle) eraseParticle = false;
                 particles[i].erase(particles[i].begin()+j);
@@ -65,11 +65,11 @@ void goParticleMask::generate(int _id, int _valueC)
     particle *tParticle2;
     tParticle2 = new particle;
     ofxVec2f tVec1 = ofxVec2f(0.0, float(_valueC)*tDamp);
-    int tHeight1 = 720;
+    int tHeight1 = W_OUTPUT_SCREEN;
     int tRandomHeight2 = ofRandom(0,tHeight1);
 
     ofxVec2f tVec = ofxVec2f(float(_valueC)*tDamp, 0.0);
-    int tHeight = 405;
+    int tHeight = H_OUTPUT_SCREEN;
     int tRandomHeight = ofRandom(0,tHeight);
     int tSqr = ofRandom(0,10)*tWidth;
     bool single = true;

@@ -56,7 +56,7 @@ void Controller::setup()
 #ifdef TARGET_OSX
         rootVideoFolder = "/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/";
 #else
-        rootVideoFolder = "E:/gameoverload/VideoProjects/Eulogy"; //C:/Users/gameoverwell/Desktop/vjMedia";
+        rootVideoFolder = "E:/vjMedia"; //C:/Users/gameoverwell/Desktop/vjMedia";
 #endif
 
         //FILES.setVerbose(true);
@@ -107,8 +107,8 @@ void Controller::fullScreen()
         ofSetWindowTitle(windowTitle);
         int x = 0;
         int y = 0;
-        int width = 1680 + 1024;
-        int height = 1050;
+        int width = W_CONTROL_SCREEN + W_OUTPUT_SCREEN;
+        int height = H_CONTROL_SCREEN;
         int storedWindowX, storedWindowY, storedWindowH, storedWindowW;
         HWND vWnd  = FindWindow(NULL,  "imMediate");
         long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
@@ -122,8 +122,8 @@ void Controller::fullScreen()
     {
         int x = 0;
         int y = 0;
-        int width = 1680;
-        int height = 1050;
+        int width = W_CONTROL_SCREEN;
+        int height = H_CONTROL_SCREEN;
         HWND vWnd  = FindWindow(NULL,  "imMediate");
         long windowStyle = GetWindowLong(vWnd, GWL_STYLE);
         windowStyle |= WS_TILEDWINDOW;

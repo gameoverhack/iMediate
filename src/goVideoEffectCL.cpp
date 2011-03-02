@@ -3,6 +3,7 @@
 static MSA::OpenCL openCL;
 static bool isSetup = false;
 static int effectInstanceCount = 0;
+
 goVideoEffectCL::goVideoEffectCL()
 {
     doBlur          = false;
@@ -26,17 +27,17 @@ goVideoEffectCL::~goVideoEffectCL()
     openCL.finish();
 }
 
-void goVideoEffectCL::reallocate(goThreadedVideo * _video, int _vidWidth, int _vidHeight)
+void goVideoEffectCL::reallocate(goThreadedVideo * _video, int _w_video, int _h_video)
 {
     if (!allocated)
     {
-        allocate(_video, _vidWidth, _vidHeight);
+        allocate(_video, _w_video, _h_video);
     }
     else
     {
         video = _video;
-        vidWidth = _vidWidth;
-        vidHeight = _vidHeight;
+        w_video = _w_video;
+        h_video = _h_video;
     }
 }
 
@@ -66,31 +67,31 @@ void goVideoEffectCL::setup()
     }
 }
 
-void goVideoEffectCL::allocate(goThreadedVideo * _video, int _vidWidth, int _vidHeight)
+void goVideoEffectCL::allocate(goThreadedVideo * _video, int _w_video, int _h_video)
 {
 
     video = _video;
-    vidWidth = _vidWidth;
-    vidHeight = _vidHeight;
+    w_video = _w_video;
+    h_video = _h_video;
 
     fboTexID = effectInstanceCount;
     effectInstanceCount++;
 
-    fbo.setup(_vidWidth, _vidHeight);
+    fbo.setup(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
 
     // allocate temp buffer
-    //pixels		= new unsigned char[vidWidth * vidHeight * 4];
+    //pixels		= new unsigned char[w_video * h_video * 4];
 
 
 
 #ifdef TARGET_OSX
     // create openCL textures and related OpenGL textures
-    clImage[0].initWithTexture(vidWidth, vidHeight, GL_RGBA);
-    clImage[1].initWithTexture(vidWidth, vidHeight, GL_RGBA);
+    clImage[0].initWithTexture(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN, GL_RGBA);
+    clImage[1].initWithTexture(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN, GL_RGBA);
 #else
     // allocate textures
-    texture[0].allocate(vidWidth, vidHeight, GL_RGBA);
-    texture[1].allocate(vidWidth, vidHeight, GL_RGBA);
+    texture[0].allocate(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN, GL_RGBA);
+    texture[1].allocate(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN, GL_RGBA);
     // create openCL textures mapped to OpenGL textures
     clImage[0] = *(openCL.createImageFromTexture(texture[0]));
     clImage[1] = *(openCL.createImageFromTexture(texture[1]));
@@ -110,10 +111,10 @@ void goVideoEffectCL::update()
     if(allocated)
     {
 
-        if(lastSpeed != videoSpeed)
+        if(lastSpeed != speed_video)
         {
-            lastSpeed = videoSpeed;
-            video->setSpeed(videoSpeed);
+            lastSpeed = speed_video;
+            video->setSpeed(speed_video);
         }
 
         video->update();
@@ -127,11 +128,11 @@ void goVideoEffectCL::update()
 #else
             fbo.attach(texture[activeImageIndex], 0);
 #endif
-
+            fbo.setBackground(0,0,0,0);
             fbo.begin();
             glPushMatrix();
             glColor4f(fadeLevel, fadeLevel, fadeLevel, fadeLevel);
-            video->draw(0, 0, vidWidth, vidHeight);
+            video->draw(0, 0, W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
             glPopMatrix();
             fbo.end();
             //glFinish();
@@ -149,7 +150,7 @@ void goVideoEffectCL::update()
                         kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                         kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
                         kernel->setArg(2, offset);
-                        kernel->run2D(vidWidth, vidHeight);
+                        kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                         activeImageIndex = 1 - activeImageIndex;
                     }
                 }
@@ -159,7 +160,7 @@ void goVideoEffectCL::update()
                     MSA::OpenCLKernel *kernel = openCL.kernel("msa_flipx");
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -169,7 +170,7 @@ void goVideoEffectCL::update()
                     MSA::OpenCLKernel *kernel = openCL.kernel("msa_flipy");
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -178,7 +179,7 @@ void goVideoEffectCL::update()
                     MSA::OpenCLKernel *kernel = openCL.kernel("msa_greyscale");
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -187,7 +188,7 @@ void goVideoEffectCL::update()
                     MSA::OpenCLKernel *kernel = openCL.kernel("msa_invert");
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -197,7 +198,7 @@ void goVideoEffectCL::update()
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
                     kernel->setArg(2, threshLevel);
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -214,7 +215,7 @@ void goVideoEffectCL::update()
                     kernel->setArg(3, gLevel);
                     kernel->setArg(4, bLevel);
                     kernel->setArg(5, aLevel);
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -224,7 +225,7 @@ void goVideoEffectCL::update()
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
                     kernel->setArg(2, saturationLevel);
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -234,7 +235,7 @@ void goVideoEffectCL::update()
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
                     kernel->setArg(2, contrastLevel);
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -244,7 +245,7 @@ void goVideoEffectCL::update()
                     kernel->setArg(0, clImage[activeImageIndex].getCLMem());
                     kernel->setArg(1, clImage[1-activeImageIndex].getCLMem());
                     kernel->setArg(2, brightnessLevel);
-                    kernel->run2D(vidWidth, vidHeight);
+                    kernel->run2D(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
                     activeImageIndex = 1 - activeImageIndex;
                 }
 
@@ -263,12 +264,16 @@ void goVideoEffectCL::update()
 
 }
 
-void goVideoEffectCL::draw()
+void goVideoEffectCL::draw(float x, float y, float w, float h)
 {
     if (allocated)
     {
         // make sure all openCL kernels have finished executing before drawing
         openCL.finish();
+
+        glPushMatrix();
+        glTranslatef(x, y, 0);
+        glScalef(w/W_FBODRAW_SCREEN, h/H_FBODRAW_SCREEN, 1.0f);
 
 #ifdef TARGET_OSX
         // draw the OpenGL texture (which was mapped to the openCL image)
@@ -276,6 +281,9 @@ void goVideoEffectCL::draw()
 #else
         texture[activeImageIndex].draw(0, 0);
 #endif
+
+        glPopMatrix();
+
     }
 
 

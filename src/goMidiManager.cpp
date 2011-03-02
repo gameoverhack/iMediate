@@ -125,16 +125,19 @@ void goMidiManager::update()
                     break;
                 case PARTICLE_GENERATE:
                     cout << PARTICLEMODE[i] << endl;
-                    if(PARTICLEMODE[i] == 0)
+                    if(lastMidiMsg.status == 144)
                     {
-                        for (int j = 0; j < 8; j++)
+                        if(PARTICLEMODE[i] == 0)
                         {
-                            PARTICLES->generate(j, (int)ofRandom(0,lastMidiMsg.byteTwo));
+                            for (int j = 0; j < 8; j++)
+                            {
+                                PARTICLES->generate(j, (int)ofRandom(0, lastMidiMsg.byteTwo));
+                            }
                         }
-                    }
-                    else
-                    {
-                        PARTICLES->generate(PARTICLEMODE[i]-1, lastMidiMsg.byteTwo);
+                        else
+                        {
+                            PARTICLES->generate(PARTICLEMODE[i]-1, lastMidiMsg.byteTwo);
+                        }
                     }
                     break;
                 case NOTE_TO_VIDEOS:
@@ -341,19 +344,19 @@ void goMidiManager::update()
                 }
                 if(lastMidiMsg.byteOne == 41)
                 {
-                    EFFECTS[0].videoSpeed = 1;
+                    EFFECTS[0].speed_video = 1;
                 }
                 if(lastMidiMsg.byteOne == 42)
                 {
-                    EFFECTS[1].videoSpeed = 1;
+                    EFFECTS[1].speed_video = 1;
                 }
                 if(lastMidiMsg.byteOne == 7)
                 {
-                    EFFECTS[0].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
+                    EFFECTS[0].speed_video = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
                 }
                 if(lastMidiMsg.byteOne == 8)
                 {
-                    EFFECTS[1].videoSpeed = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
+                    EFFECTS[1].speed_video = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, -5.0f, 5.0f, true);
                 }
                 // x-fades
                 if (lastMidiMsg.byteOne == 1)

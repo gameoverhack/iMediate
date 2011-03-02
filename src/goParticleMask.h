@@ -1,7 +1,10 @@
 #ifndef __GOPARTICLEMASK_H
 #define __GOPARTICLEMASK_H
 
+#include "ofMain.h"
+
 #include "Singleton.h"
+#include "Constants.h"
 #include "particle.h"
 
 #define PARTICLES			goParticleMaskSingleton::Instance()

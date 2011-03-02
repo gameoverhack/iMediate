@@ -21,31 +21,31 @@
     </Toggle_Protect_Control_CH>
     <SliderInt_Listen_Channel_Begin0>
         <name>Listen Channel Begin0</name>
-        <value>1</value>
+        <value>12</value>
     </SliderInt_Listen_Channel_Begin0>
     <SliderInt_Listen_Channel_End0>
         <name>Listen Channel End0</name>
-        <value>8</value>
+        <value>12</value>
     </SliderInt_Listen_Channel_End0>
     <Toggle_RX_in_Channel_Range0>
         <name>RX in Channel Range0</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_RX_in_Channel_Range0>
     <SliderInt_Map_Listen_To_Channel0>
         <name>Map Listen To Channel0</name>
-        <value>9</value>
+        <value>12</value>
     </SliderInt_Map_Listen_To_Channel0>
     <SliderInt_Listen_Note_Begin0>
         <name>Listen Note Begin0</name>
-        <value>127</value>
+        <value>1</value>
     </SliderInt_Listen_Note_Begin0>
     <SliderInt_Listen_Note_End0>
         <name>Listen Note End0</name>
-        <value>1</value>
+        <value>9</value>
     </SliderInt_Listen_Note_End0>
     <Toggle_RX_in_Note_Range0>
         <name>RX in Note Range0</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_RX_in_Note_Range0>
     <Toggle_Learn_Note_Range0>
         <name>Learn Note Range0</name>
@@ -57,7 +57,7 @@
     </ComboBox_Remap_Mode0>
     <ComboBox_Channel_Mode0>
         <name>Channel Mode0</name>
-        <value>0</value>
+        <value>1</value>
     </ComboBox_Channel_Mode0>
     <ComboBox_Particle_Mode0>
         <name>Particle Mode0</name>
@@ -65,47 +65,47 @@
     </ComboBox_Particle_Mode0>
     <SliderInt_Listen_Channel_Begin1>
         <name>Listen Channel Begin1</name>
-        <value>1</value>
+        <value>12</value>
     </SliderInt_Listen_Channel_Begin1>
     <SliderInt_Listen_Channel_End1>
         <name>Listen Channel End1</name>
-        <value>8</value>
+        <value>12</value>
     </SliderInt_Listen_Channel_End1>
     <Toggle_RX_in_Channel_Range1>
         <name>RX in Channel Range1</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_RX_in_Channel_Range1>
     <SliderInt_Map_Listen_To_Channel1>
         <name>Map Listen To Channel1</name>
-        <value>9</value>
+        <value>12</value>
     </SliderInt_Map_Listen_To_Channel1>
     <SliderInt_Listen_Note_Begin1>
         <name>Listen Note Begin1</name>
-        <value>127</value>
+        <value>1</value>
     </SliderInt_Listen_Note_Begin1>
     <SliderInt_Listen_Note_End1>
         <name>Listen Note End1</name>
-        <value>115</value>
+        <value>9</value>
     </SliderInt_Listen_Note_End1>
     <Toggle_RX_in_Note_Range1>
         <name>RX in Note Range1</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_RX_in_Note_Range1>
     <Toggle_Learn_Note_Range1>
         <name>Learn Note Range1</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Learn_Note_Range1>
     <ComboBox_Remap_Mode1>
         <name>Remap Mode1</name>
-        <value>0</value>
+        <value>2</value>
     </ComboBox_Remap_Mode1>
     <ComboBox_Channel_Mode1>
         <name>Channel Mode1</name>
-        <value>0</value>
+        <value>2</value>
     </ComboBox_Channel_Mode1>
     <ComboBox_Particle_Mode1>
         <name>Particle Mode1</name>
-        <value>0</value>
+        <value>4</value>
     </ComboBox_Particle_Mode1>
     <SliderInt_Listen_Channel_Begin2>
         <name>Listen Channel Begin2</name>

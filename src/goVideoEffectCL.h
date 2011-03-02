@@ -2,6 +2,7 @@
 #define __GOVIDEOEFFECTCL_H
 
 #include "MSAOpenCL.h"
+#include "Constants.h"
 #include "goThreadedVideo.h"
 #include "ofxFbo.h"
 
@@ -18,7 +19,7 @@ class goVideoEffectCL
 
         void                setup();
         void                update();
-        void                draw();
+        void                draw(float x, float y, float w, float h);
 
 // parameters
         bool				doBlur;
@@ -42,7 +43,7 @@ class goVideoEffectCL
 
         goThreadedVideo *     video;
 
-        float                 videoSpeed;
+        float                 speed_video;
         float                 fadeLevel;
 
     protected:
@@ -62,8 +63,8 @@ class goVideoEffectCL
 
         unsigned char		*pixels;				// temp buffer
 
-        int					vidWidth;
-        int					vidHeight;
+        int					w_video;
+        int					h_video;
         float               lastSpeed;
 
     private:

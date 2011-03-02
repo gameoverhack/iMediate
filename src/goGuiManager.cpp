@@ -71,9 +71,9 @@ void goGuiManager::setup()
         //ofAddListener(GROUPS[i].groupLoaded, this, &goGuiManager::groupLoadDone);
     }
 
-    GUI.addSlider("Channel A Speed", EFFECTS[0].videoSpeed, -5.0f, 5.0f);
+    GUI.addSlider("Channel A Speed", EFFECTS[0].speed_video, -5.0f, 5.0f);
     GUI.addToggle("Channel A MUTE", MUTE[0]);
-    GUI.addSlider("Channel B Speed", EFFECTS[1].videoSpeed, -5.0f, 5.0f);
+    GUI.addSlider("Channel B Speed", EFFECTS[1].speed_video, -5.0f, 5.0f);
     GUI.addToggle("Channel B MUTE", MUTE[1]);
     GUI.addToggle("Particle Color", PARTICLES->particleColors);
     GUI.addToggle("Particle Size", PARTICLES->sizeParticle);
@@ -83,6 +83,7 @@ void goGuiManager::setup()
     GUI.addSlider("Particle Size", PARTICLES->pWidth, 0, 720.0f);
     GUI.addSlider("Particle Speed", PARTICLES->pDamp, 0, 40.0f);
     GUI.addSlider("Particle Type", PARTICLES->particlePattern, 0, 16);
+    GUI.addToggle("Scale Into Me", scaleIntoMe);
 
     // create effects interface for video groups
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)

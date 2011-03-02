@@ -3986,7 +3986,7 @@
 1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\applicationloader.h
 	"Model.h"
 
-1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\model.h
+1299078226 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\model.h
 	"ofxXmlSettings.h"
 	"goThreadedVideo.h"
 	"goVideoEffectCL.h"
@@ -3998,8 +3998,9 @@
 	"Constants.h"
 	"Logger.h"
 
-1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideoeffectcl.h
+1299057322 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideoeffectcl.h
 	"MSAOpenCL.h"
+	"Constants.h"
 	"goThreadedVideo.h"
 	"ofxFbo.h"
 
@@ -4216,7 +4217,7 @@
 	"assert.h"
 	<cstdlib>
 
-1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\constants.h
+1299079206 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\constants.h
 
 1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\logger.h
 	<iostream>
@@ -4280,7 +4281,7 @@
 1286351099 c:\users\gameover\code\of062cb\addons\msalibs\ofxsimpleguitoo\src\ofxsimpleguivaluecontrol.h
 	"ofxSimpleGuiControl.h"
 
-1298959153 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\controller.cpp
+1299048330 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\controller.cpp
 	"Controller.h"
 
 1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\controller.h
@@ -4294,15 +4295,17 @@
 	"goMidiManager.h"
 	"goOSCManager.h"
 
-1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\view.h
+1299056991 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\view.h
 	"Singleton.h"
 	"Controller.h"
 	"Logger.h"
 	"goParticleMask.h"
 	"ofEvents.h"
 
-1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goparticlemask.h
+1299065756 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goparticlemask.h
+	"ofMain.h"
 	"Singleton.h"
+	"Constants.h"
 	"particle.h"
 
 1298949919 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\particle.h
@@ -4335,7 +4338,7 @@
 	"ofMain.h"
 	"ofxThread.h"
 
-1298949918 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goguimanager.h
+1299048448 c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goguimanager.h
 	"ofMain.h"
 	"Singleton.h"
 	"Controller.h"
@@ -4381,19 +4384,19 @@
 1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\model.cpp
 	"Model.h"
 
-1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\view.cpp
+1299079033 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\mvc\view.cpp
 	"View.h"
 
-1298949918 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goguimanager.cpp
+1299051351 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goguimanager.cpp
 	"goGuiManager.h"
 
-1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gomidimanager.cpp
+1299068859 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gomidimanager.cpp
 	"goMidiManager.h"
 
 1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gooscmanager.cpp
 	"goOSCManager.h"
 
-1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goparticlemask.cpp
+1299066690 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\goparticlemask.cpp
 	"goParticleMask.h"
 
 1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gotextloader.cpp
@@ -4402,10 +4405,10 @@
 1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\gothreadedimage.cpp
 	"goThreadedImage.h"
 
-1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
+1299076849 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideoeffectcl.cpp
 	"goVideoEffectCL.h"
 
-1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideogroup.cpp
+1299047419 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideogroup.cpp
 	"goVideoGroup.h"
 
 1298949919 source:c:\users\gameover\code\of062cb\apps\devdonotdelete\imediate\src\govideopreview.cpp
@@ -4457,7 +4460,7 @@
 	"MSAOpenCL.h"
 	"MSAOpenCLBuffer.h"
 
-1298953605 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclimage.cpp
+1299062381 source:c:\users\gameover\code\of062cb\addons\msalibs\msaopencl\src\msaopenclimage.cpp
 	"MSAOpenCL.h"
 	"MSAOpenCLImage.h"
 
@@ -4800,7 +4803,7 @@
 	<MacLocales.h>
 	<TextCommon.h>
 
-1298958427 c:\users\gameover\code\of062cb\libs\quicktime\include\fp.h
+1299044267 c:\users\gameover\code\of062cb\libs\quicktime\include\fp.h
 	<ConditionalMacros.h>
 	<MacTypes.h>
 

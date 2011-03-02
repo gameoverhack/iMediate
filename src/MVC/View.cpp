@@ -20,9 +20,10 @@ bool View::setup()
         //ofHideCursor();
     }
     SELECTIONGRP[0] = SELECTIONGRP[1] = 0;
-    FBO_OUTPUT.setup(720, 405);
-    FBO_PREVIEW.setup(720, 405);
-
+    FBO_OUTPUT.setup(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
+    FBO_PREVIEW.setup(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
+    FBO_EFFECTS[0].setup(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
+    FBO_EFFECTS[1].setup(W_FBODRAW_SCREEN, H_FBODRAW_SCREEN);
     return true;
 }
 
@@ -32,6 +33,9 @@ void View::update(ofEventArgs &e)
 {
     ofBackground(0, 0, 0);
 
+    int channel;
+    float _width, _height;
+
     OSCMANAGER->update();
     MIDIMANAGER->update();
     GUIMANAGER->update();
@@ -40,13 +44,79 @@ void View::update(ofEventArgs &e)
     {
         EFFECTS[i].update();
         GROUPS[i].update();
+
+        float _aspect = 1.0f;
+            // for now just assume width is wider than height - TODO: scale either way properly
+        if(GROUPS[i].currentlyPlayingVideo != -1) {
+            _width = GROUPS[i].videoGroup[GROUPS[i].currentlyPlayingVideo]->getWidth();
+            _height = GROUPS[i].videoGroup[GROUPS[i].currentlyPlayingVideo]->getHeight();
+            //_aspect = (_width < W_OUTPUT_SCREEN || !SCALEINTOME) ? _height / _width : _width / _height;
+        }
+
+        if(SCALEINTOME)
+        {
+
+            // scale with overscan (ie no black bars if mismatched aspect ratio to output screen)
+
+            // check if making it wider get's it high enoung
+            if (_height * (W_FBODRAW_SCREEN/_width) <= H_FBODRAW_SCREEN)
+            {
+                // we need to scale by height
+                w_output_scale[i] = _width * (H_FBODRAW_SCREEN/_height);
+                h_output_scale[i] = H_FBODRAW_SCREEN;
+            } else {
+                // we need to scale by width
+                w_output_scale[i] = W_FBODRAW_SCREEN;
+                h_output_scale[i] = _height * (W_FBODRAW_SCREEN/_width);
+            }
+
+        } else {
+
+            // no scale at all
+            //w_output_scale[i] = _width;
+            //h_output_scale[i] = _height;
+
+            // scale to widest edge (ie., black bars if mismatched aspect ratio to output screen)
+             // check if making it wider get's it too high
+            if (_height * (W_FBODRAW_SCREEN/_width) > H_FBODRAW_SCREEN)
+            {
+                // we need to scale by height
+                w_output_scale[i] = _width * (H_FBODRAW_SCREEN/_height);
+                h_output_scale[i] = H_FBODRAW_SCREEN;
+            } else {
+                // we need to scale by width
+                w_output_scale[i] = W_FBODRAW_SCREEN;
+                h_output_scale[i] = _height * (W_FBODRAW_SCREEN/_width);
+            }
+        }
+
+        x_output_scale[i] = ( W_FBODRAW_SCREEN - w_output_scale[i] ) / 2.0f;
+        y_output_scale[i] = ( H_FBODRAW_SCREEN - h_output_scale[i] ) / 2.0f;
+
+        cout << i << " :: " << _width << " :: " << _height << " :: " << _aspect << " :: " << w_output_scale[i] << " :: " << h_output_scale[i] << " :: " << x_output_scale[i] << " :: " << y_output_scale[i] <<endl;
+
+
     }
 
     PARTICLES->update();
 
     // actually do the drawing of effects
     // and layers in the update to an FBO_OUTPUT
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
+    FBO_EFFECTS[0].setBackground(0,0,0,0);
+    FBO_EFFECTS[0].begin();
+        channel = REVERSECHANNELS == true ? 1 : 0;
+        EFFECTS[channel].draw(x_output_scale[channel], y_output_scale[channel], w_output_scale[channel], h_output_scale[channel]);
+    FBO_EFFECTS[0].end();
+
+    FBO_EFFECTS[1].setBackground(0,0,0,0);
+    FBO_EFFECTS[1].begin();
+        channel = REVERSECHANNELS == true ? 0 : 1;
+        EFFECTS[channel].draw(x_output_scale[channel], y_output_scale[channel], w_output_scale[channel], h_output_scale[channel]);
+    FBO_EFFECTS[1].end();
+
+    FBO_OUTPUT.setBackground(0,0,0,0);
     FBO_OUTPUT.begin();
 
     if (!CHANNELADIRECT && !CHANNELBDIRECT)
@@ -57,15 +127,19 @@ void View::update(ofEventArgs &e)
     {
         glPushMatrix();
         glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-        if (CHANNELADIRECT && !MUTE[0]) EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
+        if (CHANNELADIRECT && !MUTE[0]) {
+            FBO_EFFECTS[0].draw(0,0);
+        }
         glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-        if (CHANNELBDIRECT && !MUTE[1]) EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
+        if (CHANNELBDIRECT && !MUTE[1]) {
+             FBO_EFFECTS[1].draw(0,0);
+        }
         glPopMatrix();
     }
 
     FBO_OUTPUT.end();
 
-
+    FBO_PREVIEW.setBackground(0,0,0,0);
     FBO_PREVIEW.begin();
     drawBlend();
     FBO_PREVIEW.end();
@@ -75,6 +149,7 @@ void View::update(ofEventArgs &e)
 void View::drawBlend()
 {
     float fadeLevel;
+    int channel;
 
     glPushMatrix();
 
@@ -82,8 +157,9 @@ void View::drawBlend()
     else fadeLevel = 1.0f - (XFADE >= 0 ? XFADE : 0);
 
     glColor4f(fadeLevel, fadeLevel, fadeLevel, fadeLevel);         // cross fade
-    if(!MUTE[0]) EFFECTS[REVERSECHANNELS == true ? 1 : 0].draw();
-
+    if(!MUTE[0]) {
+        FBO_EFFECTS[0].draw(0,0);
+    }
     PARTICLES->draw(0x000000, 0);
     PARTICLES->draw(0xFFFFFF, 1);
 
@@ -107,7 +183,9 @@ void View::drawBlend()
     else fadeLevel = 1.0f - (XFADE <= 0 ? -XFADE : 0);
 
     glColor4f(fadeLevel, fadeLevel, fadeLevel, fadeLevel);         // cross fade
-    if(!MUTE[0]) EFFECTS[REVERSECHANNELS == true ? 0 : 1].draw();
+    if(!MUTE[1]) {
+         FBO_EFFECTS[1].draw(0,0);
+    }
 
     PARTICLES->draw(0x000000, 6);
     PARTICLES->draw(0xFFFFFF, 7);
@@ -122,37 +200,39 @@ void View::drawBlend()
 void View::draw(ofEventArgs &e)
 {
 
+    // STILL A BUG WITH WIDESCREEN PREVIEW DRAWS
+
     // draw video layer 1 & 2 separately
     glPushMatrix();
     glTranslated(0,0,0);
-    glScalef(0.5f, 0.5f, 0.0f);
-    EFFECTS[0].draw();
+    glScalef(360.0/W_FBODRAW_SCREEN, 360.0f*(H_FBODRAW_SCREEN/W_FBODRAW_SCREEN)/W_FBODRAW_SCREEN, 0.0f);
+    FBO_EFFECTS[0].draw(0,0);
     glPopMatrix();
 
     glPushMatrix();
     glTranslated(720/2.0f,0,0);
-    glScalef(0.5f, 0.5f, 0.0f);
-    EFFECTS[1].draw();
+    glScalef(360.0/W_FBODRAW_SCREEN, 360.0f*(H_FBODRAW_SCREEN/W_FBODRAW_SCREEN)/W_FBODRAW_SCREEN, 0.0f);
+    FBO_EFFECTS[1].draw(0,0);
     glPopMatrix();
 
     // draw combo effects FBO_OUTPUT for preview
     glPushMatrix();
-    glTranslated(720,0,0);
-    glScalef(0.5f, 0.5f, 0.0f);
+    glTranslated(720/1.0f,0,0);
+    glScalef(360.0/W_FBODRAW_SCREEN, 360.0f*(H_FBODRAW_SCREEN/W_FBODRAW_SCREEN)/W_FBODRAW_SCREEN, 0.0f);
     FBO_PREVIEW.draw(0,0);
     glPopMatrix();
 
     // draw combo effects FBO_OUTPUT for preview
     glPushMatrix();
-    glTranslated(720*1.5,0,0);
-    glScalef(0.5f, 0.5f, 0.0f);
+    glTranslated(720*1.5f,0,0);
+    glScalef(360.0/W_FBODRAW_SCREEN, 360.0f*(H_FBODRAW_SCREEN/W_FBODRAW_SCREEN)/W_FBODRAW_SCREEN, 0.0f);
     FBO_OUTPUT.draw(0,0);
     glPopMatrix();
 
     // draw main out
     glPushMatrix();
-    glTranslated(1680,0,0);
-    glScalef(1024/720.0f, 768/405.0f, 0.0f);
+    glTranslated(W_CONTROL_SCREEN,0,0);
+    glScalef(W_OUTPUT_SCREEN/W_FBODRAW_SCREEN, H_OUTPUT_SCREEN/H_FBODRAW_SCREEN, 0.0f);
     FBO_OUTPUT.draw(0,0);
     glPopMatrix();
 
@@ -164,7 +244,7 @@ void View::draw(ofEventArgs &e)
     // draw rect around preview icon currently playing
     glPushMatrix();
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
-    ofNoFill();
+    ofFill();
     ofRect(GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].x,
            GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].y-1,
            GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].width+1,
@@ -173,7 +253,7 @@ void View::draw(ofEventArgs &e)
 
     glPushMatrix();
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
-    ofNoFill();
+    ofFill();
     ofRect(GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].x,
            GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].y-1,
            GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].width+1,
@@ -191,6 +271,8 @@ void View::draw(ofEventArgs &e)
     ofNoFill();
     ofRect(900.0f + 720/10.0f * 4.0 + 10.0f - 1.0f, (405 + 10.0f + 405/10.0f) + (405/10.0f * 3 + 4.0f) * SELECTIONGRP[1], 720/10.0f * 4.0 + 8.0f, 405/10.0f * 3 + 4.0f);
     glPopMatrix();
+
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
     if(showMSG)
     {
