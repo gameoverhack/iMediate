@@ -38,12 +38,10 @@
 #define CHANNELMODE     GUIMANAGER->channelMode
 #define PARTICLEMODE    GUIMANAGER->particleMode
 #define LEARNRANGE      GUIMANAGER->learnRange
-#define MUTE            GUIMANAGER->mute
 #define REMAPOSC        GUIMANAGER->remaposc
 #define OSCCHANNEL      GUIMANAGER->oscchannel
 #define PROTECTCONTROL  GUIMANAGER->protect
 #define SELECTIONGRP    GUIMANAGER->selectiongroup
-#define SCALEINTOME     GUIMANAGER->scaleIntoMe
 
 class goGuiManager
 {
@@ -60,7 +58,7 @@ public:
     int                         lastFolderBox[MAX_VIDEO_CHANNELS];
 
     float                       xfade;
-    bool                        xfademute, xfuncmute, trueXFader, reversechannels, mute[2];
+    bool                        xfademute, xfuncmute, trueXFader, reversechannels;
     bool                        channeladirect, channelbdirect;
 
     int                         xmodes[2], xfuncs[2];
@@ -84,8 +82,6 @@ public:
 
     bool                        remaposc[5];
     int                         oscchannel[5];
-
-    bool                        scaleIntoMe;
 
 protected:
 

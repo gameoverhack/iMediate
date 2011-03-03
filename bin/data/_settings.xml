@@ -5,24 +5,8 @@
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>2</value>
+        <value>6</value>
     </ComboBox_folderBrowser_2>
-    <SliderFloat_Channel_A_Speed>
-        <name>Channel A Speed</name>
-        <value>2.700000</value>
-    </SliderFloat_Channel_A_Speed>
-    <Toggle_Channel_A_MUTE>
-        <name>Channel A MUTE</name>
-        <value>0</value>
-    </Toggle_Channel_A_MUTE>
-    <SliderFloat_Channel_B_Speed>
-        <name>Channel B Speed</name>
-        <value>0.669291</value>
-    </SliderFloat_Channel_B_Speed>
-    <Toggle_Channel_B_MUTE>
-        <name>Channel B MUTE</name>
-        <value>0</value>
-    </Toggle_Channel_B_MUTE>
     <Toggle_Particle_Color>
         <name>Particle Color</name>
         <value>1</value>
@@ -59,6 +43,14 @@
         <name>Scale Into Me</name>
         <value>1</value>
     </Toggle_Scale_Into_Me>
+    <Toggle_Rewind_On_Start>
+        <name>Rewind On Start</name>
+        <value>1</value>
+    </Toggle_Rewind_On_Start>
+    <Toggle_Loop_Video>
+        <name>Loop Video</name>
+        <value>1</value>
+    </Toggle_Loop_Video>
     <Toggle_Blur0>
         <name>Blur0</name>
         <value>0</value>
@@ -97,7 +89,7 @@
     </Toggle_Hue0>
     <ColorPicker_Hue_Colour0>
         <name>Hue Colour0</name>
-        <values_0>1.000000</values_0>
+        <values_0>0.985000</values_0>
         <values_1>1.000000</values_1>
         <values_2>1.000000</values_2>
         <values_3>1.000000</values_3>
@@ -144,7 +136,7 @@
     </Toggle_FlipY1>
     <Toggle_Greyscale1>
         <name>Greyscale1</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Greyscale1>
     <Toggle_Invert1>
         <name>Invert1</name>
@@ -164,8 +156,8 @@
     </Toggle_Hue1>
     <ColorPicker_Hue_Colour1>
         <name>Hue Colour1</name>
-        <values_0>1.000000</values_0>
-        <values_1>1.000000</values_1>
+        <values_0>0.995000</values_0>
+        <values_1>0.990000</values_1>
         <values_2>1.000000</values_2>
         <values_3>1.000000</values_3>
     </ColorPicker_Hue_Colour1>
@@ -197,6 +189,22 @@
         <name>Reverse Channels</name>
         <value>0</value>
     </Toggle_Reverse_Channels>
+    <SliderFloat_Channel_A_Speed>
+        <name>Channel A Speed</name>
+        <value>2.700000</value>
+    </SliderFloat_Channel_A_Speed>
+    <SliderFloat_Channel_B_Speed>
+        <name>Channel B Speed</name>
+        <value>-0.150000</value>
+    </SliderFloat_Channel_B_Speed>
+    <SliderFloat_Channel_A_Position>
+        <name>Channel A Position</name>
+        <value>0.295000</value>
+    </SliderFloat_Channel_A_Position>
+    <SliderFloat_Channel_B_Position>
+        <name>Channel B Position</name>
+        <value>0.000000</value>
+    </SliderFloat_Channel_B_Position>
     <Toggle_Channel_A_Direct>
         <name>Channel A Direct</name>
         <value>0</value>
@@ -205,6 +213,10 @@
         <name>Channel A FXMute</name>
         <value>0</value>
     </Toggle_Channel_A_FXMute>
+    <Toggle_Channel_A_MUTE>
+        <name>Channel A MUTE</name>
+        <value>0</value>
+    </Toggle_Channel_A_MUTE>
     <Toggle_Channel_B_Direct>
         <name>Channel B Direct</name>
         <value>0</value>
@@ -213,6 +225,10 @@
         <name>Channel B FXMute</name>
         <value>0</value>
     </Toggle_Channel_B_FXMute>
+    <Toggle_Channel_B_MUTE>
+        <name>Channel B MUTE</name>
+        <value>0</value>
+    </Toggle_Channel_B_MUTE>
     <SliderFloat_Channel_A_Fade>
         <name>Channel A Fade</name>
         <value>1.000000</value>

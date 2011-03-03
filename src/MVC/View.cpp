@@ -34,69 +34,8 @@ void View::update(ofEventArgs &e)
     ofBackground(0, 0, 0);
 
     int channel;
-    float _width, _height;
 
-    OSCMANAGER->update();
-    MIDIMANAGER->update();
-    GUIMANAGER->update();
-
-    for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
-    {
-        EFFECTS[i].update();
-        GROUPS[i].update();
-
-        float _aspect = 1.0f;
-            // for now just assume width is wider than height - TODO: scale either way properly
-        if(GROUPS[i].currentlyPlayingVideo != -1) {
-            _width = GROUPS[i].videoGroup[GROUPS[i].currentlyPlayingVideo]->getWidth();
-            _height = GROUPS[i].videoGroup[GROUPS[i].currentlyPlayingVideo]->getHeight();
-            //_aspect = (_width < W_OUTPUT_SCREEN || !SCALEINTOME) ? _height / _width : _width / _height;
-        }
-
-        if(SCALEINTOME)
-        {
-
-            // scale with overscan (ie no black bars if mismatched aspect ratio to output screen)
-
-            // check if making it wider get's it high enoung
-            if (_height * (W_FBODRAW_SCREEN/_width) <= H_FBODRAW_SCREEN)
-            {
-                // we need to scale by height
-                w_output_scale[i] = _width * (H_FBODRAW_SCREEN/_height);
-                h_output_scale[i] = H_FBODRAW_SCREEN;
-            } else {
-                // we need to scale by width
-                w_output_scale[i] = W_FBODRAW_SCREEN;
-                h_output_scale[i] = _height * (W_FBODRAW_SCREEN/_width);
-            }
-
-        } else {
-
-            // no scale at all
-            //w_output_scale[i] = _width;
-            //h_output_scale[i] = _height;
-
-            // scale to widest edge (ie., black bars if mismatched aspect ratio to output screen)
-             // check if making it wider get's it too high
-            if (_height * (W_FBODRAW_SCREEN/_width) > H_FBODRAW_SCREEN)
-            {
-                // we need to scale by height
-                w_output_scale[i] = _width * (H_FBODRAW_SCREEN/_height);
-                h_output_scale[i] = H_FBODRAW_SCREEN;
-            } else {
-                // we need to scale by width
-                w_output_scale[i] = W_FBODRAW_SCREEN;
-                h_output_scale[i] = _height * (W_FBODRAW_SCREEN/_width);
-            }
-        }
-
-        x_output_scale[i] = ( W_FBODRAW_SCREEN - w_output_scale[i] ) / 2.0f;
-        y_output_scale[i] = ( H_FBODRAW_SCREEN - h_output_scale[i] ) / 2.0f;
-
-        cout << i << " :: " << _width << " :: " << _height << " :: " << _aspect << " :: " << w_output_scale[i] << " :: " << h_output_scale[i] << " :: " << x_output_scale[i] << " :: " << y_output_scale[i] <<endl;
-
-
-    }
+    CONTROLLER->update();
 
     PARTICLES->update();
 
@@ -107,13 +46,13 @@ void View::update(ofEventArgs &e)
     FBO_EFFECTS[0].setBackground(0,0,0,0);
     FBO_EFFECTS[0].begin();
         channel = REVERSECHANNELS == true ? 1 : 0;
-        EFFECTS[channel].draw(x_output_scale[channel], y_output_scale[channel], w_output_scale[channel], h_output_scale[channel]);
+        EFFECTS[channel].draw(GROUPS[channel].x_output_scale, GROUPS[channel].y_output_scale, GROUPS[channel].w_output_scale, GROUPS[channel].h_output_scale);
     FBO_EFFECTS[0].end();
 
     FBO_EFFECTS[1].setBackground(0,0,0,0);
     FBO_EFFECTS[1].begin();
         channel = REVERSECHANNELS == true ? 0 : 1;
-        EFFECTS[channel].draw(x_output_scale[channel], y_output_scale[channel], w_output_scale[channel], h_output_scale[channel]);
+        EFFECTS[channel].draw(GROUPS[channel].x_output_scale, GROUPS[channel].y_output_scale, GROUPS[channel].w_output_scale, GROUPS[channel].h_output_scale);
     FBO_EFFECTS[1].end();
 
     FBO_OUTPUT.setBackground(0,0,0,0);
@@ -245,19 +184,19 @@ void View::draw(ofEventArgs &e)
     glPushMatrix();
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
     ofFill();
-    ofRect(GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].x,
+    ofRect(GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].x-1,
            GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].y-1,
-           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].width+1,
-           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].height+1);
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].width+2,
+           GROUPS[0].videoPreviews[GROUPS[0].currentlyPlayingVideo].height+2);
     glPopMatrix();
 
     glPushMatrix();
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
     ofFill();
-    ofRect(GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].x,
+    ofRect(GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].x-1,
            GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].y-1,
-           GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].width+1,
-           GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].height+1);
+           GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].width+2,
+           GROUPS[1].videoPreviews[GROUPS[1].currentlyPlayingVideo].height+2);
     glPopMatrix();
 
     glPushMatrix();

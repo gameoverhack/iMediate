@@ -71,10 +71,6 @@ void goGuiManager::setup()
         //ofAddListener(GROUPS[i].groupLoaded, this, &goGuiManager::groupLoadDone);
     }
 
-    GUI.addSlider("Channel A Speed", EFFECTS[0].speed_video, -5.0f, 5.0f);
-    GUI.addToggle("Channel A MUTE", MUTE[0]);
-    GUI.addSlider("Channel B Speed", EFFECTS[1].speed_video, -5.0f, 5.0f);
-    GUI.addToggle("Channel B MUTE", MUTE[1]);
     GUI.addToggle("Particle Color", PARTICLES->particleColors);
     GUI.addToggle("Particle Size", PARTICLES->sizeParticle);
     GUI.addToggle("Particle Speed", PARTICLES->speedParticle);
@@ -83,7 +79,10 @@ void goGuiManager::setup()
     GUI.addSlider("Particle Size", PARTICLES->pWidth, 0, 720.0f);
     GUI.addSlider("Particle Speed", PARTICLES->pDamp, 0, 40.0f);
     GUI.addSlider("Particle Type", PARTICLES->particlePattern, 0, 16);
-    GUI.addToggle("Scale Into Me", scaleIntoMe);
+    GUI.addToggle("Scale Into Me", SCALEINTOME);
+    GUI.addToggle("Rewind On Start", REWINDONSTART);
+    GUI.addToggle("Loop Video", LOOPVIDEO);
+
 
     // create effects interface for video groups
     for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
@@ -109,10 +108,16 @@ void goGuiManager::setup()
 
     GUI.addTitle("X-Faders & Blends").setNewColumn(true);
     GUI.addToggle("Reverse Channels", REVERSECHANNELS);
+    GUI.addSlider("Channel A Speed", EFFECTS[0].speed_video, -5.0f, 5.0f);
+    GUI.addSlider("Channel B Speed", EFFECTS[1].speed_video, -5.0f, 5.0f);
+    GUI.addSlider("Channel A Position", GROUPS[0].position_video, 0.0f, 1.0f);
+    GUI.addSlider("Channel B Position", GROUPS[1].position_video, 0.0f, 1.0f);
     GUI.addToggle("Channel A Direct", CHANNELADIRECT);
     GUI.addToggle("Channel A FXMute", EFFECTS[0].muteAll);
+    GUI.addToggle("Channel A MUTE", MUTE[0]);
     GUI.addToggle("Channel B Direct", CHANNELBDIRECT);
     GUI.addToggle("Channel B FXMute", EFFECTS[1].muteAll);
+    GUI.addToggle("Channel B MUTE", MUTE[1]);
     GUI.addSlider("Channel A Fade", EFFECTS[0].fadeLevel, 0, 1.0);
     GUI.addSlider("Channel B Fade", EFFECTS[1].fadeLevel, 0, 1.0);
 
@@ -128,6 +133,10 @@ void goGuiManager::setup()
     GUI.addToggle("Use True Fader", XFADETRUE);
     GUI.addToggle("Use Fade Funcs", XFUNCMUTE);
     GUI.addToggle("Use Fade Modes", XFADEMUTE);
+
+    //GUI.addTitle("Scratch").setNewColumn(true);
+    //GUI.addMovieSlider("Movie 1", (GROUPS[0].videoGroup[GROUPS[0].currentlyPlayingVideo]));
+    //GUI.addMovieSlider("Movie 2", (GROUPS[1].videoGroup[GROUPS[1].currentlyPlayingVideo]));
 
     GUI.addPage("MIDI");
     GUI.addTitle("Controller Settings");

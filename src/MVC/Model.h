@@ -36,6 +36,10 @@
 #define FBO_PREVIEW     MODEL->previewFbo
 #define FBO_EFFECTS     MODEL->effectsFbo
 
+#define SCALEINTOME     MODEL->scaleIntoMe
+#define REWINDONSTART   MODEL->rewindOnStart
+#define LOOPVIDEO       MODEL->loopVideo
+#define MUTE            MODEL->mute
 
 #define DICTIONARY      MODEL->text
 
@@ -80,6 +84,8 @@ public:
     ofxFbo                      outputFbo;
     ofxFbo                      previewFbo;
     ofxFbo                      effectsFbo[MAX_VIDEO_CHANNELS];
+
+    bool                        scaleIntoMe, rewindOnStart, loopVideo, mute[2];
 
 private:
 

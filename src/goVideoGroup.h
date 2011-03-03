@@ -4,6 +4,7 @@
 #define MAX_VIDEOS_IN_GROUP 48
 
 #include "Model.h"
+
 #include "goThreadedVideo.h"
 #include "goVideoEffectCL.h"
 #include "goVideoPreview.h"
@@ -39,15 +40,26 @@ class goVideoGroup
 
         int                 numberLoaded;
 
+        float               w_output_scale, h_output_scale;
+        float               x_output_scale, y_output_scale;
+        float               position_video;
+
+        bool                scratching;
+
     protected:
 
     private:
+
+        void                scaleVideo(int index);
 
         void                success(string & name);
         void                error(int & code);
         void                previewClicked(int & index);
 
         bool                locked, loadNext;
+
+        bool                lastLoopVideo, lastScaleIntoMe, lastMute;
+
         int                 numberToLoad;
 
         vector<string>      filesToLoad;

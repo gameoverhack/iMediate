@@ -54,7 +54,7 @@ void Controller::setup()
         string rootVideoFolder;
 
 #ifdef TARGET_OSX
-        rootVideoFolder = "/Volumes/GhostDriverX/Users/gameoverx/Desktop/vjMedia/";
+        rootVideoFolder = "/Volumes/GhostDriver/MATT/vjMedia/";
 #else
         rootVideoFolder = "E:/vjMedia"; //C:/Users/gameoverwell/Desktop/vjMedia";
 #endif
@@ -95,6 +95,27 @@ void Controller::setup()
         bCustomFullscreen = false;
         SETAPPSTATE(APP_READY);
     }
+}
+
+void Controller::update()
+{
+    OSCMANAGER->update();
+    MIDIMANAGER->update();
+    GUIMANAGER->update();
+
+    for (int i = 0; i < MAX_VIDEO_CHANNELS; i++)
+    {
+        EFFECTS[i].update();
+        GROUPS[i].update();
+    }
+
+    // scratch video : TODO: this is a hack but let's us do this for now!!!
+    if (GUI.control("Channel A Position").lock) GROUPS[0].scratching = true;
+    else GROUPS[0].scratching = false;
+
+    if (GUI.control("Channel B Position").lock) GROUPS[1].scratching = true;
+    else GROUPS[1].scratching = false;
+
 }
 
 void Controller::fullScreen()

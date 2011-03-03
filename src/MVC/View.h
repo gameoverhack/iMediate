@@ -61,9 +61,6 @@ private:
     void				mousePressed(ofMouseEventArgs &e);
     void				mouseReleased(ofMouseEventArgs &e);
 
-    float               w_output_scale[2], h_output_scale[2];
-    float               w_preview_scale[2], h_preview_scale[2];
-    float               x_output_scale[2], y_output_scale[2];
 };
 
 typedef Singleton<View> ViewSingleton;   // Global declaration
