@@ -5,7 +5,7 @@
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>6</value>
+        <value>1</value>
     </ComboBox_folderBrowser_2>
     <Toggle_Particle_Color>
         <name>Particle Color</name>
@@ -49,7 +49,7 @@
     </Toggle_Rewind_On_Start>
     <Toggle_Loop_Video>
         <name>Loop Video</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Loop_Video>
     <Toggle_Blur0>
         <name>Blur0</name>
@@ -191,15 +191,15 @@
     </Toggle_Reverse_Channels>
     <SliderFloat_Channel_A_Speed>
         <name>Channel A Speed</name>
-        <value>2.700000</value>
+        <value>1.000000</value>
     </SliderFloat_Channel_A_Speed>
     <SliderFloat_Channel_B_Speed>
         <name>Channel B Speed</name>
-        <value>-0.150000</value>
+        <value>1.000000</value>
     </SliderFloat_Channel_B_Speed>
     <SliderFloat_Channel_A_Position>
         <name>Channel A Position</name>
-        <value>0.000164</value>
+        <value>0.898955</value>
     </SliderFloat_Channel_A_Position>
     <SliderFloat_Channel_B_Position>
         <name>Channel B Position</name>
@@ -227,7 +227,7 @@
     </Toggle_Channel_B_FXMute>
     <Toggle_Channel_B_MUTE>
         <name>Channel B MUTE</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Channel_B_MUTE>
     <SliderFloat_Channel_A_Fade>
         <name>Channel A Fade</name>

@@ -237,7 +237,7 @@ void goVideoGroup::scaleVideo(int index)
     x_output_scale = ( W_FBODRAW_SCREEN - w_output_scale ) / 2.0f;
     y_output_scale = ( H_FBODRAW_SCREEN - h_output_scale ) / 2.0f;
 
-    //cout << i << " :: " << _width << " :: " << _height << " :: " << _aspect << " :: " << w_output_scale[i] << " :: " << h_output_scale[i] << " :: " << x_output_scale[i] << " :: " << y_output_scale[i] <<endl;
+    //cout << " :: " << _width << " :: " << _height << " :: " << _aspect << " :: " << w_output_scale << " :: " << h_output_scale << " :: " << x_output_scale << " :: " << y_output_scale[i]zz <<endl;
 
 }
 
