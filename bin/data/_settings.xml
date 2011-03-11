@@ -1,15 +1,15 @@
 <controls>
     <ComboBox_folderBrowser_1>
         <name>folderBrowser 1</name>
-        <value>0</value>
+        <value>2</value>
     </ComboBox_folderBrowser_1>
     <ComboBox_folderBrowser_2>
         <name>folderBrowser 2</name>
-        <value>1</value>
+        <value>0</value>
     </ComboBox_folderBrowser_2>
     <Toggle_Particle_Color>
         <name>Particle Color</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Particle_Color>
     <Toggle_Particle_Size>
         <name>Particle Size</name>
@@ -17,11 +17,11 @@
     </Toggle_Particle_Size>
     <Toggle_Particle_Speed>
         <name>Particle Speed</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Particle_Speed>
     <Toggle_Particle_Link>
         <name>Particle Link</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Particle_Link>
     <Toggle_Particle_Erase>
         <name>Particle Erase</name>
@@ -29,11 +29,11 @@
     </Toggle_Particle_Erase>
     <SliderInt_Particle_Size>
         <name>Particle Size</name>
-        <value>17</value>
+        <value>2</value>
     </SliderInt_Particle_Size>
     <SliderInt_Particle_Speed>
         <name>Particle Speed</name>
-        <value>4</value>
+        <value>1</value>
     </SliderInt_Particle_Speed>
     <SliderInt_Particle_Type>
         <name>Particle Type</name>
@@ -57,7 +57,7 @@
     </Toggle_Blur0>
     <SliderInt_Blur_Level0>
         <name>Blur Level0</name>
-        <value>10</value>
+        <value>2</value>
     </SliderInt_Blur_Level0>
     <Toggle_FlipX0>
         <name>FlipX0</name>
@@ -89,7 +89,7 @@
     </Toggle_Hue0>
     <ColorPicker_Hue_Colour0>
         <name>Hue Colour0</name>
-        <values_0>0.985000</values_0>
+        <values_0>1.000000</values_0>
         <values_1>1.000000</values_1>
         <values_2>1.000000</values_2>
         <values_3>1.000000</values_3>
@@ -136,7 +136,7 @@
     </Toggle_FlipY1>
     <Toggle_Greyscale1>
         <name>Greyscale1</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Greyscale1>
     <Toggle_Invert1>
         <name>Invert1</name>
@@ -156,9 +156,9 @@
     </Toggle_Hue1>
     <ColorPicker_Hue_Colour1>
         <name>Hue Colour1</name>
-        <values_0>0.995000</values_0>
-        <values_1>0.990000</values_1>
-        <values_2>1.000000</values_2>
+        <values_0>1.000000</values_0>
+        <values_1>0.995000</values_1>
+        <values_2>0.985000</values_2>
         <values_3>1.000000</values_3>
     </ColorPicker_Hue_Colour1>
     <Toggle_Saturation1>
@@ -203,7 +203,7 @@
     </SliderFloat_Channel_A_Position>
     <SliderFloat_Channel_B_Position>
         <name>Channel B Position</name>
-        <value>0.000000</value>
+        <value>1.000000</value>
     </SliderFloat_Channel_B_Position>
     <Toggle_Channel_A_Direct>
         <name>Channel A Direct</name>
@@ -219,7 +219,7 @@
     </Toggle_Channel_A_MUTE>
     <Toggle_Channel_B_Direct>
         <name>Channel B Direct</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Channel_B_Direct>
     <Toggle_Channel_B_FXMute>
         <name>Channel B FXMute</name>
@@ -227,11 +227,11 @@
     </Toggle_Channel_B_FXMute>
     <Toggle_Channel_B_MUTE>
         <name>Channel B MUTE</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Channel_B_MUTE>
     <SliderFloat_Channel_A_Fade>
         <name>Channel A Fade</name>
-        <value>1.000000</value>
+        <value>0.000000</value>
     </SliderFloat_Channel_A_Fade>
     <SliderFloat_Channel_B_Fade>
         <name>Channel B Fade</name>
@@ -239,11 +239,11 @@
     </SliderFloat_Channel_B_Fade>
     <SliderFloat_X-Fade>
         <name>X-Fade</name>
-        <value>-0.020000</value>
+        <value>0.212598</value>
     </SliderFloat_X-Fade>
     <ComboBox_X-Fade_Func_Top>
         <name>X-Fade Func Top</name>
-        <value>4</value>
+        <value>0</value>
     </ComboBox_X-Fade_Func_Top>
     <ComboBox_X-Fade_Mode_1>
         <name>X-Fade Mode 1</name>
@@ -251,11 +251,11 @@
     </ComboBox_X-Fade_Mode_1>
     <ComboBox_X-Fade_Mode_2>
         <name>X-Fade Mode 2</name>
-        <value>6</value>
+        <value>4</value>
     </ComboBox_X-Fade_Mode_2>
     <ComboBox_X-Fade_Func_Bot>
         <name>X-Fade Func Bot</name>
-        <value>1</value>
+        <value>0</value>
     </ComboBox_X-Fade_Func_Bot>
     <Toggle_Use_True_Fader>
         <name>Use True Fader</name>
@@ -267,6 +267,6 @@
     </Toggle_Use_Fade_Funcs>
     <Toggle_Use_Fade_Modes>
         <name>Use Fade Modes</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_Use_Fade_Modes>
 </controls>

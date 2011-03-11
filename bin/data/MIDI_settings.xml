@@ -9,7 +9,7 @@
     </SliderInt_Solenoid_Channel>
     <Toggle_Play_Solenoids>
         <name>Play Solenoids</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_Play_Solenoids>
     <SliderInt_Controller_Channel>
         <name>Controller Channel</name>
@@ -53,11 +53,11 @@
     </Toggle_Learn_Note_Range0>
     <ComboBox_Remap_Mode0>
         <name>Remap Mode0</name>
-        <value>0</value>
+        <value>4</value>
     </ComboBox_Remap_Mode0>
     <ComboBox_Channel_Mode0>
         <name>Channel Mode0</name>
-        <value>1</value>
+        <value>2</value>
     </ComboBox_Channel_Mode0>
     <ComboBox_Particle_Mode0>
         <name>Particle Mode0</name>
@@ -85,7 +85,7 @@
     </SliderInt_Listen_Note_Begin1>
     <SliderInt_Listen_Note_End1>
         <name>Listen Note End1</name>
-        <value>9</value>
+        <value>72</value>
     </SliderInt_Listen_Note_End1>
     <Toggle_RX_in_Note_Range1>
         <name>RX in Note Range1</name>
@@ -101,11 +101,11 @@
     </ComboBox_Remap_Mode1>
     <ComboBox_Channel_Mode1>
         <name>Channel Mode1</name>
-        <value>2</value>
+        <value>0</value>
     </ComboBox_Channel_Mode1>
     <ComboBox_Particle_Mode1>
         <name>Particle Mode1</name>
-        <value>4</value>
+        <value>0</value>
     </ComboBox_Particle_Mode1>
     <SliderInt_Listen_Channel_Begin2>
         <name>Listen Channel Begin2</name>

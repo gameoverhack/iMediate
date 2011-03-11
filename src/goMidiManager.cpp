@@ -125,7 +125,7 @@ void goMidiManager::update()
                     break;
                 case PARTICLE_GENERATE:
                     cout << PARTICLEMODE[i] << endl;
-                    if(lastMidiMsg.status == 144)
+                    if(lastMidiMsg.status == 144 && PLAYSOLENOIDS && lastMidiMsg.byteOne != 71)
                     {
                         if(PARTICLEMODE[i] == 0)
                         {
@@ -144,7 +144,7 @@ void goMidiManager::update()
                     remap(i, 0.0f, GROUPS[0].numberLoaded, 0.0f, GROUPS[1].numberLoaded);
                     break;
                 case RANDOM_VIDEO:
-                    remap(i, GROUPS[0].numberLoaded, GROUPS[1].numberLoaded);
+                    if (lastMidiMsg.byteOne != 71) remap(i, GROUPS[0].numberLoaded, GROUPS[1].numberLoaded);
                     break;
                 case FX_BLUR:
                     remap(i, &EFFECTS[0].blurAmount, &EFFECTS[1].blurAmount, 0.0f, 20.0f, 0.0f, 20.0f);
@@ -215,11 +215,11 @@ void goMidiManager::update()
 
                 if(lastMidiMsg.byteOne == 17)
                 {
-                    PARTICLES->pWidth = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 720.0, false);
+                    PARTICLES->pWidth = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 2, 250.0, false);
                 }
                 if(lastMidiMsg.byteOne == 18)
                 {
-                    PARTICLES->pDamp = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 0, 40.0, false);
+                    PARTICLES->pDamp = ofMap(lastMidiMsg.byteTwo, 0.0f, 127.0f, 1, 40.0, false);
                 }
                 if(lastMidiMsg.byteOne == 19)
                 {
@@ -268,6 +268,10 @@ void goMidiManager::update()
                 if(lastMidiMsg.byteOne == 53)
                 {
                     PARTICLES->eraseParticle = !(bool)lastMidiMsg.byteTwo;
+                }
+                if(lastMidiMsg.byteOne == 54)
+                {
+                    PARTICLES->linkParticle = !(bool)lastMidiMsg.byteTwo;
                 }
                 if(lastMidiMsg.byteOne == 56)
                 {

@@ -43,20 +43,26 @@ void goParticleMask::generate(int _id, int _valueC)
     int tWidth;
     if(linkParticle)
     {
-        tWidth = float(_valueC)*float(pWidth)/127.0f*2;
+        tWidth = float(_valueC)/32.0f*float(pWidth);
     }
     else
     {
         tWidth = pWidth;
     }
     float tDamp;
-    if(speedParticle)
+
+    if(!speedParticle)
     {
         tDamp = 1.0f;
     }
     else
     {
-        tDamp = float(pDamp)/32.0f;
+        if (linkParticle) {
+            tDamp = float(_valueC)/64.0f*float(pDamp)/64.0f;
+        } else {
+            tDamp = float(pDamp)/64.0f;
+        }
+
     }
 
     particle *tParticle;

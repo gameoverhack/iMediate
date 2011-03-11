@@ -26,7 +26,7 @@
 		<Cursor position="2351" topLine="24" />
 	</File>
 	<File name="..\..\..\addons\msalibs\MSAOpenCL\src\MSAOpenCL.cpp" open="1" top="0" tabpos="38">
-		<Cursor position="1131" topLine="377" />
+		<Cursor position="1131" topLine="372" />
 	</File>
 	<File name="..\..\..\addons\msalibs\MSAOpenCL\src\MSAOpenCLImage.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="7565" topLine="184" />
@@ -59,10 +59,10 @@
 		<Cursor position="1764" topLine="54" />
 	</File>
 	<File name="..\..\..\addons\msalibs\ofxSimpleGuiToo\src\ofxSimpleGuiConfig.cpp" open="1" top="0" tabpos="50">
-		<Cursor position="2312" topLine="37" />
+		<Cursor position="2312" topLine="32" />
 	</File>
 	<File name="..\..\..\addons\msalibs\ofxSimpleGuiToo\src\ofxSimpleGuiConfig.h" open="1" top="0" tabpos="45">
-		<Cursor position="1383" topLine="39" />
+		<Cursor position="1383" topLine="34" />
 	</File>
 	<File name="..\..\..\addons\msalibs\ofxSimpleGuiToo\src\ofxSimpleGuiControl.cpp" open="1" top="0" tabpos="51">
 		<Cursor position="3858" topLine="87" />
@@ -71,7 +71,7 @@
 		<Cursor position="2673" topLine="44" />
 	</File>
 	<File name="..\..\..\addons\msalibs\ofxSimpleGuiToo\src\ofxSimpleGuiIncludes.h" open="1" top="0" tabpos="46">
-		<Cursor position="1472" topLine="17" />
+		<Cursor position="1472" topLine="12" />
 	</File>
 	<File name="..\..\..\addons\msalibs\ofxSimpleGuiToo\src\ofxSimpleGuiPage.cpp" open="1" top="0" tabpos="48">
 		<Cursor position="6341" topLine="170" />
@@ -86,7 +86,7 @@
 		<Cursor position="3150" topLine="70" />
 	</File>
 	<File name="..\..\..\addons\msalibs\ofxSimpleGuiToo\src\ofxSimpleGuiValueControl.h" open="1" top="0" tabpos="47">
-		<Cursor position="1683" topLine="22" />
+		<Cursor position="1683" topLine="17" />
 	</File>
 	<File name="..\..\..\addons\ofxFbo\src\ofxFbo.cpp" open="0" top="0" tabpos="18">
 		<Cursor position="1438" topLine="54" />
@@ -107,13 +107,13 @@
 		<Cursor position="365" topLine="0" />
 	</File>
 	<File name="src\MVC\Constants.h" open="1" top="0" tabpos="8">
-		<Cursor position="856" topLine="34" />
+		<Cursor position="434" topLine="21" />
 	</File>
 	<File name="src\MVC\Controller.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="2769" topLine="95" />
 	</File>
 	<File name="src\MVC\Controller.h" open="1" top="0" tabpos="9">
-		<Cursor position="845" topLine="22" />
+		<Cursor position="845" topLine="17" />
 	</File>
 	<File name="src\MVC\Logger.cpp" open="1" top="0" tabpos="10">
 		<Cursor position="0" topLine="0" />
@@ -134,16 +134,16 @@
 		<Cursor position="5096" topLine="156" />
 	</File>
 	<File name="src\MVC\View.h" open="1" top="0" tabpos="14">
-		<Cursor position="1170" topLine="33" />
+		<Cursor position="1170" topLine="28" />
 	</File>
 	<File name="src\goGuiManager.cpp" open="1" top="0" tabpos="15">
 		<Cursor position="4854" topLine="99" />
 	</File>
 	<File name="src\goGuiManager.h" open="1" top="0" tabpos="16">
-		<Cursor position="3170" topLine="62" />
+		<Cursor position="3170" topLine="57" />
 	</File>
-	<File name="src\goMidiManager.cpp" open="1" top="0" tabpos="17">
-		<Cursor position="7511" topLine="187" />
+	<File name="src\goMidiManager.cpp" open="1" top="1" tabpos="17">
+		<Cursor position="10081" topLine="250" />
 	</File>
 	<File name="src\goMidiManager.h" open="1" top="0" tabpos="18">
 		<Cursor position="227" topLine="0" />
@@ -155,7 +155,7 @@
 		<Cursor position="1677" topLine="21" />
 	</File>
 	<File name="src\goParticleMask.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1262" topLine="69" />
+		<Cursor position="0" topLine="33" />
 	</File>
 	<File name="src\goParticleMask.h" open="1" top="0" tabpos="21">
 		<Cursor position="58" topLine="0" />
@@ -167,10 +167,10 @@
 		<Cursor position="73" topLine="0" />
 	</File>
 	<File name="src\goThreadedImage.cpp" open="1" top="0" tabpos="24">
-		<Cursor position="916" topLine="18" />
+		<Cursor position="916" topLine="14" />
 	</File>
 	<File name="src\goThreadedImage.h" open="1" top="0" tabpos="25">
-		<Cursor position="617" topLine="6" />
+		<Cursor position="617" topLine="2" />
 	</File>
 	<File name="src\goVideoEffectCL.cpp" open="1" top="0" tabpos="26">
 		<Cursor position="3155" topLine="105" />
@@ -178,7 +178,7 @@
 	<File name="src\goVideoEffectCL.h" open="1" top="0" tabpos="27">
 		<Cursor position="1657" topLine="27" />
 	</File>
-	<File name="src\goVideoGroup.cpp" open="1" top="1" tabpos="28">
+	<File name="src\goVideoGroup.cpp" open="1" top="0" tabpos="28">
 		<Cursor position="7390" topLine="222" />
 	</File>
 	<File name="src\goVideoGroup.h" open="1" top="0" tabpos="29">
